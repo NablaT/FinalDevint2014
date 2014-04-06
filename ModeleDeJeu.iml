@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
-    <libelement value="file://C:/Users/user/Documents/AtelierDeViNTCleUSB/VocalyzeSIVOX/bin/SI_VOX.jar" />
+    <libelement value="file://$MODULE_DIR$/../../../AtelierDeViNTCleUSB/VocalyzeSIVOX/bin/SI_VOX.jar" />
     <src_description expected_position="0">
       <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
     </src_description>
@@ -17,13 +17,14 @@
     <orderEntry type="module-library">
       <library name="SI_VOX.jar">
         <CLASSES>
-          <root url="file://C:/Users/user/Documents/AtelierDeViNTCleUSB/VocalyzeSIVOX/bin/SI_VOX.jar" />
+          <root url="file://$MODULE_DIR$/../../../AtelierDeViNTCleUSB/VocalyzeSIVOX/bin/SI_VOX.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="library" name="SI_VOX" level="project" />
+    <orderEntry type="library" name="SI_VOX1" level="project" />
   </component>
 </module>
 
