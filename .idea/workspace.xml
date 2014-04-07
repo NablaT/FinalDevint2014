@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/GoodAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/GoodAnswer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMCarre.java" afterPath="$PROJECT_DIR$/src/jeu/IHMCarre.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMDuo.java" afterPath="$PROJECT_DIR$/src/jeu/IHMDuo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMHexa.java" afterPath="$PROJECT_DIR$/src/jeu/IHMHexa.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/WrongAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/WrongAnswer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ressources/donneesMbrola/pho_wav/phrase.pho" afterPath="$PROJECT_DIR$/ressources/donneesMbrola/pho_wav/phrase.pho" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ressources/sons/score.txt" afterPath="$PROJECT_DIR$/ressources/sons/score.txt" />
     </list>
@@ -96,7 +95,7 @@
       <file leaf-file-name="IHMDuo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMDuo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1887">
+            <state line="42" column="72" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
@@ -105,25 +104,34 @@
       <file leaf-file-name="IHMCarre.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMCarre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="9" selection-start="2196" selection-end="2710" vertical-scroll-proportion="0.0" vertical-offset="1212" max-vertical-offset="1904">
+            <state line="36" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1989">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IHMHexa.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IHMHexa.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMHexa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="9" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0" vertical-offset="1739" max-vertical-offset="2465">
+            <state line="51" column="20" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.599359" vertical-offset="425" max-vertical-offset="2584">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodAnswer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GoodAnswer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/GoodAnswer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="487" selection-end="487" vertical-scroll-proportion="0.4903846" vertical-offset="0" max-vertical-offset="1479">
+            <state line="21" column="0" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainBis.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jeu/MainBis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="31" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
@@ -177,17 +185,17 @@
         <option value="$PROJECT_DIR$/ressources/question/CapitalAzerbaïdjan.txt" />
         <option value="$PROJECT_DIR$/ressources/question/CapitalIrak.txt" />
         <option value="$PROJECT_DIR$/ressources/question/CapitalRoumanie.txt" />
-        <option value="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
         <option value="$PROJECT_DIR$/ressources/question/CapitalChine.txt" />
         <option value="$PROJECT_DIR$/src/jeu/Game.java" />
         <option value="$PROJECT_DIR$/ressources/question/CapitalFrance.txt" />
         <option value="$PROJECT_DIR$/ressources/question/CapitalHongrie.txt" />
         <option value="$PROJECT_DIR$/ressources/question/CapitalInde.txt" />
-        <option value="$PROJECT_DIR$/src/jeu/IHMDuo.java" />
-        <option value="$PROJECT_DIR$/src/jeu/IHMCarre.java" />
-        <option value="$PROJECT_DIR$/src/jeu/IHMHexa.java" />
         <option value="$PROJECT_DIR$/src/jeu/WrongAnswer.java" />
         <option value="$PROJECT_DIR$/src/jeu/GoodAnswer.java" />
+        <option value="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
+        <option value="$PROJECT_DIR$/src/jeu/IHMCarre.java" />
+        <option value="$PROJECT_DIR$/src/jeu/IHMDuo.java" />
+        <option value="$PROJECT_DIR$/src/jeu/IHMHexa.java" />
       </list>
     </option>
   </component>
@@ -713,12 +721,12 @@
       <workItem from="1396808254217" duration="193000" />
       <workItem from="1396808638950" duration="2621000" />
       <workItem from="1396826280968" duration="153000" />
-      <workItem from="1396826455247" duration="4070000" />
+      <workItem from="1396826455247" duration="4241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53078000" />
+    <option name="totallyTimeSpent" value="53249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -981,13 +989,6 @@
         <state line="72" column="57" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1921" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/MainBis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="40" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/testQuestion/Question.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="90" column="0" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0" vertical-offset="974" max-vertical-offset="1598">
@@ -1079,34 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/IHMCarre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="9" selection-start="2196" selection-end="2710" vertical-scroll-proportion="0.0" vertical-offset="1212" max-vertical-offset="1904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/IHMHexa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="9" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0" vertical-offset="1739" max-vertical-offset="2465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/IHMDuo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="43" selection-start="855" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="145" selection-start="1157" selection-end="1170" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="1836">
@@ -1123,7 +1096,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/GoodAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="487" selection-end="487" vertical-scroll-proportion="0.4903846" vertical-offset="0" max-vertical-offset="1479">
+        <state line="21" column="0" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/MainBis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="31" selection-start="991" selection-end="991" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="43" selection-start="855" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/IHMCarre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1989">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/IHMDuo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="72" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/IHMHexa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="20" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.599359" vertical-offset="425" max-vertical-offset="2584">
           <folding />
         </state>
       </provider>

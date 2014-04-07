@@ -38,7 +38,9 @@ public class IHMDuo extends JPanel implements ActionListener{
 
     public void buildElements(ArrayList<String> answers){
         this.answer1= new JButton(answers.get(0));
+        this.answer1.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
         this.answer2= new JButton(answers.get(1));
+        this.answer2.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
         this.grid=new GridBagLayout();
         this.answer1.addActionListener(this);
         this.answer2.addActionListener(this);
