@@ -28,7 +28,6 @@ public class IHMDuo extends JPanel implements ActionListener{
     public void initialize(ArrayList<String> answers){
 
         this.setSize(800,800);
-        this.setBackground(Color.black);
         this.buildElements(answers);
         this.setLayout(grid);
         this.initializeGrid();

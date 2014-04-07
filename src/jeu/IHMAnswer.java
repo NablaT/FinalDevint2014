@@ -30,10 +30,16 @@ public class IHMAnswer extends JPanel implements ActionListener {
     public IHMAnswer(GestionQuestion gestion, Game g){
         this.gridBag=new GridBagLayout();
         this.duoChoice= new JButton("Duo");
+        this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+
         this.duoChoice.addActionListener(this);
         this.carreChoice=new JButton("Carre");
+        this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+
         this.carreChoice.addActionListener(this);
         this.hexaChoice=new JButton("Hexa");
+        this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+
         this.hexaChoice.addActionListener(this);
         this.gc = new GridBagConstraints();
         this.gestionQuestion=gestion;
@@ -91,19 +97,19 @@ public class IHMAnswer extends JPanel implements ActionListener {
         return list;
     }
 
-    /// ICI LES MODIFS POUR CHARGER LES REPONSES
+
     public void majToAnswers(int nb){
-        this.removeAll();
+        //this.removeAll();
+
+        this.remove(this.carreChoice);
+        this.remove(this.hexaChoice);
+        this.remove(this.duoChoice);
         this.repaint();
         this.setLayout(null);
         Question question=this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm());
        switch(nb){
             case 2:
                 this.answersAfterChoice=new IHMDuo(this.buildArray(question,2),question.afficherBonneReponse(),this.game);
-                ArrayList<String> list=this.buildArray(question,2);
-                for(int i=0;i<2;i++){
-                    System.out.println(list.get(i));
-                }
                 break;
             case 4:
                 this.answersAfterChoice=new IHMCarre(this.buildArray(question,4),question.afficherBonneReponse(),this.game);break;
@@ -112,14 +118,13 @@ public class IHMAnswer extends JPanel implements ActionListener {
         }
 
         this.rebuild();
-        this.add(this.answersAfterChoice);
+       //this.add(this.answersAfterChoice);
         this.revalidate();
     }
 
     private void rebuild() {
         this.gc = new GridBagConstraints();
         this.setLayout(this.gridBag);
-        this.setBackground(Color.red);
         //this.setSize(300,300);
         this.gc.fill=GridBagConstraints.BOTH;
         gc.insets = new Insets(5, 5, 5, 5);
@@ -128,7 +133,7 @@ public class IHMAnswer extends JPanel implements ActionListener {
         gc.weightx=4;
         gc.weighty=4;
         this.add(this.answersAfterChoice, gc);
-        // this.add(new JButton("TEST"), gc2);
+        //this.add(new JButton("TEST"), gc2);
 
     }
 

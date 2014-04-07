@@ -24,9 +24,7 @@ public class Game extends JFrame implements ActionListener {
 
     public Game(String title) {
         super(title);
-
         this.init();
-
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500, 300);
         this.setLocationRelativeTo(null);
@@ -43,7 +41,8 @@ public class Game extends JFrame implements ActionListener {
         this.gestionQuestion=new GestionQuestion();
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
-        this.question= new JLabel(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0]);
+        this.question= new JLabel(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0],JLabel.CENTER);
+        this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
         this.answer=new IHMAnswer(this.gestionQuestion,this);
         this.gc=new GridBagConstraints();
 

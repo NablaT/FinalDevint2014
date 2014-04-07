@@ -57,6 +57,7 @@ public class IHMCarre extends JPanel implements ActionListener {
 
         gc.insets = new Insets(5, 5, 5, 5);
         gc.weighty=2;
+        gc.weightx=2;
 
         gc.gridx=0;
         gc.gridy=0;
