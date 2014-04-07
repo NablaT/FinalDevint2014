@@ -18,8 +18,12 @@ public class GoodAnswer extends JPanel implements ActionListener {
 
     public GoodAnswer(Game g){
         this.game=g;
-        this.good= new JLabel("BRAVO !");
+        this.good= new JLabel("BRAVO !",JLabel.CENTER);
+
+        this.good.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
         this.next= new JButton("Question suivante");
+
+        this.next.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
         this.next.addActionListener(this);
         this.setVisible(true);
         this.initialize();

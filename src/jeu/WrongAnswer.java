@@ -35,14 +35,19 @@ public class WrongAnswer extends JPanel implements ActionListener {
     }
 
     public void buildElements(String answers){
-        this.wrongInfo1=new JLabel("Faux");
-        this.wrongInfo2=new JLabel("La réponse était :");
+        this.wrongInfo1=new JLabel("Faux",JLabel.CENTER);
+        this.wrongInfo1.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.wrongInfo2=new JLabel("La réponse était :",JLabel.CENTER);
+        this.wrongInfo2.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
         this.next= new JButton("Prochaine question");
+        this.next.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
         this.grid=new GridBagLayout();
         this.setLayout(grid);
         this.next.addActionListener(this);
         this.gc = new GridBagConstraints();
-        this.goodAnswer=new JLabel(answers);
+        this.goodAnswer=new JLabel(answers,JLabel.CENTER);
+
+        this.goodAnswer.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
     }
 
 

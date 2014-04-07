@@ -125,14 +125,20 @@ public class IHMHexa extends JPanel implements ActionListener{
         JButton but= (JButton) source;
         if(!(but.getText().equals(this.goodAnswer))){
             this.clean();
-           // this.setVisible(false);
-            this.add(new WrongAnswer(this.goodAnswer,this.game));
+            gc.weightx=2;
+            gc.weighty=2;
+            gc.gridx=0;
+            gc.gridy=0;
+            this.add(new WrongAnswer(this.goodAnswer,this.game),gc);
             this.revalidate();
         }
         else{
             this.clean();
-            //this.setVisible(false);
-            this.add(new GoodAnswer(this.game));
+            gc.weightx=2;
+            gc.weighty=2;
+            gc.gridx=0;
+            gc.gridy=0;
+            this.add(new GoodAnswer(this.game),gc);
             this.revalidate();
         }
     }
