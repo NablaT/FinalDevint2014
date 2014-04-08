@@ -17,13 +17,19 @@ public class GoodAnswer extends JPanel implements ActionListener {
     private Game game;
 
     public GoodAnswer(Game g){
+        this.setOpaque(false);
         this.game=g;
         this.good= new JLabel("BRAVO !",JLabel.CENTER);
+       // this.next.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
+        //this.next.setIcon(new ImageIcon("ressources\\image\\button.png"));
 
-        this.good.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+
+        this.good.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        this.good.setForeground(Color.WHITE);
+
         this.next= new JButton("Question suivante");
 
-        this.next.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.next.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.next.addActionListener(this);
         this.setVisible(true);
         this.initialize();
@@ -53,7 +59,7 @@ public class GoodAnswer extends JPanel implements ActionListener {
         //gc.ipady=gc.anchor=GridBagConstraints.CENTER;;
 
         gc.weightx=2;
-        gc.weighty=1;
+        gc.weighty=2;
 
         gc.gridx=0;
         gc.gridy=0;

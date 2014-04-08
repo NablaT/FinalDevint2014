@@ -28,24 +28,28 @@ public class IHMAnswer extends JPanel implements ActionListener {
     private Game game;
 
     public IHMAnswer(GestionQuestion gestion, Game g){
+        this.setOpaque(false);
         this.gridBag=new GridBagLayout();
         this.duoChoice= new JButton("Duo");
-        this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,25));
 
         this.duoChoice.addActionListener(this);
         this.carreChoice=new JButton("Carre");
-        this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
-
+        this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,25));
+        //this.carreChoice.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
+       // this.repaint();
         this.carreChoice.addActionListener(this);
         this.hexaChoice=new JButton("Hexa");
-        this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,25));
 
         this.hexaChoice.addActionListener(this);
         this.gc = new GridBagConstraints();
         this.gestionQuestion=gestion;
         this.game=g;
+
         this.setVisible(true);
         this.build();
+        this.setOpaque(false);
     }
 
     public void build(){

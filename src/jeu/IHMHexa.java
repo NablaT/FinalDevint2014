@@ -24,6 +24,7 @@ public class IHMHexa extends JPanel implements ActionListener{
 
     public IHMHexa(ArrayList<String> answers, String goodAnswer,Game g){
         this.game=g;
+        this.setOpaque(false);
         this.initialize(answers);
         this.goodAnswer=goodAnswer;
     }
@@ -41,17 +42,17 @@ public class IHMHexa extends JPanel implements ActionListener{
 
     public void buildElements(ArrayList<String> answers){
         this.answer1= new JButton(answers.get(0));
-        this.answer1.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer1.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer2= new JButton(answers.get(1));
-        this.answer2.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer2.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer3= new JButton(answers.get(2));
-        this.answer3.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer3.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer4= new JButton(answers.get(3));
-        this.answer4.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer4.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer5= new JButton(answers.get(4));
-        this.answer5.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer5.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer6= new JButton(answers.get(5));
-        this.answer6.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer6.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
 
 
         this.answer1.addActionListener(this);

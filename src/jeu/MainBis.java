@@ -35,8 +35,8 @@ import java.util.ArrayList;
                 f.setSize(500, 300);
                 f.setLocationRelativeTo(null);
                 f.setVisible(true);
-*/
-                Game g= new Game("Question");
+*/              IHMPrincipal ihm=new IHMPrincipal("Quizz");
+               // Game g= new Game("Question");
                 //g.setIHMAnswer(answers);
 
                // Test2 t=new Test2();

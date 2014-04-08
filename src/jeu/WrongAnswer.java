@@ -20,6 +20,7 @@ public class WrongAnswer extends JPanel implements ActionListener {
     private Game game;
 
     public WrongAnswer(String goodAnswer, Game g){
+        this.setOpaque(false);
         this.initialize(goodAnswer);
         this.game=g;
         this.next.addActionListener(this);
@@ -36,18 +37,21 @@ public class WrongAnswer extends JPanel implements ActionListener {
 
     public void buildElements(String answers){
         this.wrongInfo1=new JLabel("Faux",JLabel.CENTER);
-        this.wrongInfo1.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.wrongInfo1.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        this.wrongInfo1.setForeground(Color.WHITE);
         this.wrongInfo2=new JLabel("La réponse était :",JLabel.CENTER);
-        this.wrongInfo2.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.wrongInfo2.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        this.wrongInfo2.setForeground(Color.WHITE);
         this.next= new JButton("Prochaine question");
-        this.next.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.next.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.grid=new GridBagLayout();
         this.setLayout(grid);
         this.next.addActionListener(this);
         this.gc = new GridBagConstraints();
         this.goodAnswer=new JLabel(answers,JLabel.CENTER);
+        this.goodAnswer.setForeground(Color.WHITE);
 
-        this.goodAnswer.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.goodAnswer.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
     }
 
 

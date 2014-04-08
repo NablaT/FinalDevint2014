@@ -21,6 +21,7 @@ public class IHMCarre extends JPanel implements ActionListener {
     private Game game;
 
     public IHMCarre(ArrayList<String> answers,String goodAnswer,Game g){
+        this.setOpaque(false);
         this.game=g;
         this.initialize(answers);
 
@@ -38,13 +39,13 @@ public class IHMCarre extends JPanel implements ActionListener {
     public void buildElements(ArrayList<String> answers){
         this.answer1= new JButton(answers.get(0));
 
-        this.answer1.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer1.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer2= new JButton(answers.get(1));
-        this.answer2.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer2.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer3= new JButton(answers.get(2));
-        this.answer3.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer3.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.answer4= new JButton(answers.get(3));
-        this.answer4.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.answer4.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
 
         this.answer1.addActionListener(this);
         this.answer2.addActionListener(this);

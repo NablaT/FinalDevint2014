@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * Created by user on 04/04/14.
  */
 
-public class Game extends JFrame implements ActionListener {
+public class Game extends JPanel implements ActionListener {
 
     private GridBagLayout grid;
     private GridBagConstraints gc;
@@ -22,12 +22,16 @@ public class Game extends JFrame implements ActionListener {
     private JLabel question;
     private GestionQuestion gestionQuestion;
 
+    private JLabel background;
+
     public Game(String title) {
-        super(title);
+        super();
+        //super(title);
+
         this.init();
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500, 300);
-        this.setLocationRelativeTo(null);
+    //     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      //  this.setSize(500, 300);
+        //this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 
@@ -38,15 +42,24 @@ public class Game extends JFrame implements ActionListener {
 
     protected void init() {
 
+        this.setOpaque(false);//setContentPane(new JLabel(new ImageIcon("ressources\\\\image\\\\background.jpg")));
         this.gestionQuestion=new GestionQuestion();
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
         this.question= new JLabel(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0],JLabel.CENTER);
-        this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,18));
+        this.question.setForeground(Color.WHITE);
+        this.background=new JLabel(new ImageIcon("ressources\\image\\button.png"));
+      //  this.add(background);
+       // this.question.setIcon(new ImageIcon("ressources\\image\\button.png"));
+        this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+
+
+       this.question.setPreferredSize(new Dimension(200, 100));
         this.answer=new IHMAnswer(this.gestionQuestion,this);
         this.gc=new GridBagConstraints();
 
         this.build();
+        this.setSize(600,600);
     }
 
     public void build(){
@@ -55,10 +68,12 @@ public class Game extends JFrame implements ActionListener {
         this.gc.fill=GridBagConstraints.BOTH;
 
         gc.insets = new Insets(5, 5, 5, 5);
-        gc.weightx=4;
 
         gc.gridx=0;
         gc.gridy=0;
+        gc.weightx=4;
+        gc.weightx=4;
+
 
         this.add(this.question, gc);
 
