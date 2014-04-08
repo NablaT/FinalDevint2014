@@ -29,7 +29,7 @@ public class GestionQuestion {
 	private void lireFichier(File filePath) throws Exception{
 		Scanner scanner=new Scanner(filePath);
 		Question q = new Question();
-		for(int i=0;i<9 && scanner.hasNextLine();i++){
+		for(int i=0;i<7 && scanner.hasNextLine();i++){
 				String line = scanner.nextLine();
 				q.setQuestionReponse(i, line);			
 		}
@@ -45,10 +45,11 @@ public class GestionQuestion {
 		String path = "ressources\\question";
 		File repertoire= new File(path);
 		File[] listeFichier;
+        System.out.println(repertoire.getAbsolutePath());
 		int i;
 		
 		listeFichier=repertoire.listFiles();
-		
+
 		for(i=0;i<listeFichier.length;i++){
 				try {
 					lireFichier(listeFichier[i]);
@@ -57,6 +58,7 @@ public class GestionQuestion {
 					e.printStackTrace();
 				}
 		}
+
 	}
 
 	/**
@@ -110,11 +112,6 @@ public class GestionQuestion {
 	        System.out.println(question.getQuestion());
 	        System.out.println("Duo Carre Hexa");
 	        String str = sc.nextLine();
-//	        while(str.equals("Duo") || str.compareTo("Carre")!=0 || str.compareTo("Hexa")!=0){
-//	        	str = sc.nextLine();
-//	        	System.out.println("Vous avez tap� :" + str);
-//	        	System.out.println("Duo Carre Hexa");
-//	        }
 	        
 	        if(str.compareTo("Duo")==0){
 	        	System.out.println(question.getQuestion());

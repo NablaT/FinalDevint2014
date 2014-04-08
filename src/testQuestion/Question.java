@@ -1,12 +1,15 @@
 package testQuestion;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Question {
 	
 	/**
 	 * 
 	 */
+
+    private Random randomizer = new Random();
 	private String[] questionReponse;
 	/**
 	 * L'objet question est constitu� d'un tableau de 9 String.
@@ -57,25 +60,47 @@ public class Question {
 	
 	public String[] duo(){
 		String[] reponse = new String[2];
-		for(int i=1 ; i<3;i++){
-			reponse[i-1]=questionReponse[i];
-		}
+        int alea = randomizer.nextInt(2)+1;
+            if(alea==1){
+			    reponse[0]=questionReponse[alea];
+                reponse[1]=questionReponse[alea+1];
+            }else{
+                reponse[0]=questionReponse[alea];
+                reponse[1]=questionReponse[alea-1];
+            }
 		return reponse;
 		
 	}
 	public String[] carre(){
 		String[] reponse = new String[4];
-		for(int i=1 ; i<5;i++){
-			reponse[i-1]=questionReponse[i];
+        int ref = 2;
+        int alea = randomizer.nextInt(4);
+        reponse[alea]= questionReponse[ref-1];
+		for(int i=0; i<reponse.length;i++,ref++){
+            if(i!=alea){
+                reponse[i]= questionReponse[ref];
+            }
+            else{
+                ref--;
+            }
+
 		}
-		return reponse;
+        return reponse;
 		
 	}
 	public String[] hexa(){
-		String[] reponse = new String[8];
-		for(int i=1 ; i<9;i++){
-			reponse[i-1]=questionReponse[i];
-		}
+		String[] reponse = new String[6];
+        int ref = 2;
+        int alea = randomizer.nextInt(6);
+        reponse[alea]= questionReponse[ref-1];
+        for(int i=0; i<reponse.length;i++,ref++){
+            if(i!=alea){
+                reponse[i]= questionReponse[ref];
+            }
+            else{
+                ref--;
+            }
+        }
 		return reponse;
 		
 	}
