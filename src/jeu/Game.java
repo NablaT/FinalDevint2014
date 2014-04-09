@@ -50,7 +50,8 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
         String s = this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0];
-        this.question= new JLabel(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0],JLabel.CENTER);
+        this.question= new JLabel(s,JLabel.CENTER);
+        this.voix.stop();
         this.voix.playText(s);
         //System.out.println("Je passe par laaaaaaaa");
 

@@ -1,16 +1,20 @@
 package jeu;
 
+import t2s.SIVOXDevint;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 /**
  * Created by user on 04/04/14.
  */
-public class IHMDuo extends JPanel implements ActionListener{
-
+public class IHMDuo extends JPanel implements ActionListener, MouseListener{
+    private SIVOXDevint voix;
     private JButton answer1;
     private JButton answer2;
     private GridBagLayout grid;
@@ -19,6 +23,7 @@ public class IHMDuo extends JPanel implements ActionListener{
     private String goodAnswer;
 
     public IHMDuo(ArrayList<String> answers, String goodAnswer, Game g){
+        this.voix = new SIVOXDevint();
         this.setOpaque(false);
         this.initialize(answers);
         this.goodAnswer=goodAnswer;
@@ -44,7 +49,9 @@ public class IHMDuo extends JPanel implements ActionListener{
         this.answer2.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.grid=new GridBagLayout();
         this.answer1.addActionListener(this);
+        this.answer1.addMouseListener(this);
         this.answer2.addActionListener(this);
+        this.answer2.addMouseListener(this);
         this.gc = new GridBagConstraints();
     }
 
@@ -110,5 +117,31 @@ public class IHMDuo extends JPanel implements ActionListener{
     }
     public String getGoodAnswer(){
         return this.goodAnswer;
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        JButton but = (JButton) e.getSource();
+        this.voix.playText(but.getText());
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        this.voix.stop();
     }
 }

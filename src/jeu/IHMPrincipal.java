@@ -5,10 +5,7 @@ import devintAPI.MenuAbstrait;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -143,7 +140,6 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
                 System.out.println();
                 this.game.getAnswer().majToAnswers(6);
             }
-
         }
 
     }
@@ -171,5 +167,4 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     protected String wavRegleJeu() {
         return null;
     }
-
 }

@@ -1,16 +1,20 @@
 package jeu;
 
+import t2s.SIVOXDevint;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 /**
  * Created by user on 04/04/14.
  */
-public class IHMHexa extends JPanel implements ActionListener{
-
+public class IHMHexa extends JPanel implements ActionListener, MouseListener{
+    private SIVOXDevint voix;
     private JButton answer1;
     private JButton answer2;
     private JButton answer3;
@@ -23,6 +27,7 @@ public class IHMHexa extends JPanel implements ActionListener{
     private Game game;
 
     public IHMHexa(ArrayList<String> answers, String goodAnswer,Game g){
+        this.voix = new SIVOXDevint();
         this.game=g;
         this.setOpaque(false);
         this.initialize(answers);
@@ -56,12 +61,17 @@ public class IHMHexa extends JPanel implements ActionListener{
 
 
         this.answer1.addActionListener(this);
+        this.answer1.addMouseListener(this);
         this.answer2.addActionListener(this);
-
+        this.answer2.addMouseListener(this);
         this.answer4.addActionListener(this);
+        this.answer4.addMouseListener(this);
         this.answer3.addActionListener(this);
+        this.answer3.addMouseListener(this);
         this.answer5.addActionListener(this);
+        this.answer5.addMouseListener(this);
         this.answer6.addActionListener(this);
+        this.answer6.addMouseListener(this);
 
         this.grid=new GridBagLayout();
 
@@ -149,5 +159,32 @@ public class IHMHexa extends JPanel implements ActionListener{
             this.add(new GoodAnswer(this.game),gc);
             this.revalidate();
         }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        //System.out.println(e);
+        JButton but = (JButton) e.getSource();
+        this.voix.playText(but.getText());
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        this.voix.stop();
     }
 }
