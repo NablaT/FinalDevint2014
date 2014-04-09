@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
@@ -14,7 +15,7 @@ import java.util.ArrayList;
  * Created by user on 04/04/14.
  */
 
-public class Game extends JPanel implements ActionListener {
+public class Game extends JPanel implements ActionListener, KeyListener {
 
     private GridBagLayout grid;
     private GridBagConstraints gc;
@@ -124,4 +125,22 @@ public class Game extends JPanel implements ActionListener {
     public void changeColor() {
 
     }*/
+@Override
+public void keyTyped(KeyEvent e) {
+    System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+
+}
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+
+    }
 }

@@ -42,7 +42,7 @@ public class GestionQuestion {
 	 * Lis tous les fichiers qui sont dans le dossier question
 	 */
 	private void listerRepertoire(){
-		String path = "ressources\\question";
+		String path = "..\\ressources\\question";
 		File repertoire= new File(path);
 		File[] listeFichier;
         System.out.println(repertoire.getAbsolutePath());

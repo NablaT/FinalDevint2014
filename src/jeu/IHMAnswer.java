@@ -7,12 +7,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 /**
  * Created by user on 04/04/14.
  */
-public class IHMAnswer extends JPanel implements ActionListener {
+public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
 
     private JPanel answersAfterChoice;
 
@@ -27,20 +29,28 @@ public class IHMAnswer extends JPanel implements ActionListener {
     private GestionQuestion gestionQuestion;
     private Game game;
 
+    private int currentButton = 5;
+
+
     public IHMAnswer(GestionQuestion gestion, Game g){
         this.setOpaque(false);
         this.gridBag=new GridBagLayout();
         this.duoChoice= new JButton("Duo");
-        this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,25));
+        this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
 
         this.duoChoice.addActionListener(this);
+        this.duoChoice.addKeyListener(this);
         this.carreChoice=new JButton("Carre");
-        this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,25));
+        this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         //this.carreChoice.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
        // this.repaint();
         this.carreChoice.addActionListener(this);
+        this.carreChoice.addKeyListener(this);
+
+
         this.hexaChoice=new JButton("Hexa");
-        this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,25));
+        this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        this.hexaChoice.addKeyListener(this);
 
         this.hexaChoice.addActionListener(this);
         this.gc = new GridBagConstraints();
@@ -163,5 +173,64 @@ public class IHMAnswer extends JPanel implements ActionListener {
             this.majToAnswers(6);
 
         }
+    }
+    @Override
+    public void keyTyped(KeyEvent e) {
+        System.out.println("TYPED Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        //super.keyPressed(e); // appel a la methode mere qui gere les evenements ESC, F1, F3, F4
+        //super.keyPressed(e);
+        /*switch (e.getKeyCode()) {
+
+            case KeyEvent.VK_ENTER: System.out.println("entre");
+            case KeyEvent.VK_LEFT:System.out.println("gauche");
+            case KeyEvent.VK_RIGHT:System.out.println("droite");
+
+
+        }
+/*
+        super.keyPressed(e);
+        // enter = s�lectionner l'option
+        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+            // m�thode � rendre concr�te par h�ritage
+            lancerOption(optionCourante);
+        }
+        // se d�placer dans les options vers le bas
+        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+            if (optionCourante == -1) {
+                optionCourante = 0;
+                setFocusedButton(optionCourante);
+            } else {
+                unFocusedButton(optionCourante);
+                optionCourante = (optionCourante + 1) % nbOption;
+                setFocusedButton(optionCourante);
+            }
+        }
+        // se d�placer dans les options vers le haut
+        if (e.getKeyCode() == KeyEvent.VK_UP) {
+            if (optionCourante == -1) {
+                optionCourante = 0;
+                setFocusedButton(optionCourante);
+            } else {
+                unFocusedButton(optionCourante);
+                optionCourante = optionCourante - 1;
+                if (optionCourante == -1)
+                    optionCourante = nbOption - 1;
+                setFocusedButton(optionCourante);
+            }
+        }*/
+        System.out.println("PRESSED Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+
     }
 }

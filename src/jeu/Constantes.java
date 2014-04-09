@@ -7,6 +7,6 @@ import javax.swing.*;
  */
 public class Constantes {
 
-    public static final int sizeText=30;
+    public static final int sizeText=40;
     public static final JLabel fondButton=new JLabel(new ImageIcon("ressources\\\\image\\\\button.png"));
 }

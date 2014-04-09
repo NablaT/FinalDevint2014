@@ -34,14 +34,15 @@ import java.util.ArrayList;
                 f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 f.setSize(500, 300);
                 f.setLocationRelativeTo(null);
-                f.setVisible(true);
+                //f.setVisible(true);
+
 */              IHMPrincipal ihm=new IHMPrincipal("Quizz");
                // Game g= new Game("Question");
                 //g.setIHMAnswer(answers);
 
                // Test2 t=new Test2();
 
-
+                //MenuJeu jeu=new MenuJeu("Quizz");
 
     }
 }
