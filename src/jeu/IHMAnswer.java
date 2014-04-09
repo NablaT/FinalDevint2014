@@ -174,6 +174,20 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
 
         }
     }
+
+    public JButton getDuo(){
+        return this.duoChoice;
+    }
+
+    public JButton getCarre(){
+        return this.carreChoice;
+    }
+
+    public JButton getHexa(){
+        return this.hexaChoice;
+    }
+
+
     @Override
     public void keyTyped(KeyEvent e) {
         System.out.println("TYPED Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
@@ -227,6 +241,8 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
 
 
     }
+
+
 
     @Override
     public void keyReleased(KeyEvent e) {

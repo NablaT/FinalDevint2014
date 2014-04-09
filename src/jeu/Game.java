@@ -131,7 +131,12 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     public void changeColor() {
 
     }*/
-@Override
+
+    public IHMAnswer getAnswer(){
+        return this.answer;
+    }
+
+    @Override
 public void keyTyped(KeyEvent e) {
     System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 

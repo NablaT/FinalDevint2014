@@ -13,7 +13,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-/**
+/**.
  * Created by user on 07/04/14.
  */
 public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyListener {
@@ -24,7 +24,8 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     private ImageBackground background;
 
-
+    private int nextButton=-1;
+    private int currentButton=-1;
 
     public IHMPrincipal(String title){
 
@@ -35,7 +36,6 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
        this.setContentPane(new JLabel(new ImageIcon("..\\ressources\\\\image\\\\background.jpg")));
 
-
         this.build();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,6 +43,15 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         this.setSize(1600,900);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
+        JButton[] but=new JButton[3];
+        but[0]=(this.game.getAnswer().getDuo());
+        but[1]=(this.game.getAnswer().getCarre());
+        but[2]=(this.game.getAnswer().getHexa());
+
+
+        super.setBoutonOption(but);
+
     }
 
     public void build(){
@@ -78,21 +87,70 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
 }
 
     @Override
     public void keyPressed(KeyEvent e) {
+        super.keyPressed(e);
         System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            //this.game.
+            System.out.println(this.game.getAnswer().getDuo().getX());
+            if(this.currentButton==-1){
+                this.currentButton = 0;
+                super.setFocusedButton(currentButton);
+            }
+            else{
+                unFocusedButton(currentButton);
+                currentButton = (currentButton - 1) % 3;
+                setFocusedButton(currentButton);
+            }
+            System.out.println("LEFT: Current button"+currentButton);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            // m�thode � rendre concr�te par h�ritage
+            //lancerOption(optionCourante);
+            if(this.currentButton==-1){
+                this.currentButton = 0;
+                super.setFocusedButton(currentButton);
+            }
+            else{
+                unFocusedButton(currentButton);
+                currentButton = (currentButton +1) % 3;
+                setFocusedButton(currentButton);
 
+            }
+            System.out.println("RIGHT: Current button"+currentButton);
+
+        }
+        Object source = e.getSource();
+        System.out.println("Avant ENTER");
+        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+            System.out.println("Apres ENTER");
+            System.out.println("source |||||||"+e.paramString());
+            System.out.println(" DUO ||||||||||"+this.game.getAnswer().getDuo());
+            if(currentButton==0){
+
+                System.out.println("duo");
+                this.game.getAnswer().majToAnswers(2);
+            }
+            else if(currentButton==1){
+                System.out.println("carre");
+                this.game.getAnswer().majToAnswers(4);
+            }
+            else if(currentButton==2){
+                System.out.println();
+                this.game.getAnswer().majToAnswers(6);
+
+            }
+
+        }
 
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
-
     }
 
     @Override
