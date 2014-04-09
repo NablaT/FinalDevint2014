@@ -1,5 +1,7 @@
 package jeu;
 
+import t2s.SIVOXDevint;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,6 +12,7 @@ import java.awt.event.ActionListener;
  */
 public class GoodAnswer extends JPanel implements ActionListener {
 
+    private SIVOXDevint voix;
     private JLabel good;
     private JButton next;
     private GridBagLayout grid;
@@ -22,8 +25,8 @@ public class GoodAnswer extends JPanel implements ActionListener {
         this.good= new JLabel("BRAVO !",JLabel.CENTER);
        // this.next.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
         //this.next.setIcon(new ImageIcon("ressources\\image\\button.png"));
-
-
+        this.voix = new SIVOXDevint();
+        voix.playText("BRAVO !");
         this.good.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.good.setForeground(Color.WHITE);
 

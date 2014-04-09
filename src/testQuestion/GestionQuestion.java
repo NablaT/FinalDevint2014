@@ -1,4 +1,5 @@
 package testQuestion;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random; 
@@ -6,7 +7,7 @@ import java.util.Scanner;
 import java.io . * ; 
 
 public class GestionQuestion {
-	
+
 	//Permet de r�cup�rer la question choisi
 	private int rdm= 0;
 	//Permet de choisir une question al�atoirement
@@ -76,7 +77,6 @@ public class GestionQuestion {
 	 */
 	public Question getAleaObjectQuestion(int rdm){		
 		return listeQuestion.get(rdm);
-		
 	}
 
 	/**

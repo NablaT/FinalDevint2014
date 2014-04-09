@@ -1,6 +1,7 @@
 package jeu;
 
 import devintAPI.FenetreAbstraite;
+import t2s.SIVOXDevint;
 import testQuestion.GestionQuestion;
 
 import javax.swing.*;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  */
 
 public class Game extends JPanel implements ActionListener, KeyListener {
-
+    private SIVOXDevint voix;
     private GridBagLayout grid;
     private GridBagConstraints gc;
     private IHMAnswer answer;
@@ -28,12 +29,13 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     public Game(String title) {
         super();
         //super(title);
-
+        this.voix = new SIVOXDevint();
         this.init();
     //     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //  this.setSize(500, 300);
         //this.setLocationRelativeTo(null);
         this.setVisible(true);
+
     }
 
     @Override
@@ -47,7 +49,11 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.gestionQuestion=new GestionQuestion();
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
+        String s = this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0];
         this.question= new JLabel(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0],JLabel.CENTER);
+        this.voix.playText(s);
+        //System.out.println("Je passe par laaaaaaaa");
+
         this.question.setForeground(Color.WHITE);
         this.background=new JLabel(new ImageIcon("ressources\\image\\button.png"));
       //  this.add(background);

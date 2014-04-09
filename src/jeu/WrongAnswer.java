@@ -1,5 +1,7 @@
 package jeu;
 
+import t2s.SIVOXDevint;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,6 +20,7 @@ public class WrongAnswer extends JPanel implements ActionListener {
     private GridBagConstraints gc;
     private GridBagLayout grid;
     private Game game;
+    private SIVOXDevint voix;
 
     public WrongAnswer(String goodAnswer, Game g){
         this.setOpaque(false);
@@ -36,8 +39,9 @@ public class WrongAnswer extends JPanel implements ActionListener {
     }
 
     public void buildElements(String answers){
+        this.voix= new SIVOXDevint();
         this.wrongInfo1=new JLabel("Faux",JLabel.CENTER);
-        this.wrongInfo1.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        this.wrongInfo1.setFont(new Font("Comic", Font.CENTER_BASELINE, Constantes.sizeText));
         this.wrongInfo1.setForeground(Color.WHITE);
         this.wrongInfo2=new JLabel("La réponse était :",JLabel.CENTER);
         this.wrongInfo2.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
@@ -52,6 +56,7 @@ public class WrongAnswer extends JPanel implements ActionListener {
         this.goodAnswer.setForeground(Color.WHITE);
 
         this.goodAnswer.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        this.voix.playText("Faux, la réponse était : "+answers);
     }
 
 
