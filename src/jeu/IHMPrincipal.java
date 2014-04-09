@@ -69,6 +69,10 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
        // this.gc.fill=GridBagConstraints.NONE;
 
 
+
+
+
+
         gc.insets = new Insets(5, 5, 5, 5);
         gc.weightx=10;
         gc.weighty=10;
