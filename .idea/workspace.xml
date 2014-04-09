@@ -4,17 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/src/jeu/MainBis.java" line="6" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="Maj de l'interface">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/Game.java" afterPath="$PROJECT_DIR$/src/jeu/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMPrincipal.java" afterPath="$PROJECT_DIR$/src/jeu/IHMPrincipal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/LancementJeu.java" afterPath="$PROJECT_DIR$/src/jeu/LancementJeu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/devintAPI/MenuAbstrait.java" afterPath="$PROJECT_DIR$/src/devintAPI/MenuAbstrait.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ModeleDeJeu.iml" afterPath="$PROJECT_DIR$/ModeleDeJeu.iml" />
+    <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="Maj de l'interface&#10;" />
+    <list id="03f125d5-f436-4728-b0ae-9d28a1a1d13c" name="New changelist" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ModeleDeJeu.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +71,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="IHMPrincipal.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jeu/IHMPrincipal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="0" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.55676854" vertical-offset="816" max-vertical-offset="2975">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="IHMAnswer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,15 +92,6 @@
                 <element signature="e#5534#5535#0" expanded="true" />
                 <element signature="e#5572#5573#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IHMPrincipal.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jeu/IHMPrincipal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="47" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.33406115" vertical-offset="816" max-vertical-offset="2907">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -898,6 +894,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="" />
+      <changelist id="03f125d5-f436-4728-b0ae-9d28a1a1d13c" name="New changelist" comment="" />
       <created>1396535071576</created>
       <updated>1396535071576</updated>
       <workItem from="1396535075624" duration="276000" />
@@ -925,27 +922,35 @@
       <workItem from="1397033254012" duration="1317000" />
       <workItem from="1397049227285" duration="50000" />
       <workItem from="1397068037281" duration="116000" />
-      <workItem from="1397068246814" duration="6439000" />
+      <workItem from="1397068246814" duration="6962000" />
     </task>
     <task id="LOCAL-00001" summary="Maj de l'interface">
       <created>1396961923844</created>
       <updated>1396961923844</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Maj de l'interface">
+      <created>1397074822924</created>
+      <updated>1397074822924</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Maj de l'interface&#10;">
+      <created>1397075050771</created>
+      <updated>1397075050771</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84807000" />
+    <option name="totallyTimeSpent" value="85330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298292" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -953,7 +958,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298292" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298292" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298292" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14717478" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -961,7 +966,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16302952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25481385" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2457293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -983,7 +988,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Maj de l'interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maj de l'interface" />
+    <MESSAGE value="Maj de l'interface&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maj de l'interface&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1345,7 +1351,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="47" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.33406115" vertical-offset="816" max-vertical-offset="2907">
+        <state line="74" column="0" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.55676854" vertical-offset="816" max-vertical-offset="2975">
           <folding />
         </state>
       </provider>
