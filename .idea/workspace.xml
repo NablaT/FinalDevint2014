@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="Maj de l'interface&#10;" />
-    <list id="03f125d5-f436-4728-b0ae-9d28a1a1d13c" name="New changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list id="03f125d5-f436-4728-b0ae-9d28a1a1d13c" name="New changelist" comment="" />
     <ignored path="ModeleDeJeu.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -922,7 +919,7 @@
       <workItem from="1397033254012" duration="1317000" />
       <workItem from="1397049227285" duration="50000" />
       <workItem from="1397068037281" duration="116000" />
-      <workItem from="1397068246814" duration="6962000" />
+      <workItem from="1397068246814" duration="7114000" />
     </task>
     <task id="LOCAL-00001" summary="Maj de l'interface">
       <created>1396961923844</created>
@@ -940,7 +937,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85330000" />
+    <option name="totallyTimeSpent" value="85482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
