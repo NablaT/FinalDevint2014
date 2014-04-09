@@ -159,6 +159,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
     public void actionPerformed(ActionEvent e) {
         System.out.println("action performed");
         Object source = e.getSource();
+
        // this.setVisible(false);
         if(source.equals(this.duoChoice)){
             System.out.println("duo");

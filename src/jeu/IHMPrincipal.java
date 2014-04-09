@@ -131,11 +131,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         Object source = e.getSource();
         System.out.println("Avant ENTER");
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-            System.out.println("Apres ENTER");
-            System.out.println("source |||||||"+e.paramString());
-            System.out.println(" DUO ||||||||||"+this.game.getAnswer().getDuo());
             if(currentButton==0){
-
                 System.out.println("duo");
                 this.game.getAnswer().majToAnswers(2);
             }
@@ -146,7 +142,6 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
             else if(currentButton==2){
                 System.out.println();
                 this.game.getAnswer().majToAnswers(6);
-
             }
 
         }

@@ -99,6 +99,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     public void maj(){
         System.out.println("Je rentre");
+
         //this.answer.setVisible(false);
         this.remove(question);//question.setVisible(false);
         this.remove(this.answer);
