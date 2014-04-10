@@ -250,5 +250,5 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
         System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
     }
-  
+
 }

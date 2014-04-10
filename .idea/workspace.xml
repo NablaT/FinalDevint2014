@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jeu/IHMPanelAnswers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/Constantes.java" afterPath="$PROJECT_DIR$/src/jeu/Constantes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMDuo.java" afterPath="$PROJECT_DIR$/src/jeu/IHMDuo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMPrincipal.java" afterPath="$PROJECT_DIR$/src/jeu/IHMPrincipal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ModeleDeJeu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,7 +72,7 @@
       <file leaf-file-name="IHMAnswer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="1" selection-start="7710" selection-end="7710" vertical-scroll-proportion="0.73996174" vertical-offset="3608" max-vertical-offset="4131">
+            <state line="253" column="1" selection-start="7711" selection-end="7711" vertical-scroll-proportion="0.77246654" vertical-offset="3608" max-vertical-offset="4131">
               <folding />
             </state>
           </provider>
@@ -847,7 +842,7 @@
       <workItem from="1397076218172" duration="1377000" />
       <workItem from="1397078382759" duration="3019000" />
       <workItem from="1397087149178" duration="170000" />
-      <workItem from="1397087441311" duration="1100000" />
+      <workItem from="1397087441311" duration="1210000" />
     </task>
     <task id="LOCAL-00001" summary="Maj de l'interface">
       <created>1396961923844</created>
@@ -861,7 +856,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85015000" />
+    <option name="totallyTimeSpent" value="85125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -1223,7 +1218,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="1" selection-start="7710" selection-end="7710" vertical-scroll-proportion="0.73996174" vertical-offset="3608" max-vertical-offset="4131">
+        <state line="253" column="1" selection-start="7711" selection-end="7711" vertical-scroll-proportion="0.77246654" vertical-offset="3608" max-vertical-offset="4131">
           <folding />
         </state>
       </provider>
