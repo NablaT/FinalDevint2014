@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ModeleDeJeu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,7 +72,7 @@
       <file leaf-file-name="IHMAnswer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="253" column="1" selection-start="7711" selection-end="7711" vertical-scroll-proportion="0.77246654" vertical-offset="3608" max-vertical-offset="4131">
+            <state line="200" column="0" selection-start="5920" selection-end="5920" vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="4131">
               <folding />
             </state>
           </provider>
@@ -99,7 +99,7 @@
       <file leaf-file-name="IHMPanelAnswers.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMPanelAnswers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="13" column="5" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -108,7 +108,7 @@
       <file leaf-file-name="MenuAbstrait.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/devintAPI/MenuAbstrait.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="12" selection-start="5494" selection-end="5494" vertical-scroll-proportion="0.0" vertical-offset="3281" max-vertical-offset="5984">
+            <state line="193" column="12" selection-start="5494" selection-end="5494" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5984">
               <folding />
             </state>
           </provider>
@@ -117,7 +117,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
+            <state line="27" column="0" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2805">
               <folding />
             </state>
           </provider>
@@ -135,7 +135,7 @@
       <file leaf-file-name="LancementJeu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/LancementJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="46" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="3" column="46" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -247,7 +247,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,6 +393,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -842,7 +842,8 @@
       <workItem from="1397076218172" duration="1377000" />
       <workItem from="1397078382759" duration="3019000" />
       <workItem from="1397087149178" duration="170000" />
-      <workItem from="1397087441311" duration="1210000" />
+      <workItem from="1397087441311" duration="1269000" />
+      <workItem from="1397089010791" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Maj de l'interface">
       <created>1396961923844</created>
@@ -856,7 +857,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85125000" />
+    <option name="totallyTimeSpent" value="85201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -871,23 +872,23 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24503312" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24438573" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14781491" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16302952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24503312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24503312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12339332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14781491" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1218,7 +1219,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="1" selection-start="7711" selection-end="7711" vertical-scroll-proportion="0.77246654" vertical-offset="3608" max-vertical-offset="4131">
+        <state line="200" column="0" selection-start="5920" selection-end="5920" vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="4131">
           <folding />
         </state>
       </provider>
