@@ -83,7 +83,14 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener{
         gc.gridx=1;
         gc.gridy=0;
         this.add(this.answer2, gc);
+    }
 
+    public JButton getAnswer1(){
+        return this.answer1;
+    }
+
+    public JButton getAnswer2(){
+        return this.answer2;
     }
 
     public void clean(){
