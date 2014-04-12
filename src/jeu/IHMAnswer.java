@@ -35,13 +35,13 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
         this.voix= new SIVOXDevint();
         this.setOpaque(false);
         this.gridBag=new GridBagLayout();
-        this.duoChoice= new JButton("Duo");
+        this.duoChoice= new JButton("2 Choix");
         this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
 
         this.duoChoice.addActionListener(this);
         this.duoChoice.addKeyListener(this);
         this.duoChoice.addMouseListener(this);
-        this.carreChoice=new JButton("Carre");
+        this.carreChoice=new JButton("4 Choix");
         this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         //this.carreChoice.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
         this.repaint();
@@ -50,7 +50,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
         this.carreChoice.addMouseListener(this);
 
 
-        this.hexaChoice=new JButton("Hexa");
+        this.hexaChoice=new JButton("6 Choix");
         this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.hexaChoice.addKeyListener(this);
         this.hexaChoice.addActionListener(this);
@@ -239,6 +239,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        this.voix.stop();
         JButton but = (JButton) e.getSource();
         if(but.equals(duoChoice)){
             majToAnswers(2);
@@ -250,21 +251,21 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
             majToAnswers(6);
         }
 
+
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
         //System.out.println(e);
+        this.voix.stop();
         JButton but = (JButton) e.getSource();
         this.voix.playText(but.getText());
     }
@@ -272,6 +273,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
     @Override
     public void mouseExited(MouseEvent e) {
         this.voix.stop();
+        this.voix.playText(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).afficherQuestion());
     }
 
 }

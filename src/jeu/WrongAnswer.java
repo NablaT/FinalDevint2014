@@ -23,6 +23,7 @@ public class WrongAnswer extends JPanel implements ActionListener {
     private SIVOXDevint voix;
 
     public WrongAnswer(String goodAnswer, Game g){
+        this.voix= new SIVOXDevint();
         this.setOpaque(false);
         this.initialize(goodAnswer);
         this.game=g;
@@ -39,7 +40,6 @@ public class WrongAnswer extends JPanel implements ActionListener {
     }
 
     public void buildElements(String answers){
-        this.voix= new SIVOXDevint();
         this.wrongInfo1=new JLabel("Faux",JLabel.CENTER);
         this.wrongInfo1.setFont(new Font("Comic", Font.CENTER_BASELINE, Constantes.sizeText));
         this.wrongInfo1.setForeground(Color.WHITE);
