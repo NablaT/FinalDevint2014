@@ -12,28 +12,26 @@ public class Theme {
 	private ArrayList<String> listeStringTheme;
 
 	public Theme(){
-		listeTheme =new ArrayList<File>();
-		listeStringTheme = new ArrayList<String>();
+		this.listeTheme =new ArrayList<File>();
+		this.listeStringTheme = new ArrayList<String>();
 		listeDossier();
-		
+
 	}
 	/**
 	 * Lire les dossiers
 	 */
 	public void listeDossier(){
-		
+        //System.out.println(System.getProperty("user.dir"));
 		String path = "..\\ressources\\question";
 		File repertoire= new File(path);
 		File[] listeFichier;
 		int i;
 		int j=0;
 		listeFichier=repertoire.listFiles();
-		System.out.println(listeFichier.length);
-
 		for(i=0;i<listeFichier.length;i++){
 				try {
 					if(listeFichier[i].isDirectory()){
-						
+						//System.out.println(listeFichier[i].getName());
 						listeStringTheme.add(listeFichier[i].getName());
 						listeTheme.add(listeFichier[i].getAbsoluteFile());
 					}
@@ -46,7 +44,7 @@ public class Theme {
 	}
 	
 	public void creationDossier(String name){
-		String path = ".\\ressources\\question\\";
+		String path = "ressources\\question\\";
 		path+= name;
 		File repertoire= new File(path);
 		repertoire.mkdir();
@@ -87,13 +85,21 @@ public class Theme {
 		}
 		bw.close();	
 	}
-	
+
 	public void supprimerFichierTxt(File path){
 		path.delete();
 	}
-	public String[] getListeStringTheme() {
-		return (String[]) listeStringTheme.toArray();
+	public ArrayList<String> getListeStringTheme() {
+		return listeStringTheme;
 	}
+
+    public String[] getTabTheme(){
+        String[] tab = new String[this.getListeStringTheme().size()];
+        for(int i=0; i<getListeStringTheme().size();i++){
+            tab[i]=getListeStringTheme().get(i);
+        }
+        return  tab;
+    }
 	public void setListeStringTheme(ArrayList<String> listeStringTheme) {
 		this.listeStringTheme = listeStringTheme;
 	}
@@ -101,5 +107,12 @@ public class Theme {
 	public static void main(String args[]) throws IOException{
 		
 		Theme theme = new Theme();
-	}
+        File file;
+        file = new File("ressources\\question");
+        for(int i =0; i<theme.getListeStringTheme().size(); i++){
+            System.out.println(theme.getListeStringTheme().get(i));
+        }
+
+
+    }
 }

@@ -53,7 +53,9 @@ public class GestionQuestion {
 
 		for(i=0;i<listeFichier.length;i++){
 				try {
-					lireFichier(listeFichier[i]);
+                    if(listeFichier[i].isFile()){
+					    lireFichier(listeFichier[i]);
+                    }
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

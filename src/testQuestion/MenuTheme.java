@@ -8,22 +8,24 @@ public class MenuTheme extends MenuAbstrait{
 	
 	private Theme theme;
 
+
 	public MenuTheme(String title) {
 		super(title);
-		theme = new Theme();
+
 		// TODO Auto-generated constructor stub
 	}
 	/** renvoie le nom des options du menu
-	 * vous pouvez définir autant d'options que vous voulez
+	 * vous pouvez dï¿½finir autant d'options que vous voulez
 	 **/
 	protected String[] nomOptions() {
-		String[] noms = theme.getListeStringTheme();
-		//String[] noms = {"Test","1", "2", "3"};
+		//String[] noms = theme.getListeStringTheme();
+        this.theme = new Theme();
+		String[] noms = theme.getTabTheme();
 		return noms;
 	}
 
-	/** lance l'action associée au bouton n°i
-	 * la numérotation est celle du tableau renvoyé par nomOption
+	/** lance l'action associï¿½e au bouton nï¿½i
+	 * la numï¿½rotation est celle du tableau renvoyï¿½ par nomOption
 	 */
 	protected void lancerOption(int i) {
 		switch (i){  
@@ -32,7 +34,7 @@ public class MenuTheme extends MenuAbstrait{
 		case 2 : break;
 		case 3 : break;
 		case 4 : System.exit(0);
-		default: System.err.println("action non définie");
+		default: System.err.println("action non dï¿½finie");
 		}
 	}
 	@Override

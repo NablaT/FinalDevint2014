@@ -7,9 +7,9 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 
 /**
- * Created by user on 14/04/14.
+ * Created by user on 15/04/14.
  */
-public class MenuQuestion extends JFrame{
+public class MenuAddTheme extends JFrame{
 
     private ImageBackground background;
     // �l�ments de placement des composants
@@ -26,7 +26,7 @@ public class MenuQuestion extends JFrame{
     private JLabel[] tabLabel;
     private JTextField[] tabTextField;
 
-    public MenuQuestion(){
+    public MenuAddTheme(){
         setVisible(true);
 
         initialize();
@@ -45,8 +45,7 @@ public class MenuQuestion extends JFrame{
         this.gc = new GridBagConstraints();
         this.initLayout();
         this.initEntete();
-        this.initButton();
-        this.initializeGrid(initTabString());
+        this.initializeGrid();
     }
 
     private void initLayout() {
@@ -75,7 +74,7 @@ public class MenuQuestion extends JFrame{
         entete.setBorder(enteteBorder);
 
         // le label
-        lb1 = new JLabel("Menu Question");
+        lb1 = new JLabel("Nouveau thème");
         lb1.setFont(new Font("Georgia", 1, 96));
         entete.add(lb1);
 
@@ -83,29 +82,25 @@ public class MenuQuestion extends JFrame{
         gc.gridx = 1;
         gc.gridy = 1;
         grid.setConstraints(entete, gc);
-       add(entete);
+        add(entete);
     }
 
-    private String[] initTabString(){
-        String[] tab = {"Veuillez rentrer votre question : ","Quel est la bonne réponse à la question ? "," 1er Mauvaise réponse : ",
-                " 2eme Mauvaise réponse : "," 3eme Mauvaise réponse : "," 4eme Mauvaise réponse : "," 5eme Mauvaise réponse : "};
-        return tab;
-    }
 
-    private void initializeGrid(String[] question){
+    private void initializeGrid(){
 
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(question.length,1));
+        panel.setLayout(new GridLayout(4,1));
         Font fonte = new Font("Tahoma", 1, 56);
         LineBorder border = new LineBorder(Color.BLACK, 8);
-        tabLabel = new JLabel[question.length] ;
-        tabTextField = new JTextField[question.length];
-        for(int i = 0; i<question.length; i++){
-            creerLabelTextField(i,question[i]);
-            panel.add(tabLabel[i]);
-            panel.add(tabTextField[i]);
-        }
+        JLabel label = new JLabel("Quel thème souhaitez-vous rajouter ?");
+        JTextField textField = new JTextField();
+        JButton buttonAjouterTheme = new JButton("Ajouter le thèmes");
+        JButton buttonQuitter = new JButton("Quitter");
 
+        panel.add(label);
+        panel.add(textField);
+        panel.add(buttonAjouterTheme);
+        panel.add(buttonQuitter);
         gc.weighty=4;
         gc.gridx = 1;
         gc.gridy=2;
@@ -113,27 +108,8 @@ public class MenuQuestion extends JFrame{
         this.add(panel);
     }
 
-    private void creerLabelTextField(int i,String texte){
-        tabLabel[i]= new JLabel(texte);
-        tabTextField[i]= new JTextField();
-    }
-
-    private void initButton(){
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(1,2));
-        JButton buttonLeave = new JButton("Quitter");
-        JButton buttonAddQuestion = new JButton("Ajouter la question");
-
-        panel.add(buttonLeave);
-        panel.add(buttonAddQuestion);
-        gc.weighty = 0.25;
-        gc.gridx =1;
-        gc.gridy=4;
-        grid.setConstraints(panel,gc);
-        this.add(panel);
-    }
 
     public static void main(String[] args){
-        MenuQuestion menuThemeTry = new MenuQuestion();
+        MenuAddTheme menuAddTheme = new MenuAddTheme();
     }
 }
