@@ -21,7 +21,13 @@ public class GestionQuestion {
 		//Initialise les questions
 		listerRepertoire();
 	}
-	
+
+    public GestionQuestion(File path){
+        listeQuestion = new ArrayList<Question>();
+        listerRepertoire(path);
+    }
+
+
 	/**
 	 * Chaque fichier est lu ligne par ligne, chaque fichier correspond � une question
 	 * @param filePath
@@ -61,8 +67,25 @@ public class GestionQuestion {
 					e.printStackTrace();
 				}
 		}
-
 	}
+
+    private void listerRepertoire(File path){
+        File[] listeFichier;
+        listeFichier = path.listFiles();
+        for(int i =0; i<listeFichier.length;i++){
+            try {
+                if(listeFichier[i].isFile()){
+                    lireFichier(listeFichier[i]);
+                }
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
 
 	/**
 	 * Permet de r�cup�rer la liste des questions

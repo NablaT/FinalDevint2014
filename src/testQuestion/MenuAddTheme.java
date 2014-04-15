@@ -5,11 +5,14 @@ import jeu.ImageBackground;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
 
 /**
  * Created by user on 15/04/14.
  */
-public class MenuAddTheme extends JFrame{
+public class MenuAddTheme extends JFrame implements ActionListener{
 
     private ImageBackground background;
     // �l�ments de placement des composants
@@ -25,9 +28,14 @@ public class MenuAddTheme extends JFrame{
     protected LineBorder enteteBorder;
     private JLabel[] tabLabel;
     private JTextField[] tabTextField;
+    private JButton buttonQuitter;
+    private JButton buttonAjouterTheme;
+    private JTextField textField;
+    private Theme theme;
 
     public MenuAddTheme(){
         setVisible(true);
+        //initCursor();
 
         initialize();
 
@@ -40,7 +48,7 @@ public class MenuAddTheme extends JFrame{
 
 
     private void initialize(){
-
+        theme =new Theme();
         this.grid = new GridBagLayout();
         this.gc = new GridBagConstraints();
         this.initLayout();
@@ -93,9 +101,11 @@ public class MenuAddTheme extends JFrame{
         Font fonte = new Font("Tahoma", 1, 56);
         LineBorder border = new LineBorder(Color.BLACK, 8);
         JLabel label = new JLabel("Quel thème souhaitez-vous rajouter ?");
-        JTextField textField = new JTextField();
-        JButton buttonAjouterTheme = new JButton("Ajouter le thèmes");
-        JButton buttonQuitter = new JButton("Quitter");
+        textField = new JTextField();
+        buttonAjouterTheme = new JButton("Ajouter le thème");
+        buttonAjouterTheme.addActionListener(this);
+        buttonQuitter = new JButton("Quitter");
+        buttonQuitter.addActionListener(this);
 
         panel.add(label);
         panel.add(textField);
@@ -109,7 +119,29 @@ public class MenuAddTheme extends JFrame{
     }
 
 
+    private void initCursor(){
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image image = toolkit.getImage("pointer.png");
+        Point hotSpot = new Point(0,0);
+        Cursor cursor = toolkit.createCustomCursor(image,hotSpot,"Mouse");
+        this.setCursor(cursor);
+    }
     public static void main(String[] args){
         MenuAddTheme menuAddTheme = new MenuAddTheme();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton actionButton = new JButton();
+        actionButton = (JButton) e.getSource();
+        if(actionButton.getText().equals("Ajouter le thème")){
+            if(textField.getText().length()>1){
+                theme.creationDossier(textField.getText());
+                textField.setText("");
+            }
+        }
+        if(actionButton.getText().equals("Quitter")){
+            dispose();
+        }
     }
 }

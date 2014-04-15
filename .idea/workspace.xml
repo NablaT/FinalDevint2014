@@ -5,19 +5,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/jeu/Game.java" line="157" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="Maj de l'interface&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/CapitalBresil.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/CapitalEspagne.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/CapitalItalie.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/CapitalJapon.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ressources/question/CapitalRoumanie.txt" afterPath="$PROJECT_DIR$/ressources/question/CapitalRoumanie.txt" />
+    <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\user\IdeaProjects\FinalDevint2014\src\testQuestion\MenuQuestion.java" afterPath="$PROJECT_DIR$/src/testQuestion/MenuAddQuestion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testQuestion/GestionQuestion.java" afterPath="$PROJECT_DIR$/src/testQuestion/GestionQuestion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java" afterPath="$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testQuestion/MenuCreationQuestion.java" afterPath="$PROJECT_DIR$/src/testQuestion/MenuCreationQuestion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/MenuJeu.java" afterPath="$PROJECT_DIR$/src/jeu/MenuJeu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testQuestion/MenuQuestion.java" afterPath="$PROJECT_DIR$/src/testQuestion/MenuQuestion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testQuestion/MenuTheme.java" afterPath="$PROJECT_DIR$/src/testQuestion/MenuTheme.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/SI_VOX2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/SI_VOX2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testQuestion/Theme.java" afterPath="$PROJECT_DIR$/src/testQuestion/Theme.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -88,100 +81,124 @@
     <favorites_list name="ModeleDeJeu" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MenuQuestion.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuQuestion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="19" selection-start="217" selection-end="4124" vertical-scroll-proportion="0.0" vertical-offset="1830" max-vertical-offset="2465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuAddTheme.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="29" selection-start="2904" selection-end="2904" vertical-scroll-proportion="0.53149605" vertical-offset="1295" max-vertical-offset="2057">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GestionQuestion.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testQuestion/GestionQuestion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="49" selection-start="1121" selection-end="1150" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1887">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testQuestion/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1003">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuAbstrait.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/devintAPI/MenuAbstrait.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="0" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="5984">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DevintFrameListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/devintAPI/DevintFrameListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="67" selection-start="1280" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1751">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuJeu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jeu/MenuJeu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1122">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuTheme.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuTheme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="969">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Theme.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testQuestion/Theme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="5" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="2108">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuCreationQuestion.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuCreationQuestion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="39" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="867">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="MenuAddQuestion.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuAddQuestion.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="179" column="0" selection-start="5690" selection-end="5690" vertical-scroll-proportion="0.5460614" vertical-offset="2498" max-vertical-offset="3247">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MenuAbstrait.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/devintAPI/MenuAbstrait.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="242" column="47" selection-start="6984" selection-end="6984" vertical-scroll-proportion="0.0" vertical-offset="4114" max-vertical-offset="5984">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DevintFrameListener.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/devintAPI/DevintFrameListener.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="73" column="12" selection-start="2287" selection-end="2297" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="1751">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MenuTheme.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuTheme.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="32" column="8" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1003">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Theme.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/Theme.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="94" column="34" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="2091">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MenuCreationQuestion.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuCreationQuestion.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="26" column="42" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="884">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LancementJeu.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/jeu/LancementJeu.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="357">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MenuJeu.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/jeu/MenuJeu.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="60" column="0" selection-start="1893" selection-end="1893" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1122">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="MenuTheme.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuTheme.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="48" column="34" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1003">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MenuAddTheme.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="117" column="24" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.22440945" vertical-offset="1699" max-vertical-offset="2482">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GestionQuestion.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/GestionQuestion.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="20" column="34" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="2278">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Question.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/testQuestion/Question.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="21" column="5" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2057">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -232,15 +249,16 @@
         <option value="$PROJECT_DIR$/src/testQuestion/Question.java" />
         <option value="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
         <option value="$PROJECT_DIR$/src/jeu/WrongAnswer.java" />
-        <option value="$PROJECT_DIR$/src/testQuestion/GestionQuestion.java" />
-        <option value="$PROJECT_DIR$/src/testQuestion/Theme.java" />
-        <option value="$PROJECT_DIR$/src/testQuestion/MenuTheme.java" />
         <option value="$PROJECT_DIR$/src/jeu/MenuJeu.java" />
         <option value="$PROJECT_DIR$/src/jeu/IHMCarre.java" />
         <option value="$PROJECT_DIR$/src/testQuestion/MenuThemeTry.java" />
-        <option value="$PROJECT_DIR$/src/testQuestion/MenuCreationQuestion.java" />
         <option value="$PROJECT_DIR$/src/testQuestion/MenuQuestion.java" />
+        <option value="$PROJECT_DIR$/src/testQuestion/GestionQuestion.java" />
+        <option value="$PROJECT_DIR$/src/testQuestion/MenuCreationQuestion.java" />
         <option value="$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java" />
+        <option value="$PROJECT_DIR$/src/testQuestion/MenuTheme.java" />
+        <option value="$PROJECT_DIR$/src/testQuestion/Theme.java" />
+        <option value="$PROJECT_DIR$/src/testQuestion/MenuAddQuestion.java" />
       </list>
     </option>
   </component>
@@ -407,7 +425,7 @@
       <recent name="D:\Documents\Nouveau dossier\Modele_de_jeu\ressources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MenuAddTheme">
+  <component name="RunManager" selected="Application.LancementJeu">
     <configuration default="false" name="LancementJeu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -486,14 +504,14 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="MenuQuestion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MenuAddQuestion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="testQuestion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="testQuestion.MenuQuestion" />
+      <option name="MAIN_CLASS_NAME" value="testQuestion.MenuAddQuestion" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -745,14 +763,14 @@
       <item index="0" class="java.lang.String" itemvalue="Application.LancementJeu" />
       <item index="1" class="java.lang.String" itemvalue="Application.Theme" />
       <item index="2" class="java.lang.String" itemvalue="Application.MenuThemeTry" />
-      <item index="3" class="java.lang.String" itemvalue="Application.MenuQuestion" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MenuAddQuestion" />
       <item index="4" class="java.lang.String" itemvalue="Application.MenuAddTheme" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MenuAddTheme" />
-        <item index="1" class="java.lang.String" itemvalue="Application.LancementJeu" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MenuQuestion" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LancementJeu" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MenuAddTheme" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MenuAddQuestion" />
         <item index="3" class="java.lang.String" itemvalue="Application.MenuThemeTry" />
         <item index="4" class="java.lang.String" itemvalue="Application.Theme" />
       </list>
@@ -835,7 +853,13 @@
       <workItem from="1397507733527" duration="129000" />
       <workItem from="1397507878198" duration="7086000" />
       <workItem from="1397517401777" duration="1986000" />
-      <workItem from="1397520278416" duration="44000" />
+      <workItem from="1397520278416" duration="114000" />
+      <workItem from="1397563251735" duration="89000" />
+      <workItem from="1397563488656" duration="3513000" />
+      <workItem from="1397572940712" duration="694000" />
+      <workItem from="1397574227081" duration="1244000" />
+      <workItem from="1397591781294" duration="5166000" />
+      <workItem from="1397597351773" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="Maj de l'interface">
       <created>1396961923844</created>
@@ -857,11 +881,15 @@
       <created>1397313909416</created>
       <updated>1397313909416</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Interface Creation Question Theme&#10;">
+      <created>1397520374601</created>
+      <updated>1397520374601</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133646000" />
+    <option name="totallyTimeSpent" value="144469000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -906,13 +934,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14698331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14698331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24523507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12325286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14612453" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14485388" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -959,7 +987,8 @@
     </option>
     <MESSAGE value="Maj de l'interface" />
     <MESSAGE value="Maj de l'interface&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maj de l'interface&#10;" />
+    <MESSAGE value="Interface Creation Question Theme&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interface Creation Question Theme&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1103,23 +1132,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMHexa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="25" selection-start="5075" selection-end="5075" vertical-scroll-proportion="0.0" vertical-offset="2652" max-vertical-offset="3298">
-          <folding />
-        </state>
+        <state line="187" column="25" selection-start="5075" selection-end="5075" vertical-scroll-proportion="0.0" vertical-offset="2652" max-vertical-offset="3298" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMChoiceOption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="7" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="31" column="7" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMDuo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="44" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2431">
-          <folding />
-        </state>
+        <state line="137" column="44" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2431" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ressources/question/CapitalAllemagne.txt">
@@ -1136,21 +1159,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/WrongAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="35" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.0" vertical-offset="1253" max-vertical-offset="2108">
-          <folding />
-        </state>
+        <state line="118" column="35" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.0" vertical-offset="1253" max-vertical-offset="2108" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_40/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="251" column="0" selection-start="8172" selection-end="8172" vertical-scroll-proportion="0.0" vertical-offset="3540" max-vertical-offset="4947" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testQuestion/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="5" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2006">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/Game.java">
@@ -1162,16 +1176,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/Jeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2652">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/LancementJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
+        <state line="20" column="13" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="2652" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_40/src.zip!/java/awt/Container.java">
@@ -1183,30 +1188,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMCarre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="489" selection-end="489" vertical-scroll-proportion="-7.48" vertical-offset="0" max-vertical-offset="2533">
-          <folding />
-        </state>
+        <state line="19" column="28" selection-start="489" selection-end="489" vertical-scroll-proportion="-7.48" vertical-offset="0" max-vertical-offset="2533" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="30" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/devintAPI/MenuAbstrait.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="5984">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testQuestion/Theme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="5" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1887">
-          <folding />
-        </state>
+        <state line="23" column="30" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2856" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testQuestion/Main.java">
@@ -1216,61 +1203,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuTheme.java">
+    <entry file="file://$PROJECT_DIR$/src/devintAPI/FenetreAbstraite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+        <state line="57" column="9" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.3413284" vertical-offset="699" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/devintAPI/FenetreAbstraite.java">
+    <entry file="file://$PROJECT_DIR$/src/devintAPI/MenuAbstrait.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="2" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1241">
+        <state line="242" column="47" selection-start="6984" selection-end="6984" vertical-scroll-proportion="0.0" vertical-offset="4114" max-vertical-offset="5984">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/devintAPI/DevintFrameListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="67" selection-start="1280" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1649">
+        <state line="73" column="12" selection-start="2287" selection-end="2297" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="1751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/LancementJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/MenuJeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+        <state line="60" column="0" selection-start="1893" selection-end="1893" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testQuestion/GestionQuestion.java">
+    <entry file="file://$PROJECT_DIR$/src/testQuestion/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="49" selection-start="1121" selection-end="1150" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1785">
+        <state line="21" column="5" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="2006">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuCreationQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="39" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+        <state line="26" column="42" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="850">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuQuestion.java">
+    <entry file="file://$PROJECT_DIR$/src/testQuestion/Theme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="19" selection-start="217" selection-end="4124" vertical-scroll-proportion="0.0" vertical-offset="1830" max-vertical-offset="2465">
+        <state line="94" column="34" selection-start="2500" selection-end="2500" vertical-scroll-proportion="0.0" vertical-offset="806" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuTheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="34" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testQuestion/GestionQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="34" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuAddQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="0" selection-start="5690" selection-end="5690" vertical-scroll-proportion="0.5460614" vertical-offset="2498" max-vertical-offset="3247">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="29" selection-start="2904" selection-end="2904" vertical-scroll-proportion="0.53149605" vertical-offset="1295" max-vertical-offset="2057">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="117" column="24" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.22440945" vertical-offset="1699" max-vertical-offset="2482">
+          <folding />
         </state>
       </provider>
     </entry>

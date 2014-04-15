@@ -15,7 +15,6 @@ public class Theme {
 		this.listeTheme =new ArrayList<File>();
 		this.listeStringTheme = new ArrayList<String>();
 		listeDossier();
-
 	}
 	/**
 	 * Lire les dossiers
@@ -44,7 +43,7 @@ public class Theme {
 	}
 	
 	public void creationDossier(String name){
-		String path = "ressources\\question\\";
+		String path = "..\\ressources\\question\\";
 		path+= name;
 		File repertoire= new File(path);
 		repertoire.mkdir();

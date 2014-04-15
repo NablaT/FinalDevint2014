@@ -1,5 +1,6 @@
 package testQuestion;
 
+import jeu.IHMPrincipal;
 import jeu.Jeu;
 import devintAPI.MenuAbstrait;
 
@@ -13,7 +14,7 @@ public class MenuCreationQuestion extends MenuAbstrait{
 	 * vous pouvez d�finir autant d'options que vous voulez
 	 **/
 	protected String[] nomOptions() {
-		String[] noms = {"Jouer","Options","Ajouter une question","Quitter"};
+		String[] noms = {"Jouer","Ajouter un nouveau thème","Ajouter une question","Quitter"};
 		return noms;
 	}
 
@@ -22,8 +23,8 @@ public class MenuCreationQuestion extends MenuAbstrait{
 	 */
 	protected void lancerOption(int i) {
 		switch (i){  
-		case 0 : new Jeu(nomJeu);break;
-		case 1 : new MenuQuestion();break;
+		case 0 : new IHMPrincipal(nomJeu);break;
+		case 1 : new MenuAddTheme();break;
 		case 2 : new MenuTheme("Theme !");break;
 		case 3 : System.exit(0);
 		default: System.err.println("action non d�finie");

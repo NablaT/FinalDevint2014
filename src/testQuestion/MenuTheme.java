@@ -7,9 +7,10 @@ import jeu.Option;
 public class MenuTheme extends MenuAbstrait{
 	
 	private Theme theme;
+    private String[] noms;
 
 
-	public MenuTheme(String title) {
+    public MenuTheme(String title) {
 		super(title);
 
 		// TODO Auto-generated constructor stub
@@ -20,7 +21,7 @@ public class MenuTheme extends MenuAbstrait{
 	protected String[] nomOptions() {
 		//String[] noms = theme.getListeStringTheme();
         this.theme = new Theme();
-		String[] noms = theme.getTabTheme();
+		noms = theme.getTabTheme();
 		return noms;
 	}
 
@@ -28,14 +29,15 @@ public class MenuTheme extends MenuAbstrait{
 	 * la num�rotation est celle du tableau renvoy� par nomOption
 	 */
 	protected void lancerOption(int i) {
-		switch (i){  
-		case 0 : break;
-		case 1 : break;
-		case 2 : break;
-		case 3 : break;
-		case 4 : System.exit(0);
-		default: System.err.println("action non d�finie");
-		}
+
+        if(i<noms.length){
+            new MenuAddQuestion(theme.getTheme().get(i));
+        }
+		else{
+            System.exit(0);
+        }
+        System.err.println("action non d�finie");
+
 	}
 	@Override
 	protected String wavAccueil() {
