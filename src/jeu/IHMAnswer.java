@@ -66,6 +66,9 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     public void build(){
 
+
+
+
         this.setSize(800,800);
         System.out.println("Dans le build");
         this.setLayout(this.gridBag);
