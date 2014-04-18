@@ -9,6 +9,7 @@
 package jeu; 
 
 import devintAPI.MenuAbstrait;
+import testQuestion.MenuCreationQuestion;
 
 public class MenuJeu extends MenuAbstrait {
 
@@ -34,12 +35,14 @@ public class MenuJeu extends MenuAbstrait {
 		switch (i){  
 		case 0 : new IHMPrincipal(nomJeu);break;
 		case 1 : new UneImage(nomJeu + ": exemple d'images");break;
-		case 2 : new Option(nomJeu + ": gestion des options");break;
+		//case 2 : new Option(nomJeu + ": gestion des options");break;
+        case 2 : new MenuCreationQuestion("Options"); break;
 		case 3 : new Fichier(nomJeu + ": pour �crire dans un fichier");break;
 		case 4 : System.exit(0);
 		default: System.err.println("action non d�finie");
 		}
-	} 
+	}
+
 
 	// renvoie le fichier wave contenant le message d'accueil
 	// ces fichiers doivent �tre plac�s dans ressources/sons/

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="SI_VOX2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../VocalyzeSIVOX/bin/SI_VOX.jar!/" />
+      <root url="jar://$USER_HOME$/VocalyzeSIVOX/bin/SI_VOX.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

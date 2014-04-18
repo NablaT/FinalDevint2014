@@ -21,7 +21,13 @@ public class GestionQuestion {
 		//Initialise les questions
 		listerRepertoire();
 	}
-	
+
+    public GestionQuestion(File path){
+        listeQuestion = new ArrayList<Question>();
+        listerRepertoire(path);
+    }
+
+
 	/**
 	 * Chaque fichier est lu ligne par ligne, chaque fichier correspond � une question
 	 * @param filePath
@@ -53,14 +59,33 @@ public class GestionQuestion {
 
 		for(i=0;i<listeFichier.length;i++){
 				try {
-					lireFichier(listeFichier[i]);
+                    if(listeFichier[i].isFile()){
+					    lireFichier(listeFichier[i]);
+                    }
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 		}
-
 	}
+
+    private void listerRepertoire(File path){
+        File[] listeFichier;
+        listeFichier = path.listFiles();
+        for(int i =0; i<listeFichier.length;i++){
+            try {
+                if(listeFichier[i].isFile()){
+                    lireFichier(listeFichier[i]);
+                }
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
 
 	/**
 	 * Permet de r�cup�rer la liste des questions
@@ -100,43 +125,4 @@ public class GestionQuestion {
 		return getAleaObjectQuestion(rdm).afficherQuestion();
 	}
 
-	 public static void main(String args[]){
-	        GestionQuestion question = new GestionQuestion();	        
-	        String[] tab;
-	        int alea = question.getRdmNumber();
-	        
-	        
-	        Scanner sc = new Scanner(System.in);
-	        
-	        
-	        System.out.println(question.getQuestion());
-	        System.out.println("Duo Carre Hexa");
-	        String str = sc.nextLine();
-	        
-	        if(str.compareTo("Duo")==0){
-	        	System.out.println(question.getQuestion());
-	        	tab=question.getAleaObjectQuestion(alea).duo();
-	        	
-	        }else if(str.compareTo("Carre")==0){
-	        	System.out.println(question.getQuestion());
-	        	tab=question.getAleaObjectQuestion(alea).carre();
-	        }else{
-	        	System.out.println(question.getQuestion());
-	        	tab=question.getAleaObjectQuestion(alea).hexa();
-	        }
-	        for(int i=0; i<tab.length;i++){
-	        	System.out.println(tab[i]);
-	        }
-	        int nb = sc.nextInt();
-	        String[] tabReponse;
-	        tabReponse = question.getAleaObjectQuestion(alea).getQuestionReponse();
-	        
-	        if(question.getAleaObjectQuestion(alea).bonneReponse(tabReponse[nb])){
-	        	System.out.println("Bravo !");
-	        }
-	        else{
-	        	System.out.println("Faux !");
-	        }
-
-	 }
 }
