@@ -30,7 +30,7 @@ public class MenuAddTheme extends JFrame implements ActionListener{
     private JTextField[] tabTextField;
     private JButton buttonQuitter;
     private JButton buttonAjouterTheme;
-    private JTextField textField;
+    private JTextField jTextField;
     private Theme theme;
 
     public MenuAddTheme(){
@@ -101,14 +101,21 @@ public class MenuAddTheme extends JFrame implements ActionListener{
         Font fonte = new Font("Tahoma", 1, 56);
         LineBorder border = new LineBorder(Color.BLACK, 8);
         JLabel label = new JLabel("Quel thème souhaitez-vous rajouter ?");
-        textField = new JTextField();
+        label.setFont(fonte);
+        label.setHorizontalTextPosition(JLabel.CENTER);
+        label.setVerticalTextPosition(JLabel.CENTER);
+        jTextField = new JTextField();
+        jTextField.setFont(fonte);
+        jTextField.setForeground(new Color(0,0,0));
         buttonAjouterTheme = new JButton("Ajouter le thème");
+        buttonAjouterTheme.setFont(fonte);
         buttonAjouterTheme.addActionListener(this);
         buttonQuitter = new JButton("Quitter");
+        buttonQuitter.setFont(fonte);
         buttonQuitter.addActionListener(this);
 
         panel.add(label);
-        panel.add(textField);
+        panel.add(jTextField);
         panel.add(buttonAjouterTheme);
         panel.add(buttonQuitter);
         gc.weighty=4;
@@ -135,9 +142,9 @@ public class MenuAddTheme extends JFrame implements ActionListener{
         JButton actionButton = new JButton();
         actionButton = (JButton) e.getSource();
         if(actionButton.getText().equals("Ajouter le thème")){
-            if(textField.getText().length()>1){
-                theme.creationDossier(textField.getText());
-                textField.setText("");
+            if(jTextField.getText().length()>1){
+                theme.creationDossier(jTextField.getText());
+                jTextField.setText("");
             }
         }
         if(actionButton.getText().equals("Quitter")){

@@ -36,7 +36,6 @@ public class MenuTheme extends MenuAbstrait{
 		else{
             System.exit(0);
         }
-        System.err.println("action non d�finie");
 
 	}
 	@Override
