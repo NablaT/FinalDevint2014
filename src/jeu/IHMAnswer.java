@@ -1,21 +1,20 @@
 package jeu;
 
+import t2s.SIVOXDevint;
 import testQuestion.GestionQuestion;
 import testQuestion.Question;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 
 /**
  * Created by user on 04/04/14.
  */
-public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
+public class IHMAnswer extends JPanel implements ActionListener, KeyListener, MouseListener {
 
+    private SIVOXDevint voix;
     private JPanel answersAfterChoice;
 
     private JButton duoChoice;
@@ -33,26 +32,29 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
 
 
     public IHMAnswer(GestionQuestion gestion, Game g){
+        this.voix= new SIVOXDevint();
         this.setOpaque(false);
         this.gridBag=new GridBagLayout();
-        this.duoChoice= new JButton("Duo");
+        this.duoChoice= new JButton("2 Choix");
         this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
 
         this.duoChoice.addActionListener(this);
         this.duoChoice.addKeyListener(this);
-        this.carreChoice=new JButton("Carre");
+        this.duoChoice.addMouseListener(this);
+        this.carreChoice=new JButton("4 Choix");
         this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         //this.carreChoice.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
-       // this.repaint();
+        this.repaint();
         this.carreChoice.addActionListener(this);
         this.carreChoice.addKeyListener(this);
+        this.carreChoice.addMouseListener(this);
 
 
-        this.hexaChoice=new JButton("Hexa");
+        this.hexaChoice=new JButton("6 Choix");
         this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.hexaChoice.addKeyListener(this);
-
         this.hexaChoice.addActionListener(this);
+        this.hexaChoice.addMouseListener(this);
         this.gc = new GridBagConstraints();
         this.gestionQuestion=gestion;
         this.game=g;
@@ -157,23 +159,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("action performed");
-        Object source = e.getSource();
-
-       // this.setVisible(false);
-        if(source.equals(this.duoChoice)){
-            System.out.println("duo");
-            this.majToAnswers(2);
-        }
-        else if(source.equals(this.carreChoice)){
-            System.out.println("carre");
-            this.majToAnswers(4);
-        }
-        else if(source.equals(this.hexaChoice)){
-            System.out.println();
-            this.majToAnswers(6);
-
-        }
+        e.getSource();
     }
 
     public JButton getDuo(){
@@ -249,6 +235,45 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener {
     public void keyReleased(KeyEvent e) {
         System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        this.voix.stop();
+        JButton but = (JButton) e.getSource();
+        if(but.equals(duoChoice)){
+            majToAnswers(2);
+        }
+        else if(but.equals(carreChoice)){
+            majToAnswers(4);
+        }
+        else if(but.equals(hexaChoice)){
+            majToAnswers(6);
+        }
+
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        //System.out.println(e);
+        this.voix.stop();
+        JButton but = (JButton) e.getSource();
+        this.voix.playText(but.getText());
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        this.voix.stop();
+        this.voix.playText(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).afficherQuestion());
     }
 
 }
