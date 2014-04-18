@@ -1,6 +1,7 @@
 package jeu;
 
 import t2s.SIVOXDevint;
+import testQuestion.GameDependsOnTheme;
 import testQuestion.GestionQuestion;
 import testQuestion.Question;
 
@@ -27,6 +28,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
     private ArrayList<String> list;
     private GestionQuestion gestionQuestion;
     private Game game;
+    private GameDependsOnTheme gameDependsOnTheme;
 
     private int currentButton = 5;
 
@@ -58,6 +60,39 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
         this.gc = new GridBagConstraints();
         this.gestionQuestion=gestion;
         this.game=g;
+
+        this.setVisible(true);
+        this.build();
+        this.setOpaque(false);
+    }
+
+    public IHMAnswer(GestionQuestion gestion, GameDependsOnTheme g){
+        this.voix= new SIVOXDevint();
+        this.setOpaque(false);
+        this.gridBag=new GridBagLayout();
+        this.duoChoice= new JButton("2 Choix");
+        this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+
+        this.duoChoice.addActionListener(this);
+        this.duoChoice.addKeyListener(this);
+        this.duoChoice.addMouseListener(this);
+        this.carreChoice=new JButton("4 Choix");
+        this.carreChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        //this.carreChoice.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
+        this.repaint();
+        this.carreChoice.addActionListener(this);
+        this.carreChoice.addKeyListener(this);
+        this.carreChoice.addMouseListener(this);
+
+
+        this.hexaChoice=new JButton("6 Choix");
+        this.hexaChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
+        this.hexaChoice.addKeyListener(this);
+        this.hexaChoice.addActionListener(this);
+        this.hexaChoice.addMouseListener(this);
+        this.gc = new GridBagConstraints();
+        this.gestionQuestion=gestion;
+        this.gameDependsOnTheme=g;
 
         this.setVisible(true);
         this.build();
