@@ -22,13 +22,14 @@ public class GestionQuestion {
 		listerRepertoire();
 	}
 
-    public GestionQuestion(File path){
+
+    public GestionQuestion(File path) {
         listeQuestion = new ArrayList<Question>();
         listerRepertoire(path);
     }
 
 
-	/**
+    /**
 	 * Chaque fichier est lu ligne par ligne, chaque fichier correspond � une question
 	 * @param filePath
 	 * @throws Exception

@@ -69,13 +69,14 @@ public class Theme {
 		File fichier= new File(path);
 		fichier.createNewFile();
 		List<String> lines = new ArrayList<String>();
-		lines.add(Question+"\n");
-		lines.add(bonneReponse+"\n");
-		lines.add(reponseFausse1+"\n");
-		lines.add(reponseFausse2+"\n");
-		lines.add(reponseFausse3+"\n");
-		lines.add(reponseFausse4+"\n");
-		lines.add(reponseFausse5+"\n");
+		lines.add(Question+System.getProperty("line.separator"));
+
+		lines.add(bonneReponse+System.getProperty("line.separator"));
+		lines.add(reponseFausse1+System.getProperty("line.separator"));
+		lines.add(reponseFausse2+System.getProperty("line.separator"));
+		lines.add(reponseFausse3+System.getProperty("line.separator"));
+		lines.add(reponseFausse4+System.getProperty("line.separator"));
+		lines.add(reponseFausse5+System.getProperty("line.separator"));
 		
 		FileWriter fw = new FileWriter(fichier.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);

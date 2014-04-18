@@ -23,7 +23,7 @@ public class MenuCreationQuestion extends MenuAbstrait{
 	 */
 	protected void lancerOption(int i) {
 		switch (i){  
-		case 0 : new IHMPrincipal(nomJeu);break;
+		case 0 : new MenuThemeJeu(nomJeu);break;
 		case 1 : new MenuAddTheme();break;
 		case 2 : new MenuTheme("Theme !");break;
 		case 3 : System.exit(0);

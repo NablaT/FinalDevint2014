@@ -86,12 +86,13 @@ public class MenuAddQuestion extends JFrame implements ActionListener{
         FlowLayout enteteLayout = new FlowLayout();
         enteteLayout.setAlignment(FlowLayout.CENTER);
         entete.setLayout(enteteLayout);
-        enteteBorder = new LineBorder(Color.BLUE, 8);
+        enteteBorder = new LineBorder(Color.BLACK, 8);
         entete.setBorder(enteteBorder);
 
         // le label
         lb1 = new JLabel("Menu Question");
         lb1.setFont(new Font("Georgia", 1, 96));
+        lb1.setForeground(Color.BLUE);
         entete.add(lb1);
 
         // placement de l'entete en 1�re ligne, 1�re colonne
@@ -111,10 +112,11 @@ public class MenuAddQuestion extends JFrame implements ActionListener{
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(question.length,1));
-        Font fonte = new Font("Tahoma", 1, 56);
+
         LineBorder border = new LineBorder(Color.BLACK, 8);
         tabLabel = new JLabel[question.length] ;
         tabTextField = new JTextField[question.length];
+
         for(int i = 0; i<question.length; i++){
             creerLabelTextField(i,question[i]);
             panel.add(tabLabel[i]);
@@ -129,8 +131,16 @@ public class MenuAddQuestion extends JFrame implements ActionListener{
     }
 
     private void creerLabelTextField(int i,String texte){
-        tabLabel[i]= new JLabel(texte);
-        tabTextField[i]= new JTextField();
+        JLabel labelText = new JLabel(texte);
+        Font fonte = new Font("Tahoma", 1, 30);
+        labelText.setFont(fonte);
+        labelText.setForeground(new Color(255, 3, 0));
+        tabLabel[i]= labelText;
+        JTextField jTextField = new JTextField();
+        jTextField.setFont(fonte);
+        jTextField.setForeground(new Color(0,0,0));
+        tabTextField[i]= jTextField;
+
     }
 
     private void initButton(){
