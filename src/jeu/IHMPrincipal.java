@@ -23,20 +23,17 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     private int nextButton=-1;
     private int currentButton=-1;
+    private int nbOfPoints=0;
 
     public IHMPrincipal(String title){
 
         super(title);
 
-           // BufferedImage img=ImageIO.read(new File("ressources\\image\\ardoise.png"));
-            //this.setContentPane(new ImageBackground(img));
-
-       this.setContentPane(new JLabel(new ImageIcon("..\\ressources\\\\image\\\\background.jpg")));
+        this.setContentPane(new JLabel(new ImageIcon("..\\ressources\\\\image\\\\background.jpg")));
 
         this.build();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        this.setPreferredSize(new Dimension(1600,900));
         this.setSize(1600,900);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -52,33 +49,31 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     }
 
     public void build(){
-        this.game=new Game("Quizz");
-        this.game.setPreferredSize(new Dimension(800,500));
+        this.game=new Game(this, 0,false);
+        this.game.setPreferredSize(new Dimension(1000,600));
         this.grid=new GridBagLayout();
         this.grid.location(500,500);
         this.gc=new GridBagConstraints();
 
         this.gc.gridheight=10;
         this.gc.gridwidth=10;
-       // this.setLayout(this.grid);
-
-
-       // this.gc.fill=GridBagConstraints.NONE;
-
-
-
-
-
 
         gc.insets = new Insets(5, 5, 5, 5);
-        gc.weightx=10;
-        gc.weighty=10;
+        gc.weightx=14;
+        gc.weighty=14;
         gc.gridx=4;
         gc.gridy=4;
 
         this.setLayout(this.grid);
         this.add(this.game, gc);
 
+    }
+
+    public void maj(int NbOfPoints, boolean answerWasCorrect){
+        this.remove(game);
+        this.game=new Game(this,NbOfPoints,answerWasCorrect);
+        this.repaint();
+        this.revalidate();
     }
 
     @Override
@@ -91,6 +86,9 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
 }
 
+    public Game getGame(){
+        return this.game;
+    }
     @Override
     public void keyPressed(KeyEvent e) {
         super.keyPressed(e);

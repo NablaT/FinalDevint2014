@@ -26,17 +26,14 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     private int nBOfPoints;
 
     private ProgressBar progressBar;
-
+    private IHMPrincipal ihmPrincipal;
     private JLabel background;
 
-    public Game(String title) {
+    public Game(IHMPrincipal ihmPrincipal, int NbOfPoints, boolean answerWasCorrect) {
         super();
-        //super(title);
+        this.ihmPrincipal=ihmPrincipal;
         this.voix = new SIVOXDevint();
         this.init(false);
-    //     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      //  this.setSize(500, 300);
-        //this.setLocationRelativeTo(null);
         this.setVisible(true);
 
     }
@@ -49,7 +46,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     protected void init(boolean answerWasCorrect) {
 
         this.setPreferredSize(new Dimension(900, 900));
-        this.setOpaque(false);//setContentPane(new JLabel(new ImageIcon("ressources\\\\image\\\\background.jpg")));
+        this.setOpaque(false);
         this.gestionQuestion=new GestionQuestion();
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
@@ -61,7 +58,6 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.voix.playText(s);
 
         this.question.setForeground(Color.WHITE);
-        //this.background=new JLabel(new ImageIcon("ressources\\image\\button.png"));
         this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.nBOfPoints=0;
 
@@ -105,53 +101,30 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         gc.weighty=10;
 
         this.add(this.answer, gc);
-
-        /*this.answer.setVisible(true);
-        this.question.setVisible(true);
-*/
-
-
     }
 
     public void maj(int nbPoints,boolean answerWasCorrect){
-        System.out.println("Je rentre");
         this.voix.stop();
-        //this.answer.setVisible(false);
-        this.remove(question);//question.setVisible(false);
+        this.remove(question);
         this.remove(this.answer);
 
         this.remove(this.progressBar);
 
         this.nBOfPoints=this.nBOfPoints+nbPoints;
+        this.setPreferredSize(new Dimension(1000, 600));
         this.init(answerWasCorrect);
         this.repaint();
         this.revalidate();
+
+        IHMPrincipal ihm=new IHMPrincipal("Quizz");
+        this.ihmPrincipal.dispose();
     }
 
 
     public void setIHMAnswer(IHMAnswer an){
         this.answer=an;
     }
-/*
-    @Override
-    protected String wavAide() {
-        return null;
-    }
 
-    @Override
-    protected String wavAccueil() {
-        return null;
-    }
-
-    @Override
-    protected String wavRegleJeu() {
-        return null;
-    }
-
-    @Override
-    public void changeColor() {
-
-    }*/
 
     public IHMAnswer getAnswer(){
         return this.answer;
