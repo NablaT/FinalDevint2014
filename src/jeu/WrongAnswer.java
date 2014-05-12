@@ -117,7 +117,7 @@ public class WrongAnswer extends JPanel implements ActionListener {
         this.voix.stop();
         if(source.equals(this.next)){
             this.setVisible(false);
-            this.game.maj();
+            this.game.maj(0);
         }
 
     }

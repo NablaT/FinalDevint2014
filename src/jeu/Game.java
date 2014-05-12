@@ -23,6 +23,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     private IHMAnswer answer;
     private JLabel question;
     private GestionQuestion gestionQuestion;
+    private int nBOfPoints;
 
     private JLabel background;
 
@@ -60,7 +61,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
       //  this.add(background);
        // this.question.setIcon(new ImageIcon("ressources\\image\\button.png"));
         this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
-
+        this.nBOfPoints=0;
 
        this.question.setPreferredSize(new Dimension(200, 100));
         this.answer=new IHMAnswer(this.gestionQuestion,this);
@@ -98,12 +99,13 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     }
 
-    public void maj(){
+    public void maj(int nbPoints){
         System.out.println("Je rentre");
         this.voix.stop();
         //this.answer.setVisible(false);
         this.remove(question);//question.setVisible(false);
         this.remove(this.answer);
+        this.nBOfPoints=this.nBOfPoints+nbPoints;
         this.init();
         this.repaint();
         this.revalidate();
