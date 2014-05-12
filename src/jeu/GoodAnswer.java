@@ -87,7 +87,7 @@ public class GoodAnswer extends JPanel implements ActionListener {
         JButton but=(JButton) source;
         if(but.getText().equals("Question suivante")){
             this.setVisible(false);
-            this.game.maj(this.nbOfPoints);
+            this.game.maj(this.nbOfPoints,true);
         }
 
     }

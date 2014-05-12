@@ -20,8 +20,9 @@ public class ProgressBar extends JPanel {
     private ImageProgressBar progressBar;
     private GridBagConstraints gc;
     private GridBagLayout grid;
+    private int step=0;
 
-    public ProgressBar(){
+    public ProgressBar(boolean answerWasCorrect){
         this.setSize(500, 500);
         this.panelDroit=new JPanel();
         this.panelDroit.setBackground(Color.RED);
@@ -29,8 +30,8 @@ public class ProgressBar extends JPanel {
         this.panelGauche=new JPanel();
         this.panelGauche.setBackground(Color.RED);
         this.panelGauche.setSize(new Dimension(100, 500));
-
-        this.progressBar=new ImageProgressBar();
+        if(answerWasCorrect) this.step++;
+        this.progressBar=new ImageProgressBar(step);
         this.progressBar.setSize(new Dimension(300,500));
 
         /*this.panelDroit.setVisible(false);

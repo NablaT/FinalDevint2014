@@ -2,28 +2,17 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/jeu/MainBis.java" line="6" mnemonic="8" />
-    <bookmark url="file://$PROJECT_DIR$/src/jeu/Game.java" line="175" />
+    <bookmark url="file://$PROJECT_DIR$/src/jeu/Game.java" line="176" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/image/load9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jeu/ImageProgressBar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jeu/ProgressBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ressources/image/load0.png" afterPath="$PROJECT_DIR$/ressources/image/load0.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/Game.java" afterPath="$PROJECT_DIR$/src/jeu/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/GoodAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/GoodAnswer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/ImageProgressBar.java" afterPath="$PROJECT_DIR$/src/jeu/ImageProgressBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/Progress.java" afterPath="$PROJECT_DIR$/src/jeu/Progress.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/ProgressBar.java" afterPath="$PROJECT_DIR$/src/jeu/ProgressBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jeu/WrongAnswer.java" afterPath="$PROJECT_DIR$/src/jeu/WrongAnswer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="03f125d5-f436-4728-b0ae-9d28a1a1d13c" name="New changelist" comment="" />
@@ -94,19 +83,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IHMDuo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jeu/IHMDuo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="53" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.0" vertical-offset="1610" max-vertical-offset="2431">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IHMPrincipal.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMPrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2856">
+            <state line="27" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2856">
               <folding />
             </state>
           </provider>
@@ -115,21 +95,8 @@
       <file leaf-file-name="Game.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jeu/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="5" selection-start="1042" selection-end="1048" vertical-scroll-proportion="-0.5513308" vertical-offset="817" max-vertical-offset="2873">
+            <state line="63" column="10" selection-start="1837" selection-end="1837" vertical-scroll-proportion="0.4832776" vertical-offset="612" max-vertical-offset="2890">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Progress.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jeu/Progress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1173">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#865#1067#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -137,10 +104,8 @@
       <file leaf-file-name="ProgressBar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/ProgressBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="1632">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="68" column="19" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1564">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,7 +113,7 @@
       <file leaf-file-name="ImageProgressBar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/ImageProgressBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+            <state line="14" column="31" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="646">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,11 +121,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="load1.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ressources/image/load1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="IHMCarre.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMCarre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="25" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="2533">
-              <folding />
+            <state line="117" column="25" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2533">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2675#2676#0" expanded="false" />
+                <element signature="e#2713#2714#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,16 +144,7 @@
       <file leaf-file-name="IHMAnswer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="0" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="5185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LancementJeu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jeu/LancementJeu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="102" column="0" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.0" vertical-offset="2142" max-vertical-offset="5185">
               <folding />
             </state>
           </provider>
@@ -186,7 +153,16 @@
       <file leaf-file-name="GoodAnswer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jeu/GoodAnswer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="41" selection-start="2288" selection-end="2288" vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1615">
+            <state line="89" column="46" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WrongAnswer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jeu/WrongAnswer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="33" selection-start="3034" selection-end="3034" vertical-scroll-proportion="0.0" vertical-offset="1582" max-vertical-offset="2108">
               <folding />
             </state>
           </provider>
@@ -246,17 +222,17 @@
         <option value="$PROJECT_DIR$/src/testQuestion/Theme.java" />
         <option value="$PROJECT_DIR$/src/testQuestion/MenuAddQuestion.java" />
         <option value="$PROJECT_DIR$/src/jeu/IHMChoiceOption.java" />
-        <option value="$PROJECT_DIR$/src/jeu/WrongAnswer.java" />
-        <option value="$PROJECT_DIR$/src/jeu/GoodAnswer.java" />
         <option value="$PROJECT_DIR$/src/jeu/IHMCarre.java" />
         <option value="$PROJECT_DIR$/src/jeu/IHMHexa.java" />
         <option value="$PROJECT_DIR$/src/jeu/IHMDuo.java" />
         <option value="$PROJECT_DIR$/src/jeu/TestBarre.java" />
-        <option value="$PROJECT_DIR$/src/jeu/Progress.java" />
         <option value="$PROJECT_DIR$/src/jeu/IHMAnswer.java" />
+        <option value="$PROJECT_DIR$/src/jeu/Progress.java" />
+        <option value="$PROJECT_DIR$/src/jeu/GoodAnswer.java" />
+        <option value="$PROJECT_DIR$/src/jeu/WrongAnswer.java" />
+        <option value="$PROJECT_DIR$/src/jeu/ProgressBar.java" />
         <option value="$PROJECT_DIR$/src/jeu/ImageProgressBar.java" />
         <option value="$PROJECT_DIR$/src/jeu/Game.java" />
-        <option value="$PROJECT_DIR$/src/jeu/ProgressBar.java" />
       </list>
     </option>
   </component>
@@ -294,6 +270,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,28 +371,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ModeleDeJeu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FinalDevint2014" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ressources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="image" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,7 +390,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="dynamic.classpath" value="false" />
@@ -891,7 +849,8 @@
       <workItem from="1397597351773" duration="47000" />
       <workItem from="1397987250573" duration="3477000" />
       <workItem from="1399410026115" duration="31000" />
-      <workItem from="1399913493872" duration="5516000" />
+      <workItem from="1399913493872" duration="6741000" />
+      <workItem from="1399925459681" duration="2291000" />
     </task>
     <task id="LOCAL-00001" summary="Maj de l'interface">
       <created>1396961923844</created>
@@ -921,11 +880,15 @@
       <created>1399916041184</created>
       <updated>1399916041184</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Ajout de la barre dans le panel Game (en cours d'ajustement)">
+      <created>1399919041521</created>
+      <updated>1399919041521</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153493000" />
+    <option name="totallyTimeSpent" value="157009000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -964,14 +927,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14403293" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14403293" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14681262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24279836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24279836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -982,10 +945,10 @@
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967907" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24269377" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1003,9 +966,9 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14612453" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1025,7 +988,10 @@
     <MESSAGE value="Maj de l'interface&#10;" />
     <MESSAGE value="Interface Creation Question Theme&#10;" />
     <MESSAGE value="Test de la barre de progression" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test de la barre de progression" />
+    <MESSAGE value="Ajout de la barre dans le panel Game (en cours d'ajustement)" />
+    <MESSAGE value="Ajout de la barre dans le panel Game (en cours d'ajustement)&#10;" />
+    <MESSAGE value="Résolution d'un bug (duplication de la barre de chargement)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Résolution d'un bug (duplication de la barre de chargement)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1035,11 +1001,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/devintAPI/FenetreAbstraite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1326" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/devintAPI/DevintFrameListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="79" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1751" />
@@ -1190,13 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="24" selection-start="3599" selection-end="3599" vertical-scroll-proportion="-0.0070921984" vertical-offset="1875" max-vertical-offset="2601">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/devintAPI/DevintFrameListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="12" selection-start="2287" selection-end="2297" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="1751">
@@ -1260,13 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/WrongAnswer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="27" selection-start="3028" selection-end="3028" vertical-scroll-proportion="0.0" vertical-offset="1582" max-vertical-offset="2108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMDuo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="113" column="53" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.0" vertical-offset="1610" max-vertical-offset="2431">
@@ -1288,23 +1235,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/GoodAnswer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="41" selection-start="2288" selection-end="2288" vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1615">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/ressources/image/load1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMCarre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="25" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2533">
-          <folding />
+        <state line="117" column="25" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2533">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2675#2676#0" expanded="false" />
+            <element signature="e#2713#2714#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="0" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="5185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/GoodAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="46" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/WrongAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="33" selection-start="3034" selection-end="3034" vertical-scroll-proportion="0.0" vertical-offset="1582" max-vertical-offset="2108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jeu/Progress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="0" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
@@ -1316,38 +1286,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/ProgressBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="1632">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/ImageProgressBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+        <state line="14" column="31" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="646">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jeu/Progress.java">
+    <entry file="file://$PROJECT_DIR$/src/jeu/ProgressBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="1173">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#865#1067#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-          </folding>
+        <state line="68" column="19" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuAddTheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="24" selection-start="3599" selection-end="3599" vertical-scroll-proportion="3.7029703" vertical-offset="0" max-vertical-offset="2601">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="5" selection-start="1042" selection-end="1048" vertical-scroll-proportion="-0.5513308" vertical-offset="817" max-vertical-offset="2873">
+        <state line="63" column="10" selection-start="1837" selection-end="1837" vertical-scroll-proportion="0.4832776" vertical-offset="612" max-vertical-offset="2890">
           <folding />
         </state>
       </provider>

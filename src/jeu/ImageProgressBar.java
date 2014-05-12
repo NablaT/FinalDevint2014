@@ -9,11 +9,18 @@ import java.awt.*;
 public class ImageProgressBar extends JPanel {
 
     private Image image;
+    private int step;
 
-    public ImageProgressBar(){
+    public ImageProgressBar(int step){
         this.setSize(500, 500);
+        this.step=step;
+        this.giveMeGoodImage();
 
-        this.image=new ImageIcon("..\\ressources\\\\image\\\\loading.jpg").getImage();
+    }
+
+    private void giveMeGoodImage() {
+        String path="..\\ressources\\\\image\\\\load"+this.step+".jpg";
+        this.image=new ImageIcon(path).getImage();
     }
 
     @Override

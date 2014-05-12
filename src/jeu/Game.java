@@ -33,7 +33,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         super();
         //super(title);
         this.voix = new SIVOXDevint();
-        this.init();
+        this.init(false);
     //     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       //  this.setSize(500, 300);
         //this.setLocationRelativeTo(null);
@@ -46,28 +46,26 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     }
 
-    protected void init() {
+    protected void init(boolean answerWasCorrect) {
 
+        this.setPreferredSize(new Dimension(900, 900));
         this.setOpaque(false);//setContentPane(new JLabel(new ImageIcon("ressources\\\\image\\\\background.jpg")));
         this.gestionQuestion=new GestionQuestion();
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
 
-        this.progressBar=new ProgressBar();
+        this.progressBar=new ProgressBar(answerWasCorrect);
         String s = this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0];
         this.question= new JLabel(s,JLabel.CENTER);
         this.voix.stop();
         this.voix.playText(s);
-        //System.out.println("Je passe par laaaaaaaa");
 
         this.question.setForeground(Color.WHITE);
-        this.background=new JLabel(new ImageIcon("ressources\\image\\button.png"));
-      //  this.add(background);
-       // this.question.setIcon(new ImageIcon("ressources\\image\\button.png"));
+        //this.background=new JLabel(new ImageIcon("ressources\\image\\button.png"));
         this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.nBOfPoints=0;
 
-       this.question.setPreferredSize(new Dimension(200, 100));
+        this.question.setPreferredSize(new Dimension(800, 800));
         this.answer=new IHMAnswer(this.gestionQuestion,this);
         this.gc=new GridBagConstraints();
 
@@ -103,8 +101,8 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
         gc.gridx=0;
         gc.gridy=2;
-        gc.weightx=6;
-        gc.weighty=6;
+        gc.weightx=10;
+        gc.weighty=10;
 
         this.add(this.answer, gc);
 
@@ -115,14 +113,17 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     }
 
-    public void maj(int nbPoints){
+    public void maj(int nbPoints,boolean answerWasCorrect){
         System.out.println("Je rentre");
         this.voix.stop();
         //this.answer.setVisible(false);
         this.remove(question);//question.setVisible(false);
         this.remove(this.answer);
+
+        this.remove(this.progressBar);
+
         this.nBOfPoints=this.nBOfPoints+nbPoints;
-        this.init();
+        this.init(answerWasCorrect);
         this.repaint();
         this.revalidate();
     }
