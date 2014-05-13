@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Theme {
+public class Outils {
 	private ArrayList<File> listeTheme;
 	private ArrayList<String> listeStringTheme;
 
-	public Theme(){
+	public Outils(){
 		this.listeTheme =new ArrayList<File>();
 		this.listeStringTheme = new ArrayList<String>();
 		listeDossier();
@@ -86,7 +86,7 @@ public class Theme {
 		bw.close();	
 	}
 
-	public void supprimerFichierTxt(File path){
+	public static void supprimerFichierTxt(File path){
 		path.delete();
 	}
 	public ArrayList<String> getListeStringTheme() {
@@ -106,11 +106,11 @@ public class Theme {
 	
 	public static void main(String args[]) throws IOException{
 		
-		Theme theme = new Theme();
+		Outils outils = new Outils();
         File file;
         file = new File("ressources\\question");
-        for(int i =0; i<theme.getListeStringTheme().size(); i++){
-            System.out.println(theme.getListeStringTheme().get(i));
+        for(int i =0; i< outils.getListeStringTheme().size(); i++){
+            System.out.println(outils.getListeStringTheme().get(i));
         }
 
 

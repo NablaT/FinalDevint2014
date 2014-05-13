@@ -8,7 +8,7 @@ import devintAPI.MenuAbstrait;
 public class MenuThemeJeu extends MenuAbstrait {
 
 
-    private Theme theme;
+    private Outils outils;
     private String[] noms;
 
 
@@ -21,9 +21,9 @@ public class MenuThemeJeu extends MenuAbstrait {
      * vous pouvez d�finir autant d'options que vous voulez
      **/
     protected String[] nomOptions() {
-        //String[] noms = theme.getListeStringTheme();
-        this.theme = new Theme();
-        noms = theme.getTabTheme();
+        //String[] noms = outils.getListeStringTheme();
+        this.outils = new Outils();
+        noms = outils.getTabTheme();
         return noms;
     }
 
@@ -33,7 +33,7 @@ public class MenuThemeJeu extends MenuAbstrait {
     protected void lancerOption(int i) {
 
         if(i<noms.length){
-            new IHMPrincipalTest("Jeu test",theme.getTheme().get(i));
+            new IHMPrincipalTest("Jeu test", outils.getTheme().get(i));
         }
         else{
             System.exit(0);
