@@ -33,7 +33,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
         this.build();
 
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setSize(1600,900);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -85,7 +85,9 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     public void keyTyped(KeyEvent e) {
 
 }
-
+    public void closeWindow(){
+        this.dispose();
+    }
     public Game getGame(){
         return this.game;
     }
@@ -141,6 +143,8 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         }
 
     }
+
+
 
     @Override
     public void keyReleased(KeyEvent e) {

@@ -115,9 +115,9 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.init(answerWasCorrect);
         this.repaint();
         this.revalidate();
-
+        this.ihmPrincipal.closeWindow();
         IHMPrincipal ihm=new IHMPrincipal("Quizz");
-        this.ihmPrincipal.dispose();
+
     }
 
 
