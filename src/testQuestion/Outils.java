@@ -50,6 +50,10 @@ public class Outils {
 	}
 	
 	public void retirerDossier(File path){
+        GestionQuestion gestionQuestion = new GestionQuestion(path);
+        for(int i=0;i<gestionQuestion.getListeFilePath().size();i++){
+            supprimerFichierTxt(gestionQuestion.getListeFilePath().get(i));
+        }
 		listeTheme.remove(path);
 		path.delete();
 	}

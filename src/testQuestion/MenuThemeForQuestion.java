@@ -2,13 +2,13 @@ package testQuestion;
 
 import devintAPI.MenuAbstrait;
 
-public class MenuTheme extends MenuAbstrait{
+public class MenuThemeForQuestion extends MenuAbstrait{
 	
 	private Outils outils;
     private String[] noms;
 
 
-    public MenuTheme(String title) {
+    public MenuThemeForQuestion(String title) {
 		super(title);
 
 		// TODO Auto-generated constructor stub

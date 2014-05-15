@@ -1,12 +1,10 @@
 package testQuestion;
 
-import jeu.IHMPrincipal;
-import jeu.Jeu;
 import devintAPI.MenuAbstrait;
 
-public class MenuCreationQuestion extends MenuAbstrait{
+public class MenuCreation extends MenuAbstrait{
 
-	public MenuCreationQuestion(String title) {
+	public MenuCreation(String title) {
 		super(title);
 		// TODO Auto-generated constructor stub
 	}
@@ -14,7 +12,7 @@ public class MenuCreationQuestion extends MenuAbstrait{
 	 * vous pouvez d�finir autant d'options que vous voulez
 	 **/
 	protected String[] nomOptions() {
-		String[] noms = {"Jouer","Ajouter un nouveau thème","Ajouter une question","Quitter"};
+		String[] noms = {"Jouer","Ajouter un nouveau thème","Ajouter une question","Supprimer un thème","Supprimer une question","Quitter"};
 		return noms;
 	}
 
@@ -23,10 +21,12 @@ public class MenuCreationQuestion extends MenuAbstrait{
 	 */
 	protected void lancerOption(int i) {
 		switch (i){  
-		case 0 : new MenuThemeJeu(nomJeu);break;
-		case 1 : new MenuAddTheme();break;
-		case 2 : new MenuTheme("Outils !");break;
-		case 3 : System.exit(0);
+		    case 0 : new MenuThemeJeu(nomJeu);break;
+		    case 1 : new MenuAddTheme();break;
+		    case 2 : new MenuThemeForQuestion("Création de la question");break;
+            case 3 : new MenuThemeToDeleteTheme("Supression d'un thème");break;
+            case 4 : new MenuThemeToDeleteQuestion("Supression de la question");break;
+		    case 5 : System.exit(0);
 		default: System.err.println("action non d�finie");
 		}
 	} 
