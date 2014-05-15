@@ -24,6 +24,9 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     private int nextButton=-1;
     private int currentButton=-1;
     private int nbOfPoints=0;
+    private GridLayout grid2;
+
+    private ProgressBar progressBar;
 
     public IHMPrincipal(String title){
 
@@ -31,40 +34,54 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
         this.setContentPane(new JLabel(new ImageIcon("..\\ressources\\\\image\\\\background.jpg")));
 
+        this.progressBar=new ProgressBar(false);
         this.build();
+
+        this.progressBar.setSize(new Dimension(300,400));
+        JButton[] but=new JButton[3];
+        but[0]=(this.game.getAnswer().getDuo());
+        but[1]=(this.game.getAnswer().getCarre());
+        but[2]=(this.game.getAnswer().getHexa());
+
+        super.setBoutonOption(but);
 
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setSize(1600,900);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-        JButton[] but=new JButton[3];
-        but[0]=(this.game.getAnswer().getDuo());
-        but[1]=(this.game.getAnswer().getCarre());
-        but[2]=(this.game.getAnswer().getHexa());
-
-
-        super.setBoutonOption(but);
-
     }
 
     public void build(){
         this.game=new Game(this, 0,false);
-        this.game.setPreferredSize(new Dimension(1000,600));
+        this.game.setPreferredSize(new Dimension(950,600));
         this.grid=new GridBagLayout();
-        this.grid.location(500,500);
-        this.gc=new GridBagConstraints();
+        this.grid2=new GridLayout(6,8);
 
-        this.gc.gridheight=10;
-        this.gc.gridwidth=10;
-
-        gc.insets = new Insets(5, 5, 5, 5);
-        gc.weightx=14;
-        gc.weighty=14;
-        gc.gridx=4;
-        gc.gridy=4;
 
         this.setLayout(this.grid);
+
+        this.grid.location(500,500);
+        this.progressBar.setLocation(0, 250);
+        this.gc=new GridBagConstraints();
+        this.grid.setConstraints(this.progressBar, gc);
+        this.grid.setConstraints(this.game,this.gc);
+        this.gc.fill=GridBagConstraints.REMAINDER;
+
+        gc.insets = new Insets(5, 5, 5, 5);
+
+        gc.gridx=4;
+        gc.gridy=0;
+        gc.gridwidth=15;
+        gc.gridheight=5;
+
+        this.add(this.progressBar, gc);
+
+        gc.gridx=4;
+        gc.gridy=16;
+        gc.gridwidth=2;
+        gc.gridheight=2;
+
         this.add(this.game, gc);
 
     }

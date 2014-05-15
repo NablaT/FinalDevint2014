@@ -10,17 +10,20 @@ public class ImageProgressBar extends JPanel {
 
     private Image image;
     private int step;
+    private int width;
 
     public ImageProgressBar(int step){
-        this.setSize(500, 500);
+        this.setSize(50, 500);
         this.step=step;
         this.giveMeGoodImage();
 
     }
 
     private void giveMeGoodImage() {
-        String path="..\\ressources\\\\image\\\\load"+this.step+".jpg";
+        String path="..\\ressources\\\\image\\\\load"+this.step+".png";
         this.image=new ImageIcon(path).getImage();
+        this.width=this.getHeight();
+        System.out.println("HAUTEUR :"+this.width);
     }
 
     @Override
