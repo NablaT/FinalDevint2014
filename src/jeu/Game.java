@@ -25,7 +25,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     private GestionQuestion gestionQuestion;
     private int nBOfPoints;
 
-    private ProgressBar progressBar;
+    //private ProgressBar progressBar;
     private IHMPrincipal ihmPrincipal;
     private JLabel background;
 
@@ -51,8 +51,9 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
 
-        this.progressBar=new ProgressBar(answerWasCorrect);
+        //this.progressBar=new ProgressBar(answerWasCorrect);
         String s = this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0];
+
         this.question= new JLabel(s,JLabel.CENTER);
         this.voix.stop();
         this.voix.playText(s);
@@ -78,17 +79,17 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         gc.insets = new Insets(5, 5, 5, 5);
 
 
-        gc.gridx=0;
+        /*gc.gridx=0;
         gc.gridy=0;
         gc.weightx=4;
         gc.weighty=4;
-
-        this.add(this.progressBar, gc);
+*/
+       // this.add(this.progressBar, gc);
 
 
 
         gc.gridx=0;
-        gc.gridy=1;
+        gc.gridy=4;
         gc.weightx=4;
         gc.weightx=4;
 
@@ -96,7 +97,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.add(this.question, gc);
 
         gc.gridx=0;
-        gc.gridy=2;
+        gc.gridy=8;
         gc.weightx=10;
         gc.weighty=10;
 
@@ -108,7 +109,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.remove(question);
         this.remove(this.answer);
 
-        this.remove(this.progressBar);
+        //this.remove(this.progressBar);
 
         this.nBOfPoints=this.nBOfPoints+nbPoints;
         this.setPreferredSize(new Dimension(1000, 600));

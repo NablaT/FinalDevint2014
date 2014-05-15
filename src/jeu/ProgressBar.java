@@ -24,6 +24,7 @@ public class ProgressBar extends JPanel {
 
     public ProgressBar(boolean answerWasCorrect){
         this.setSize(500, 500);
+        this.setOpaque(false);
         this.panelDroit=new JPanel();
         this.panelDroit.setBackground(Color.RED);
         this.panelDroit.setSize(new Dimension(100, 500));
@@ -61,15 +62,15 @@ public class ProgressBar extends JPanel {
 
         gc.gridx=0;
         gc.gridy=0;
-        gc.weightx=1;
-        gc.weighty=4;
+        gc.gridwidth=2;
+        gc.gridheight=5;
 
         this.add(this.panelGauche, gc);
 
         gc.gridx=1;
         gc.gridy=0;
-        gc.weightx=8;
-        gc.weighty=4;
+        gc.gridwidth=8;
+        gc.gridheight=5;
 
         this.add(this.progressBar, gc);
 
@@ -77,8 +78,8 @@ public class ProgressBar extends JPanel {
 
         gc.gridx=2;
         gc.gridy=0;
-        gc.weightx=1;
-        gc.weighty=4;
+        gc.gridwidth=2;
+        gc.gridheight=5;
 
         this.add(this.panelDroit, gc);
 
