@@ -18,8 +18,9 @@ public class GoodAnswer extends JPanel implements ActionListener {
     private GridBagLayout grid;
     private GridBagConstraints gc;
     private Game game;
+    private int nbOfPoints;
 
-    public GoodAnswer(Game g){
+    public GoodAnswer(Game g, int nbOfPoints){
         this.setOpaque(false);
         this.game=g;
         this.good= new JLabel("BRAVO !",JLabel.CENTER);
@@ -31,7 +32,7 @@ public class GoodAnswer extends JPanel implements ActionListener {
         this.good.setForeground(Color.WHITE);
 
         this.next= new JButton("Question suivante");
-
+        this.nbOfPoints=nbOfPoints;
         this.next.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
         this.next.addActionListener(this);
         this.setVisible(true);
@@ -86,7 +87,7 @@ public class GoodAnswer extends JPanel implements ActionListener {
         JButton but=(JButton) source;
         if(but.getText().equals("Question suivante")){
             this.setVisible(false);
-            this.game.maj();
+            this.game.maj(this.nbOfPoints,true);
         }
 
     }

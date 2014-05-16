@@ -15,6 +15,7 @@ public class GestionQuestion {
 
 	// Contient toutes les questions du jeu
 	private ArrayList<Question> listeQuestion;
+    private ArrayList<File> listeFilePath;
 	
 	public GestionQuestion(){		
 		listeQuestion=new ArrayList<Question>();
@@ -24,6 +25,7 @@ public class GestionQuestion {
 
 
     public GestionQuestion(File path) {
+        listeFilePath = new ArrayList<File>();
         listeQuestion = new ArrayList<Question>();
         listerRepertoire(path);
     }
@@ -36,6 +38,7 @@ public class GestionQuestion {
 	 */
 	private void lireFichier(File filePath) throws Exception{
 		Scanner scanner=new Scanner(filePath);
+
 		Question q = new Question();
 		for(int i=0;i<7 && scanner.hasNextLine();i++){
 				String line = scanner.nextLine();
@@ -53,7 +56,6 @@ public class GestionQuestion {
 		String path = "..\\ressources\\question";
 		File repertoire= new File(path);
 		File[] listeFichier;
-        System.out.println(repertoire.getAbsolutePath());
 		int i;
 		
 		listeFichier=repertoire.listFiles();
@@ -76,6 +78,7 @@ public class GestionQuestion {
         for(int i =0; i<listeFichier.length;i++){
             try {
                 if(listeFichier[i].isFile()){
+                    listeFilePath.add(listeFichier[i].getAbsoluteFile());
                     lireFichier(listeFichier[i]);
                 }
             } catch (Exception e) {
@@ -106,7 +109,7 @@ public class GestionQuestion {
 	}
 
 	/**
-	 * Revnoie un nombre aleatoire
+	 * Renvoie un nombre aleatoire
 	 * @return
 	 */
 	public int getRdmNumber(){
@@ -125,5 +128,9 @@ public class GestionQuestion {
 	public String getQuestion(){
 		return getAleaObjectQuestion(rdm).afficherQuestion();
 	}
+
+    public ArrayList<File> getListeFilePath(){
+        return listeFilePath;
+    }
 
 }

@@ -1,16 +1,14 @@
 package testQuestion;
 
 import devintAPI.MenuAbstrait;
-import jeu.Jeu;
-import jeu.Option;
 
-public class MenuTheme extends MenuAbstrait{
+public class MenuThemeForQuestion extends MenuAbstrait{
 	
-	private Theme theme;
+	private Outils outils;
     private String[] noms;
 
 
-    public MenuTheme(String title) {
+    public MenuThemeForQuestion(String title) {
 		super(title);
 
 		// TODO Auto-generated constructor stub
@@ -19,9 +17,9 @@ public class MenuTheme extends MenuAbstrait{
 	 * vous pouvez d�finir autant d'options que vous voulez
 	 **/
 	protected String[] nomOptions() {
-		//String[] noms = theme.getListeStringTheme();
-        this.theme = new Theme();
-		noms = theme.getTabTheme();
+		//String[] noms = outils.getListeStringTheme();
+        this.outils = new Outils();
+		noms = outils.getTabTheme();
 		return noms;
 	}
 
@@ -31,7 +29,7 @@ public class MenuTheme extends MenuAbstrait{
 	protected void lancerOption(int i) {
 
         if(i<noms.length){
-            new MenuAddQuestion(theme.getTheme().get(i));
+            new MenuAddQuestion(outils.getTheme().get(i));
         }
 		else{
             System.exit(0);

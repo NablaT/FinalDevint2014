@@ -2,17 +2,13 @@ package testQuestion;
 
 import devintAPI.MenuAbstrait;
 
-/**
- * Created by user on 18/04/14.
- */
-public class MenuThemeJeu extends MenuAbstrait {
-
+public class MenuThemeToDeleteQuestion extends MenuAbstrait{
 
     private Outils outils;
     private String[] noms;
 
 
-    public MenuThemeJeu(String title) {
+    public MenuThemeToDeleteQuestion(String title) {
         super(title);
 
         // TODO Auto-generated constructor stub
@@ -33,7 +29,7 @@ public class MenuThemeJeu extends MenuAbstrait {
     protected void lancerOption(int i) {
 
         if(i<noms.length){
-            new IHMPrincipalTest("Jeu test", outils.getTheme().get(i));
+            new ViewQuestion(outils.getTheme().get(i));
         }
         else{
             System.exit(0);
@@ -49,6 +45,6 @@ public class MenuThemeJeu extends MenuAbstrait {
     protected String wavRegleJeu() {
         // TODO Auto-generated method stub
         return null;
-
     }
+
 }

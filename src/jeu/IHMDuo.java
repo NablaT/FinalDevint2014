@@ -118,7 +118,7 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener{
             gc.weighty=2;
             gc.gridx=0;
             gc.gridy=0;
-            this.add(new GoodAnswer(this.game),gc);
+            this.add(new GoodAnswer(this.game,2),gc);
             this.revalidate();
         }
     }

@@ -179,11 +179,11 @@ public class MenuAddQuestion extends JFrame implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        Theme theme = new Theme();
+        Outils outils = new Outils();
         JButton temporaryButton = (JButton) e.getSource();
         if(temporaryButton.getText().equals("Ajouter la question") && jTextIsFull()){
             try {
-                theme.creerFichierTxt(path,tabTextField[0].getText(),tabTextField[1].getText(),
+                outils.creerFichierTxt(path,tabTextField[0].getText(),tabTextField[1].getText(),
                         tabTextField[2].getText(),tabTextField[3].getText(),
                         tabTextField[4].getText(),tabTextField[5].getText(),
                         tabTextField[6].getText());

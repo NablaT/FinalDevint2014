@@ -7,7 +7,6 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyListener;
 
 /**
  * Created by user on 15/04/14.
@@ -31,11 +30,11 @@ public class MenuAddTheme extends JFrame implements ActionListener{
     private JButton buttonQuitter;
     private JButton buttonAjouterTheme;
     private JTextField jTextField;
-    private Theme theme;
+    private Outils outils;
 
     public MenuAddTheme(){
         setVisible(true);
-        //initCursor();
+        initCursor();
 
         initialize();
 
@@ -48,7 +47,7 @@ public class MenuAddTheme extends JFrame implements ActionListener{
 
 
     private void initialize(){
-        theme =new Theme();
+        outils =new Outils();
         this.grid = new GridBagLayout();
         this.gc = new GridBagConstraints();
         this.initLayout();
@@ -128,10 +127,14 @@ public class MenuAddTheme extends JFrame implements ActionListener{
 
     private void initCursor(){
         Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Image image = toolkit.getImage("pointer.png");
+        Image image = toolkit.getImage("..\\ressources\\image\\cursor.png");
         Point hotSpot = new Point(0,0);
         Cursor cursor = toolkit.createCustomCursor(image,hotSpot,"Mouse");
+
         this.setCursor(cursor);
+        // Retourner le chemin complet du répertoire de travail
+        String curDir = System.getProperty("user.dir");
+        System.out.println ("Le répertoire courant est: "+curDir);
     }
     public static void main(String[] args){
         MenuAddTheme menuAddTheme = new MenuAddTheme();
@@ -143,7 +146,7 @@ public class MenuAddTheme extends JFrame implements ActionListener{
         actionButton = (JButton) e.getSource();
         if(actionButton.getText().equals("Ajouter le thème")){
             if(jTextField.getText().length()>1){
-                theme.creationDossier(jTextField.getText());
+                outils.creationDossier(jTextField.getText());
                 jTextField.setText("");
             }
         }

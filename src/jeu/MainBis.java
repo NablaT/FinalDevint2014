@@ -37,7 +37,7 @@ import java.util.ArrayList;
                 //f.setVisible(true);
 
 */              IHMPrincipal ihm=new IHMPrincipal("Quizz");
-               // Game g= new Game("Question");
+               // GameDependsOnTheme g= new GameDependsOnTheme("Question");
                 //g.setIHMAnswer(answers);
 
                // Test2 t=new Test2();

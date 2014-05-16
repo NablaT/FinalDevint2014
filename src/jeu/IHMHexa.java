@@ -27,9 +27,12 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener{
     private Game game;
 
     public IHMHexa(ArrayList<String> answers, String goodAnswer,Game g){
+        //super(answers,goodAnswer,g,6);
+
         this.voix = new SIVOXDevint();
-        this.game=g;
         this.setOpaque(false);
+        this.goodAnswer=goodAnswer;
+        this.game=g;
         this.initialize(answers);
         this.goodAnswer=goodAnswer;
     }
@@ -156,7 +159,7 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener{
             gc.weighty=2;
             gc.gridx=0;
             gc.gridy=0;
-            this.add(new GoodAnswer(this.game),gc);
+            this.add(new GoodAnswer(this.game,6),gc);
             this.revalidate();
         }
     }
