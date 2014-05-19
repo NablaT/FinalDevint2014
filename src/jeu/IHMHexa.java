@@ -38,8 +38,6 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener{
     }
 
     public void initialize(ArrayList<String> answers){
-        System.out.println("initialize");
-
 
             this.buildElements(answers);
             this.setLayout(grid);
@@ -127,7 +125,6 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener{
         gc.gridy=1;
         this.add(this.answer6, gc);
 
-        System.out.println("Après les add");
 
     }
 

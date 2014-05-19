@@ -141,7 +141,6 @@ public class IHMCarre extends JPanel implements ActionListener, MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        //System.out.println(e);
         JButton but = (JButton) e.getSource();
         this.voix.playText(but.getText());
     }

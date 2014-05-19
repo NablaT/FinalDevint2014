@@ -4,6 +4,7 @@ import devintAPI.MenuAbstrait;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -12,6 +13,7 @@ import java.io.IOException;
 
 /**.
  * Created by user on 07/04/14.
+ *
  */
 public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyListener {
 
@@ -24,19 +26,23 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     private int currentButton=-1;
     private int nbOfPoints=0;
     private GridLayout grid2;
+    private boolean answerWasCorrect;
+   // private ProgressBar progressBar;
+    private int step;
 
-    private ProgressBar progressBar;
-
-    public IHMPrincipal(String title){
+    public IHMPrincipal(String title, boolean answerWasCorrect, int step, int nbOfPoints){
 
         super(title);
+        this.step=step;
+        this.answerWasCorrect=answerWasCorrect;
+        this.nbOfPoints=nbOfPoints;
+        String path= "..\\ressources\\\\image\\\\bg"+step+".jpg";
+        this.setContentPane(new JLabel(new ImageIcon(path)));
 
-        this.setContentPane(new JLabel(new ImageIcon("..\\ressources\\\\image\\\\bg1.jpg")));
-
-        this.progressBar=new ProgressBar(false);
+       // this.progressBar=new ProgressBar(false);
+        // this.progressBar.setLayout(new BorderLayout());
         this.build();
-
-        this.progressBar.setSize(new Dimension(300,400));
+        //  this.progressBar.setSize(new Dimension(300,400));
         JButton[] but=new JButton[3];
         but[0]=(this.game.getAnswer().getDuo());
         but[1]=(this.game.getAnswer().getCarre());
@@ -52,29 +58,32 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     }
 
     public void build(){
-        this.game=new Game(this, 0,false);
+        this.game=new Game(this, this.nbOfPoints,false);
         this.game.setPreferredSize(new Dimension(950,600));
         this.grid=new GridBagLayout();
         this.grid2=new GridLayout(6,8);
 
-
+        System.out.println("LES POINTS "+this.nbOfPoints);
         this.setLayout(this.grid);
+       // this.setLayout(new BorderLayout());
+       // this.add(this.progressBar,BorderLayout.NORTH);
+        //this.add(this.game, BorderLayout.CENTER);
 
-        this.grid.location(500,500);
-        this.progressBar.setLocation(0, 250);
+        this.grid.location(500, 500);
+        //  this.progressBar.setLocation(0, 250);
         this.gc=new GridBagConstraints();
-        this.grid.setConstraints(this.progressBar, gc);
+        // this.grid.setConstraints(this.progressBar, gc);
         this.grid.setConstraints(this.game,this.gc);
         this.gc.fill=GridBagConstraints.REMAINDER;
 
         gc.insets = new Insets(5, 5, 5, 5);
 
-        gc.gridx=4;
-        gc.gridy=0;
-        gc.gridwidth=15;
-        gc.gridheight=5;
+        //  gc.gridx=4;
+        //  gc.gridy=0;
+        //   gc.gridwidth=15;
+        //   gc.gridheight=5;
 
-        this.add(this.progressBar, gc);
+        // this.add(this.progressBar, gc);
 
         gc.gridx=4;
         gc.gridy=16;
@@ -87,9 +96,14 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     public void maj(int NbOfPoints, boolean answerWasCorrect){
         this.remove(game);
+        System.out.println("LES POINTS DANS LA MAJ"+this.nbOfPoints);
         this.game=new Game(this,NbOfPoints,answerWasCorrect);
         this.repaint();
         this.revalidate();
+    }
+
+    public int getStep(){
+        return this.step;
     }
 
     @Override
