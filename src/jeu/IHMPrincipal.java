@@ -19,7 +19,6 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     private GridBagLayout grid;
     private GridBagConstraints gc;
 
-    private ImageBackground background;
 
     private int nextButton=-1;
     private int currentButton=-1;
@@ -32,7 +31,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
         super(title);
 
-        this.setContentPane(new JLabel(new ImageIcon("..\\ressources\\\\image\\\\background.jpg")));
+        this.setContentPane(new JLabel(new ImageIcon("..\\ressources\\\\image\\\\bg1.jpg")));
 
         this.progressBar=new ProgressBar(false);
         this.build();
