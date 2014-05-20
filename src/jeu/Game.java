@@ -33,7 +33,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         super();
         this.ihmPrincipal=ihmPrincipal;
         this.nBOfPoints=nBOfPoints;
-        this.voix = new SIVOXDevint();
+       // this.voix = new SIVOXDevint();
         this.init(false);
         this.setVisible(true);
 
@@ -51,14 +51,17 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.gestionQuestion=new GestionQuestion();
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
-
+        this.voix = new SIVOXDevint();
         //this.progressBar=new ProgressBar(answerWasCorrect);
         String s = this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0];
 
         this.question= new JLabel(s,JLabel.CENTER);
+
+        System.out.println("AVANT LE PLAY VOX"+ s);
+        System.out.println("MAINTENANT LE LABEL "+this.question.getText());
         this.voix.stop();
         this.voix.playText(s);
-
+        s=null;
         this.question.setForeground(Color.WHITE);
         this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
 
@@ -79,21 +82,10 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
         gc.insets = new Insets(5, 5, 5, 5);
 
-
-        /*gc.gridx=0;
-        gc.gridy=0;
-        gc.weightx=4;
-        gc.weighty=4;
-*/
-       // this.add(this.progressBar, gc);
-
-
-
         gc.gridx=0;
         gc.gridy=4;
         gc.weightx=4;
         gc.weightx=4;
-
 
         this.add(this.question, gc);
 
@@ -107,16 +99,19 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     public void maj(int nbPoints,boolean answerWasCorrect){
         this.voix.stop();
+        int step=this.ihmPrincipal.getStep();
         this.remove(question);
         this.remove(this.answer);
+        this.voix=null;
+        this.question=null;
         int save=this.nBOfPoints;
         //this.remove(this.progressBar);
-        this.setPreferredSize(new Dimension(1000, 600));
+        /*this.setPreferredSize(new Dimension(1000, 600));
         this.init(answerWasCorrect);
         this.repaint();
         this.revalidate();
         int step=this.ihmPrincipal.getStep();
-
+*/
         this.ihmPrincipal.closeWindow();
         this.ihmPrincipal.dispose();
 
@@ -132,13 +127,15 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         else if(answerWasCorrect){
             step++;
             System.out.println("NOMBRE DE POINTS "+this.nBOfPoints);
-        IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
-        }
-        else{
             IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
 
         }
+        else{
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
+        }
 
+
+        this.voix.stop();
     }
 
 
@@ -152,8 +149,8 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     }
 
     @Override
-public void keyTyped(KeyEvent e) {
-    System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+    public void keyTyped(KeyEvent e) {
+        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
 }
 

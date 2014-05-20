@@ -64,7 +64,7 @@ public class GameDependsOnTheme extends JPanel implements ActionListener, KeyLis
 
 
        this.question.setPreferredSize(new Dimension(200, 100));
-        this.answer=new IHMAnswer(this.gestionQuestion,this);
+        this.answer= new IHMAnswer(this.gestionQuestion,this);
         this.gc=new GridBagConstraints();
 
         this.build();
