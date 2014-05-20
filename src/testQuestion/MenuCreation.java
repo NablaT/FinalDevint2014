@@ -12,7 +12,7 @@ public class MenuCreation extends MenuAbstrait{
 	 * vous pouvez d�finir autant d'options que vous voulez
 	 **/
 	protected String[] nomOptions() {
-		String[] noms = {"Jouer","Ajouter un nouveau thème","Ajouter une question","Supprimer un thème","Supprimer une question","Quitter"};
+		String[] noms = {"Ajouter un nouveau thème","Ajouter une question","Supprimer un thème","Supprimer une question","Quitter"};
 		return noms;
 	}
 
@@ -20,13 +20,12 @@ public class MenuCreation extends MenuAbstrait{
 	 * la num�rotation est celle du tableau renvoy� par nomOption
 	 */
 	protected void lancerOption(int i) {
-		switch (i){  
-		    case 0 : new MenuThemeJeu(nomJeu);break;
-		    case 1 : new MenuAddTheme();break;
-		    case 2 : new MenuThemeForQuestion("Création de la question");break;
-            case 3 : new MenuThemeToDeleteTheme("Supression d'un thème");break;
-            case 4 : new MenuThemeToDeleteQuestion("Supression de la question");break;
-		    case 5 : System.exit(0);
+		switch (i){
+		    case 0 : new MenuAddTheme();break;
+		    case 1 : new MenuThemeForQuestion("Création de la question");break;
+            case 2 : new MenuThemeToDeleteTheme("Supression d'un thème");break;
+            case 3 : new MenuThemeToDeleteQuestion("Supression de la question");break;
+		    case 4 : System.exit(0);
 		default: System.err.println("action non d�finie");
 		}
 	} 

@@ -29,7 +29,6 @@ public class MenuThemeToDeleteTheme extends MenuAbstrait{
     protected void lancerOption(int i) {
 
         if(i<noms.length){
-            System.out.println(outils.getTheme().get(i).getAbsolutePath());
             outils.retirerDossier(outils.getTheme().get(i));
             dispose();
             new MenuThemeToDeleteTheme("Supression d'un thème");
@@ -49,5 +48,8 @@ public class MenuThemeToDeleteTheme extends MenuAbstrait{
         // TODO Auto-generated method stub
         return null;
     }
+
+
+
 
 }
