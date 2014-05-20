@@ -301,6 +301,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
     public void mouseEntered(MouseEvent e) {
         //System.out.println(e);
         this.voix.stop();
+        this.initCursor1();
         JButton but = (JButton) e.getSource();
         this.voix.playText(but.getText());
     }
@@ -309,6 +310,18 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
     public void mouseExited(MouseEvent e) {
         this.voix.stop();
         this.voix.playText(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).afficherQuestion());
+    }
+
+    public void initCursor1(){
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image image = toolkit.getImage("..\\ressources\\image\\cursor1.png");
+        image.getScaledInstance(1000,1000,Image.SCALE_DEFAULT);
+        Point hotSpot = new Point(0,0);
+        Cursor cursor = toolkit.createCustomCursor(image,hotSpot,"Mouse");
+        this.setCursor(cursor);
+        // Retourner le chemin complet du répertoire de travail
+        String curDir = System.getProperty("user.dir");
+        System.out.println ("Le répertoire courant est: "+curDir);
     }
 
 }

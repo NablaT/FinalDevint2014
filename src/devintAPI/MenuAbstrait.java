@@ -12,13 +12,7 @@
 
 package devintAPI;
 
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import java.awt.Insets;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -110,7 +104,7 @@ public abstract class MenuAbstrait extends DevintFrameListener implements
     	this.requestFocus();
 		// lit le message d'accueil
 		voix.playWav(wavAccueil());
- 
+        this.initCursor();
 	}
 
     public JButton[] getBoutonOption(){
@@ -338,5 +332,17 @@ public abstract class MenuAbstrait extends DevintFrameListener implements
 			boutonOption[i].setBorder(buttonBorder);
 		}
 	}
+
+    public void initCursor(){
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image image = toolkit.getImage("..\\ressources\\image\\cursor.png");
+        image.getScaledInstance(1000,1000,Image.SCALE_DEFAULT);
+        Point hotSpot = new Point(0,0);
+        Cursor cursor = toolkit.createCustomCursor(image,hotSpot,"Mouse");
+        this.setCursor(cursor);
+        // Retourner le chemin complet du répertoire de travail
+        String curDir = System.getProperty("user.dir");
+        System.out.println ("Le répertoire courant est: "+curDir);
+    }
  
 }

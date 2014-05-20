@@ -24,7 +24,7 @@ public class MenuJeu extends MenuAbstrait {
      * vous pouvez d�finir autant d'options que vous voulez
      **/
 	protected String[] nomOptions() {
-		String[] noms = {"Jouer","Image","Options","Fichiers","Quitter"};
+		String[] noms = {"Jouer","Options du jeu","Quitter"};
 		return noms;
 	}
 
@@ -34,11 +34,8 @@ public class MenuJeu extends MenuAbstrait {
 	protected void lancerOption(int i) {
 		switch (i){  
 		case 0 : new IHMPrincipal(nomJeu,false,0,0);break;
-		case 1 : new UneImage(nomJeu + ": exemple d'images");break;
-		//case 2 : new Option(nomJeu + ": gestion des options");break;
-        case 2 : new MenuCreation("Options"); break;
-		case 3 : new Fichier(nomJeu + ": pour �crire dans un fichier");break;
-		case 4 : System.exit(0);
+		case 1 : new MenuCreation("Options du jeu"); break;
+		case 2 : System.exit(0);
 		default: System.err.println("action non d�finie");
 		}
 	}
@@ -48,13 +45,14 @@ public class MenuJeu extends MenuAbstrait {
 	// ces fichiers doivent �tre plac�s dans ressources/sons/
 	
 	protected  String wavAccueil() {
-		return "../ressources/sons/accueil.wav";
+		return null;
 		//return "../ressources/sons/accueil.wav";
 	}
 
 	// renvoie le fichier wave contenant la r�gle du jeu
 	protected  String wavRegleJeu() {
-		return "../ressources/sons/accueil.wav";
+        return null;
+		//return "../ressources/sons/accueil.wav";
 	}
 	
 }
