@@ -39,6 +39,7 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
         this.setVisible(true);
     }
 
+
 /*
     @Override
     protected String[] nomOptions() {
