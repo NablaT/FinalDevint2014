@@ -13,23 +13,22 @@ public class ImageProgressBar extends JPanel {
     private int width;
 
     public ImageProgressBar(int step){
-        this.setSize(50, 500);
+        //this.setSize(50, 500);
         this.step=step;
         this.giveMeGoodImage();
+        this.setLayout(new BorderLayout());
 
     }
 
     private void giveMeGoodImage() {
-        String path="..\\ressources\\\\image\\\\load"+this.step+".png";
+        //String path="..\\ressources\\\\image\\\\load"+this.step+".jpg";
+        /*String path="..\\ressources\\\\image\\\\loading.png"; //+this.step+".jpg";
         this.image=new ImageIcon(path).getImage();
         this.width=this.getHeight();
-        System.out.println("HAUTEUR :"+this.width);
+        System.out.println("HAUTEUR :"+this.width);*/
+        this.setBackground(Color.CYAN);
     }
 
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.drawImage(image, 0, 0, image.getWidth(null), image.getHeight(null), null);
-    }
+
 
 }

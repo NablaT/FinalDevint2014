@@ -33,7 +33,7 @@ public class MenuJeu extends MenuAbstrait {
 	 */
 	protected void lancerOption(int i) {
 		switch (i){  
-		case 0 : new IHMPrincipal(nomJeu);break;
+		case 0 : new IHMPrincipal(nomJeu,false,0,0);break;
 		case 1 : new UneImage(nomJeu + ": exemple d'images");break;
 		//case 2 : new Option(nomJeu + ": gestion des options");break;
         case 2 : new MenuCreation("Options"); break;

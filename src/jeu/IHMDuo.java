@@ -99,7 +99,6 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("ACTION PERFORMED");
         Object source= e.getSource();
         JButton but= (JButton) source;
       //  this.setVisible(false);

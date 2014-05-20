@@ -36,7 +36,7 @@ import java.util.ArrayList;
                 f.setLocationRelativeTo(null);
                 //f.setVisible(true);
 
-*/              IHMPrincipal ihm=new IHMPrincipal("Quizz");
+*/              //IHMPrincipal ihm=new IHMPrincipal("Quizz");
                // GameDependsOnTheme g= new GameDependsOnTheme("Question");
                 //g.setIHMAnswer(answers);
 
@@ -44,5 +44,6 @@ import java.util.ArrayList;
 
                 //MenuJeu jeu=new MenuJeu("Quizz");
 
+                IHMEnd end= new IHMEnd("fin ");
     }
 }

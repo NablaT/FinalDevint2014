@@ -32,6 +32,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     public Game(IHMPrincipal ihmPrincipal, int NbOfPoints, boolean answerWasCorrect) {
         super();
         this.ihmPrincipal=ihmPrincipal;
+        this.nBOfPoints=nBOfPoints;
         this.voix = new SIVOXDevint();
         this.init(false);
         this.setVisible(true);
@@ -60,7 +61,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
         this.question.setForeground(Color.WHITE);
         this.question.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
-        this.nBOfPoints=0;
+
 
         this.question.setPreferredSize(new Dimension(800, 800));
         this.answer=new IHMAnswer(this.gestionQuestion,this);
@@ -108,16 +109,35 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.voix.stop();
         this.remove(question);
         this.remove(this.answer);
-
+        int save=this.nBOfPoints;
         //this.remove(this.progressBar);
-
-        this.nBOfPoints=this.nBOfPoints+nbPoints;
         this.setPreferredSize(new Dimension(1000, 600));
         this.init(answerWasCorrect);
         this.repaint();
         this.revalidate();
+        int step=this.ihmPrincipal.getStep();
+
         this.ihmPrincipal.closeWindow();
-        IHMPrincipal ihm=new IHMPrincipal("Quizz");
+        this.ihmPrincipal.dispose();
+
+        System.out.println("RECUPERER " + nbPoints);
+
+        System.out.println("LES POINTS DANS GAME"+save);
+        this.nBOfPoints=save+nbPoints;
+
+        System.out.println("LES POINTS DANS GAME"+this.nBOfPoints);
+        if(step==13){
+            IHMEnd end= new IHMEnd("FIN");
+        }
+        else if(answerWasCorrect){
+            step++;
+            System.out.println("NOMBRE DE POINTS "+this.nBOfPoints);
+        IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
+        }
+        else{
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
+
+        }
 
     }
 
