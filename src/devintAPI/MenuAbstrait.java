@@ -48,7 +48,7 @@ public abstract class MenuAbstrait extends DevintFrameListener implements
 	protected Color backgroundColor;
 
 	// l'option courante qui est s�lectionn�e
-	private int optionCourante;
+	protected int optionCourante;
 
 	// �l�ments de placement des composants
 	private GridBagLayout placement; // le layout
