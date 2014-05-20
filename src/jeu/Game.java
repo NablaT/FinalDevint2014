@@ -56,9 +56,6 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         String s = this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).getQuestionReponse()[0];
 
         this.question= new JLabel(s,JLabel.CENTER);
-
-        System.out.println("AVANT LE PLAY VOX"+ s);
-        System.out.println("MAINTENANT LE LABEL "+this.question.getText());
         this.voix.stop();
         this.voix.playText(s);
         s=null;
@@ -104,7 +101,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.remove(this.answer);
         this.voix=null;
         this.question=null;
-        int save=this.nBOfPoints;
+        int save=this.ihmPrincipal.getNbOfPoints();
         //this.remove(this.progressBar);
         /*this.setPreferredSize(new Dimension(1000, 600));
         this.init(answerWasCorrect);
@@ -114,13 +111,8 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 */
         this.ihmPrincipal.closeWindow();
         this.ihmPrincipal.dispose();
-
-        System.out.println("RECUPERER " + nbPoints);
-
-        System.out.println("LES POINTS DANS GAME"+save);
         this.nBOfPoints=save+nbPoints;
 
-        System.out.println("LES POINTS DANS GAME"+this.nBOfPoints);
         if(step==13){
             IHMEnd end= new IHMEnd("FIN");
         }
@@ -133,9 +125,6 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         else{
             IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
         }
-
-
-        this.voix.stop();
     }
 
 

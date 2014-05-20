@@ -27,7 +27,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     private int nextButton=-1;
     private int currentButton=-1;
-    private int nbOfPoints=0;
+    private int nbOfPoints;
     private GridLayout grid2;
     private boolean answerWasCorrect;
    // private ProgressBar progressBar;
@@ -38,6 +38,8 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         super(title);
         this.step=step;
         this.answerWasCorrect=answerWasCorrect;
+        int save=this.nbOfPoints;
+
         this.nbOfPoints=nbOfPoints;
         String path= "..\\ressources\\\\image\\\\bg"+step+".jpg";
         this.setContentPane(new JLabel(new ImageIcon(path)));
@@ -178,7 +180,9 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     }
 
-
+    public int getNbOfPoints(){
+        return this.nbOfPoints;
+    }
 
     @Override
     public void keyReleased(KeyEvent e) {

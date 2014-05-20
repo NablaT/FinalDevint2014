@@ -21,14 +21,17 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
      *
      * @param title : le nom du jeu
      */
+
     public IHMEnd(String title) {
         super(title);
-        String path= "..\\ressources\\\\image\\\\background.jpg";
+        String path= "ressources\\image\\les_boucans.jpg";
+        this.setBackground(Color.BLACK);
+       //JLabel label=new JLabel(new ImageIcon(path));
+        //label.setLayout(new BorderLayout());
+       //this.add(label, BorderLayout.CENTER);
         JLabel label=new JLabel(new ImageIcon(path));
-        label.setLayout(new BorderLayout());
-        JLabel label2=new JLabel();
-        label2.setBackground(Color.CYAN);
-        this.add(label2, BorderLayout.CENTER);
+        label.setPreferredSize(new Dimension(1600,900));
+       this.setContentPane(label);
         //this.setContentPane(label);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setSize(1600,900);
