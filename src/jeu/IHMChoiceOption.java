@@ -27,7 +27,7 @@ public class IHMChoiceOption extends JPanel {
     public IHMChoiceOption(ArrayList<String> answers, String goodAnswer, Game g, int nb){
         this.voix = new SIVOXDevint();
         this.setOpaque(false);
-        this.goodAnswer=goodAnswer;
+        this.goodAnwer=goodAnswer;
         this.game=g;
         this.buildAnswer(nb);
         this.initializeAnswer(nb);

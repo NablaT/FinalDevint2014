@@ -2,6 +2,8 @@ package testQuestion;
 
 import devintAPI.MenuAbstrait;
 
+import java.awt.*;
+
 public class MenuThemeToDeleteTheme extends MenuAbstrait{
 
     private Outils outils;
@@ -10,7 +12,6 @@ public class MenuThemeToDeleteTheme extends MenuAbstrait{
 
     public MenuThemeToDeleteTheme(String title) {
         super(title);
-
         // TODO Auto-generated constructor stub
     }
     /** renvoie le nom des options du menu
@@ -29,10 +30,9 @@ public class MenuThemeToDeleteTheme extends MenuAbstrait{
     protected void lancerOption(int i) {
 
         if(i<noms.length){
-            System.out.println(outils.getTheme().get(i).getAbsolutePath());
             outils.retirerDossier(outils.getTheme().get(i));
             dispose();
-            new MenuThemeToDeleteTheme("Supression d'un thème");
+            new MenuThemeToDeleteTheme("Suppression d'un thème");
         }
         else{
             System.exit(0);
@@ -49,5 +49,24 @@ public class MenuThemeToDeleteTheme extends MenuAbstrait{
         // TODO Auto-generated method stub
         return null;
     }
+
+    private void customize(){
+        /*
+        this.buttonBorder;
+        this.backgroundColor;
+        this.foregroundColor;
+        */
+        for(int i=0;i<this.getBoutonOption().length;i++){
+            if(i==this.optionCourante){
+                this.getBoutonOption()[i].setBackground(new Color(255, 255, 255));
+                this.getBoutonOption()[i].setForeground(new Color(255, 3,0));
+            }
+            else{
+                this.getBoutonOption()[i].setBackground(new Color(255, 212, 189));
+                this.getBoutonOption()[i].setForeground(new Color(255, 3,0));
+            }
+        }
+    }
+
 
 }
