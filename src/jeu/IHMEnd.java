@@ -53,6 +53,7 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
         this.labelInfo=new JTextField("Bravo ! Tu as totalisé "+nbOfPoints);
         this.labelInfo2= new JLabel("Bravo ! Tu as totalisé "+nbOfPoints+ " points");
         this.labelInfo2.setForeground(Color.WHITE);
+
         this.labelInfo.setPreferredSize(new Dimension(500,500));
 
         Border border = BorderFactory.createLineBorder(Color.WHITE);
