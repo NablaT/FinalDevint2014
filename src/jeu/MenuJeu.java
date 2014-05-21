@@ -33,7 +33,7 @@ public class MenuJeu extends MenuAbstrait {
 	 */
 	protected void lancerOption(int i) {
 		switch (i){  
-		case 0 : new IHMPrincipal(nomJeu,false,0,0);break;
+		case 0 : new IHMPrincipal(nomJeu,false,13,0);break;
 		case 1 : new MenuCreation("Options du jeu"); break;
 		case 2 : System.exit(0);
 		default: System.err.println("action non d�finie");

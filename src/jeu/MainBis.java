@@ -44,6 +44,6 @@ import java.util.ArrayList;
 
                 //MenuJeu jeu=new MenuJeu("Quizz");
 
-                IHMEnd end= new IHMEnd("fin ");
+                IHMEnd end= new IHMEnd("fin ",11);
     }
 }

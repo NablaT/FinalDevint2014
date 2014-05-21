@@ -55,7 +55,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
         super.setBoutonOption(but);
 
-        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setSize(1600,900);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -66,7 +66,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         this.game=new Game(this, this.nbOfPoints,false);
         this.game.setPreferredSize(new Dimension(950,600));
         this.grid=new GridBagLayout();
-        this.grid2=new GridLayout(6,8);
+        //this.grid2=new GridLayout(6,8);
 
         System.out.println("LES POINTS "+this.nbOfPoints);
         this.setLayout(this.grid);

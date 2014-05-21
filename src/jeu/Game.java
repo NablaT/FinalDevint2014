@@ -114,7 +114,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.nBOfPoints=save+nbPoints;
 
         if(step==13){
-            IHMEnd end= new IHMEnd("FIN");
+            IHMEnd end= new IHMEnd("FIN",this.nBOfPoints);
         }
         else if(answerWasCorrect){
             step++;
