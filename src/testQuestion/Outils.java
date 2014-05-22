@@ -30,7 +30,7 @@ public class Outils {
 		for(i=0;i<listeFichier.length;i++){
 				try {
 					if(listeFichier[i].isDirectory()){
-						//System.out.println(listeFichier[i].getName());
+						System.out.println(listeFichier[i].getName());
 						listeStringTheme.add(listeFichier[i].getName());
 						listeTheme.add(listeFichier[i].getAbsoluteFile());
 					}

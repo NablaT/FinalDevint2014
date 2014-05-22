@@ -1,6 +1,7 @@
 package testQuestion;
 
 import devintAPI.MenuAbstrait;
+import jeu.IHMPrincipal;
 
 /**
  * Created by user on 18/04/14.
@@ -33,7 +34,8 @@ public class MenuThemeJeu extends MenuAbstrait {
     protected void lancerOption(int i) {
 
         if(i<noms.length){
-            new IHMPrincipalTest("Jeu test", outils.getTheme().get(i));
+            System.out.println(outils.getTheme().get(i));
+            new IHMPrincipal("Quizz !",false,0,0, outils.getTheme().get(i));
         }
         else{
             System.exit(0);

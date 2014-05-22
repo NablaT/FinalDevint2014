@@ -10,6 +10,7 @@ package jeu;
 
 import devintAPI.MenuAbstrait;
 import testQuestion.MenuCreation;
+import testQuestion.MenuThemeJeu;
 
 public class MenuJeu extends MenuAbstrait {
 
@@ -33,7 +34,8 @@ public class MenuJeu extends MenuAbstrait {
 	 */
 	protected void lancerOption(int i) {
 		switch (i){  
-		case 0 : new IHMPrincipal(nomJeu,false,13,0);break;
+		//case 0 : new IHMPrincipal(nomJeu,false,13,0);break;
+        case 0 : new MenuThemeJeu("Jeu"); break;
 		case 1 : new MenuCreation("Options du jeu"); break;
 		case 2 : System.exit(0);
 		default: System.err.println("action non d�finie");
