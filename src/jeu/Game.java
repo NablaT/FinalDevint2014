@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -24,7 +25,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     private JLabel question;
     private GestionQuestion gestionQuestion;
     private int nBOfPoints;
-
+    private File themePath;
     //private ProgressBar progressBar;
     private IHMPrincipal ihmPrincipal;
     private JLabel background;
@@ -43,6 +44,19 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     }
 
+    public Game(IHMPrincipal ihmPrincipal, int NbOfPoints, boolean answerWasCorrect, File themePath) {
+        super();
+        this.themePath=themePath;
+        this.ihmPrincipal=ihmPrincipal;
+        if(this.ihmPrincipal.getStep()==0){
+            chrono=0;
+        }
+        this.nBOfPoints=nBOfPoints;
+        // this.voix = new SIVOXDevint();
+        this.init(false);
+        this.setVisible(true);
+
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -52,7 +66,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
         this.setPreferredSize(new Dimension(900, 900));
         this.setOpaque(false);
-        this.gestionQuestion=new GestionQuestion();
+        this.gestionQuestion=new GestionQuestion(themePath);
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
         this.voix = new SIVOXDevint();
@@ -117,19 +131,19 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         }
         else if(step==13 && !(answerWasCorrect)){
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
-            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints,themePath);
         }
         else if(answerWasCorrect){
             step++;
             System.out.println("chrono "+this.chrono);
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
-            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints,themePath);
 
         }
         else{
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
             System.out.println("chrono "+this.chrono);
-            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints,themePath);
         }
     }
 

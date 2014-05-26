@@ -34,34 +34,6 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     private int step;
     static long chrono = 0 ;
 
-    public IHMPrincipal(String title, boolean answerWasCorrect, int step, int nbOfPoints){
-
-        super(title);
-        this.step=step;
-        this.answerWasCorrect=answerWasCorrect;
-        int save=this.nbOfPoints;
-        chrono = java.lang.System.currentTimeMillis() ;
-        this.nbOfPoints=nbOfPoints;
-        String path= "..\\ressources\\\\image\\\\bg"+step+".jpg";
-        this.setContentPane(new JLabel(new ImageIcon(path)));
-
-       // this.progressBar=new ProgressBar(false);
-        // this.progressBar.setLayout(new BorderLayout());
-        this.build();
-        //  this.progressBar.setSize(new Dimension(300,400));
-        JButton[] but=new JButton[3];
-        but[0]=(this.game.getAnswer().getDuo());
-        but[1]=(this.game.getAnswer().getCarre());
-        but[2]=(this.game.getAnswer().getHexa());
-
-        super.setBoutonOption(but);
-
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setSize(1600,900);
-        this.setLocationRelativeTo(null);
-        this.setVisible(true);
-
-    }
 
     public IHMPrincipal(String title, boolean answerWasCorrect, int step, int nbOfPoints , File themePath){
 
@@ -94,7 +66,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     }
 
     public void build(){
-        this.game=new Game(this, this.nbOfPoints,false);
+        this.game=new Game(this, this.nbOfPoints,false,themePath);
         this.game.setPreferredSize(new Dimension(950,600));
         this.grid=new GridBagLayout();
         //this.grid2=new GridLayout(6,8);
