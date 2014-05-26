@@ -32,9 +32,12 @@ public class MenuThemeJeu extends MenuAbstrait {
      * la num�rotation est celle du tableau renvoy� par nomOption
      */
     protected void lancerOption(int i) {
+        for(int j=0; j<outils.getTheme().size();j++){
 
-        if(i<noms.length){
             System.out.println(outils.getTheme().get(i));
+        }
+        if(i<noms.length){
+            //System.out.println(outils.getTheme().get(i));
             new IHMPrincipal("Quizz !",false,7,0, outils.getTheme().get(i));
         }
         else{
