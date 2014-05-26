@@ -6,16 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3b347e-d7f0-4492-917d-8429fce8046a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Badge.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Electrique.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Herbizarre.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Il n'y a pas d'évolution.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Leviator.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Petit monstre.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Pokeball.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Raichu.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Sacha.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/question/Pokemon/Tortank.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testQuestion/MenuThemeJeu.java" afterPath="$PROJECT_DIR$/src/testQuestion/MenuThemeJeu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -136,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Badge.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Badge.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ressources/question/Pokemon/Badge.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21288015" vertical-offset="0" max-vertical-offset="559">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
@@ -156,11 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuThemeJeu.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MenuThemeJeu.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuThemeJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1071">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.7906977" vertical-offset="204" max-vertical-offset="1071">
+              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -908,7 +898,7 @@
       <workItem from="1401092504411" duration="4247000" />
       <workItem from="1401099201014" duration="18000" />
       <workItem from="1401101518297" duration="2624000" />
-      <workItem from="1401105549426" duration="1429000" />
+      <workItem from="1401105549426" duration="1499000" />
     </task>
     <task id="LOCAL-00001" summary="Maj de l'interface">
       <created>1396961923844</created>
@@ -982,11 +972,15 @@
       <created>1401101902064</created>
       <updated>1401101902064</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Envoie des données pokemon">
+      <created>1401107269816</created>
+      <updated>1401107269816</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193771000" />
+    <option name="totallyTimeSpent" value="193841000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1010,7 +1004,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1031,7 +1025,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14505777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14505777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22516556" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1100,7 +1094,8 @@
     <MESSAGE value="Affichage dernière Frame (IHMEnd)" />
     <MESSAGE value="Le push de fin" />
     <MESSAGE value="the end II" />
-    <option name="LAST_COMMIT_MESSAGE" value="the end II" />
+    <MESSAGE value="Envoie des données pokemon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Envoie des données pokemon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1449,14 +1444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuThemeJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1071">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jeu/IHMPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.44" vertical-offset="2543" max-vertical-offset="3893">
@@ -1467,8 +1454,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ressources/question/Pokemon/Badge.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21288015" vertical-offset="0" max-vertical-offset="559">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testQuestion/MenuThemeJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7906977" vertical-offset="204" max-vertical-offset="1071">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
           <folding />
         </state>
       </provider>
