@@ -24,14 +24,14 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
     private GridBagLayout grid;
     private GridBagConstraints gc;
     private int nbOfPoints;
-
+    private long chrono;
     /**
      * constructeur,
      *
      * @param title : le nom du jeu
      */
 
-    public IHMEnd(String title, int nbOfPoints) {
+    public IHMEnd(String title, int nbOfPoints, long chrono) {
         super(title);
         String path= "..\\ressources\\image\\fireworks-wallpaper-38935.jpg";
         this.setBackground(Color.BLACK);
@@ -58,7 +58,7 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
 
         Border border = BorderFactory.createLineBorder(Color.WHITE);
 
-        Font font1 = new Font("SansSerif", Font.BOLD, 50);
+        Font font1 = new Font("SansSerif", Font.BOLD, 80);
         //Font f=new Font("SansSerif", Font.CENTER_BASELINE, 40);
         this.labelInfo2.setFont(font1);
                 /*

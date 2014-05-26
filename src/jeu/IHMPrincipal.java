@@ -32,6 +32,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     private boolean answerWasCorrect;
    // private ProgressBar progressBar;
     private int step;
+    static long chrono = 0 ;
 
     public IHMPrincipal(String title, boolean answerWasCorrect, int step, int nbOfPoints){
 
@@ -39,7 +40,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         this.step=step;
         this.answerWasCorrect=answerWasCorrect;
         int save=this.nbOfPoints;
-
+        chrono = java.lang.System.currentTimeMillis() ;
         this.nbOfPoints=nbOfPoints;
         String path= "..\\ressources\\\\image\\\\bg"+step+".jpg";
         this.setContentPane(new JLabel(new ImageIcon(path)));
@@ -93,7 +94,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     }
 
     public void build(){
-        this.game=new Game(this, this.nbOfPoints,false,themePath);
+        this.game=new Game(this, this.nbOfPoints,false);
         this.game.setPreferredSize(new Dimension(950,600));
         this.grid=new GridBagLayout();
         //this.grid2=new GridLayout(6,8);
@@ -208,6 +209,13 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
         }
 
+    }
+
+    static long Stop_Chrono() {
+        long chrono2 = java.lang.System.currentTimeMillis() ;
+        long temps = chrono2 - chrono ;
+        temps=temps/(1000);
+        return temps;
     }
 
     public int getNbOfPoints(){

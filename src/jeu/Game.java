@@ -10,7 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -24,33 +23,25 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     private IHMAnswer answer;
     private JLabel question;
     private GestionQuestion gestionQuestion;
-    private File themePath;
     private int nBOfPoints;
 
     //private ProgressBar progressBar;
     private IHMPrincipal ihmPrincipal;
     private JLabel background;
+    private long chrono;
 
     public Game(IHMPrincipal ihmPrincipal, int NbOfPoints, boolean answerWasCorrect) {
         super();
         this.ihmPrincipal=ihmPrincipal;
+        if(this.ihmPrincipal.getStep()==0){
+            chrono=0;
+        }
         this.nBOfPoints=nBOfPoints;
-        // this.voix = new SIVOXDevint();
-        this.init(false);
-        this.setVisible(true);
-    }
-
-    public Game(IHMPrincipal ihmPrincipal, int NbOfPoints, boolean answerWasCorrect, File themePath) {
-        super();
-        this.themePath=themePath;
-        this.ihmPrincipal=ihmPrincipal;
-        this.nBOfPoints=nBOfPoints;
-        // this.voix = new SIVOXDevint();
+       // this.voix = new SIVOXDevint();
         this.init(false);
         this.setVisible(true);
 
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -61,7 +52,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
         this.setPreferredSize(new Dimension(900, 900));
         this.setOpaque(false);
-        this.gestionQuestion=new GestionQuestion(themePath);
+        this.gestionQuestion=new GestionQuestion();
         this.gestionQuestion.getRdmNumber();
         this.grid= new GridBagLayout();
         this.voix = new SIVOXDevint();
@@ -115,28 +106,30 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.voix=null;
         this.question=null;
         int save=this.ihmPrincipal.getNbOfPoints();
-        //this.remove(this.progressBar);
-        /*this.setPreferredSize(new Dimension(1000, 600));
-        this.init(answerWasCorrect);
-        this.repaint();
-        this.revalidate();
-        int step=this.ihmPrincipal.getStep();
-*/
         this.ihmPrincipal.closeWindow();
         this.ihmPrincipal.dispose();
         this.nBOfPoints=save+nbPoints;
 
-        if(step==13){
-            IHMEnd end= new IHMEnd("FIN",this.nBOfPoints);
+        if(step==13 && answerWasCorrect){
+            this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
+            System.out.println("chrono "+this.chrono);
+            IHMEnd end= new IHMEnd("FIN",this.nBOfPoints,this.chrono);
+        }
+        else if(step==13 && !(answerWasCorrect)){
+            this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
         }
         else if(answerWasCorrect){
             step++;
-            System.out.println("NOMBRE DE POINTS "+this.nBOfPoints);
-            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints, themePath);
+            System.out.println("chrono "+this.chrono);
+            this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
 
         }
         else{
-            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints,themePath);
+            this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
+            System.out.println("chrono "+this.chrono);
+            IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints);
         }
     }
 
