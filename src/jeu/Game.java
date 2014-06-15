@@ -152,6 +152,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         this.answer=an;
     }
 
+    public GestionQuestion getQuestion(){ return gestionQuestion;}
 
     public IHMAnswer getAnswer(){
         return this.answer;
@@ -165,8 +166,8 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
+        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
     }
 

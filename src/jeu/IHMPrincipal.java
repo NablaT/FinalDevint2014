@@ -1,6 +1,7 @@
 package jeu;
 
 import devintAPI.MenuAbstrait;
+import testQuestion.GestionQuestion;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -133,52 +134,10 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     public void keyPressed(KeyEvent e) {
         super.keyPressed(e);
         System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            //this.game.
-            System.out.println(this.game.getAnswer().getDuo().getX());
-            if(this.currentButton==-1){
-                this.currentButton = 0;
-                super.setFocusedButton(currentButton);
-            }
-            else{
-                unFocusedButton(currentButton);
-                currentButton = (currentButton - 1) % 3;
-                setFocusedButton(currentButton);
-            }
-            System.out.println("LEFT: Current button"+currentButton);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            // m�thode � rendre concr�te par h�ritage
-            //lancerOption(optionCourante);
-            if(this.currentButton==-1){
-                this.currentButton = 0;
-                super.setFocusedButton(currentButton);
-            }
-            else{
-                unFocusedButton(currentButton);
-                currentButton = (currentButton +1) % 3;
-                setFocusedButton(currentButton);
-
-            }
-            System.out.println("RIGHT: Current button"+currentButton);
-
-        }
-        Object source = e.getSource();
-        System.out.println("Avant ENTER");
-        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-            if(currentButton==0){
-                System.out.println("duo");
-                this.game.getAnswer().majToAnswers(2);
-            }
-            else if(currentButton==1){
-                System.out.println("carre");
-                this.game.getAnswer().majToAnswers(4);
-            }
-            else if(currentButton==2){
-                System.out.println();
-                this.game.getAnswer().majToAnswers(6);
-            }
-
+        if (e.getKeyCode() == KeyEvent.VK_F1) {
+            GestionQuestion gestionQuestion = this.game.getQuestion();
+            this.voix.playText(gestionQuestion.getAleaObjectQuestion(
+                    gestionQuestion.getRdm()).afficherQuestion());
         }
 
     }

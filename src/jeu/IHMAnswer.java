@@ -35,6 +35,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
     public IHMAnswer(GestionQuestion gestion, Game g){
         this.voix= new SIVOXDevint();
         this.setOpaque(false);
+        this.addKeyListener(this);
         this.gridBag=new GridBagLayout();
         this.duoChoice= new JButton("2 Choix");
         this.duoChoice.setFont(new Font("Comic",Font.CENTER_BASELINE,Constantes.sizeText));
@@ -218,49 +219,11 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void keyPressed(KeyEvent e) {
-        //super.keyPressed(e); // appel a la methode mere qui gere les evenements ESC, F1, F3, F4
-        //super.keyPressed(e);
-        /*switch (e.getKeyCode()) {
-
-            case KeyEvent.VK_ENTER: System.out.println("entre");
-            case KeyEvent.VK_LEFT:System.out.println("gauche");
-            case KeyEvent.VK_RIGHT:System.out.println("droite");
-
-
+       System.out.println("Passage KeyListener");
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_F1 :
+                this.voix.playText(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).afficherQuestion());
         }
-/*
-        super.keyPressed(e);
-        // enter = s�lectionner l'option
-        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-            // m�thode � rendre concr�te par h�ritage
-            lancerOption(optionCourante);
-        }
-        // se d�placer dans les options vers le bas
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            if (optionCourante == -1) {
-                optionCourante = 0;
-                setFocusedButton(optionCourante);
-            } else {
-                unFocusedButton(optionCourante);
-                optionCourante = (optionCourante + 1) % nbOption;
-                setFocusedButton(optionCourante);
-            }
-        }
-        // se d�placer dans les options vers le haut
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            if (optionCourante == -1) {
-                optionCourante = 0;
-                setFocusedButton(optionCourante);
-            } else {
-                unFocusedButton(optionCourante);
-                optionCourante = optionCourante - 1;
-                if (optionCourante == -1)
-                    optionCourante = nbOption - 1;
-                setFocusedButton(optionCourante);
-            }
-        }*/
-        System.out.println("PRESSED Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
-
 
     }
 
@@ -308,8 +271,8 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void mouseExited(MouseEvent e) {
-        this.voix.stop();
-        this.voix.playText(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).afficherQuestion());
+        //this.voix.stop();
+        //this.voix.playText(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).afficherQuestion());
     }
 
     public void initCursor1(){
