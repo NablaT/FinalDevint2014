@@ -1,6 +1,5 @@
 package jeu;
 
-import devintAPI.FenetreAbstraite;
 import t2s.SIVOXDevint;
 import testQuestion.GestionQuestion;
 
@@ -11,7 +10,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
-import java.util.ArrayList;
 
 /**
  * Created by user on 04/04/14.
@@ -30,6 +28,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     private IHMPrincipal ihmPrincipal;
     private JLabel background;
     private long chrono;
+
 
     public Game(IHMPrincipal ihmPrincipal, int NbOfPoints, boolean answerWasCorrect) {
         super();
@@ -63,7 +62,6 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     }
 
     protected void init(boolean answerWasCorrect) {
-
         this.setPreferredSize(new Dimension(900, 900));
         this.setOpaque(false);
         this.gestionQuestion=new GestionQuestion(themePath);
@@ -83,6 +81,8 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
         this.question.setPreferredSize(new Dimension(800, 800));
         this.answer=new IHMAnswer(this.gestionQuestion,this);
+        this.addKeyListener(answer);
+        this.answer.requestFocus();
         this.gc=new GridBagConstraints();
 
         this.setPreferredSize(new Dimension(900, 900));
@@ -145,6 +145,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
             System.out.println("chrono "+this.chrono);
             IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints,themePath);
         }
+
     }
 
 
@@ -160,20 +161,13 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
-
 }
 
     @Override
     public void keyPressed(KeyEvent e) {
-
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
-
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
-
     }
 }

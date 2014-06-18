@@ -6,11 +6,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import static java.awt.event.KeyEvent.*;
 
 /**
  * Created by user on 06/04/14.
  */
-public class GoodAnswer extends JPanel implements ActionListener {
+public class GoodAnswer extends JPanel implements ActionListener, KeyListener {
 
     private SIVOXDevint voix;
     private JLabel good;
@@ -22,6 +26,7 @@ public class GoodAnswer extends JPanel implements ActionListener {
 
     public GoodAnswer(Game g, int nbOfPoints){
         this.setOpaque(false);
+        this.setFocusable(true);
         this.game=g;
         this.good= new JLabel("BRAVO !",JLabel.CENTER);
        // this.next.setIcon(new ImageIcon("ressources\\\\image\\\\button.png"));
@@ -89,6 +94,23 @@ public class GoodAnswer extends JPanel implements ActionListener {
             this.setVisible(false);
             this.game.maj(this.nbOfPoints,true);
         }
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        if (e.getKeyCode()== KeyEvent.VK_ENTER) {
+        this.setVisible(false);
+        this.game.maj(this.nbOfPoints,true);
+        }
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
 
     }
 }

@@ -1,19 +1,18 @@
 package jeu;
 
 import t2s.SIVOXDevint;
+import testQuestion.GestionQuestion;
 
+import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 
 /**
  * Created by user on 04/04/14.
  */
-public class IHMDuo extends JPanel implements ActionListener, MouseListener{
+public class IHMDuo extends JPanel implements ActionListener, MouseListener, KeyListener{
     private SIVOXDevint voix;
     private JButton answer1;
     private JButton answer2;
@@ -21,9 +20,16 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener{
     private GridBagConstraints gc;
     private Game game;
     private String goodAnswer;
+    private String choixReponse;
+    private ArrayList<String> answers;
 
     public IHMDuo(ArrayList<String> answers, String goodAnswer, Game g){
+        this.answers = answers;
+        this.choixReponse="";
+        this.setFocusable(true);
+        this.requestFocusInWindow();
         this.voix = new SIVOXDevint();
+        this.addKeyListener(this);
         this.setOpaque(false);
         this.initialize(answers);
         this.goodAnswer=goodAnswer;
@@ -99,16 +105,27 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener{
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+
+    }
+    public String getGoodAnswer(){
+        return this.goodAnswer;
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("Passage Mouse");
         Object source= e.getSource();
         JButton but= (JButton) source;
-      //  this.setVisible(false);
+        //  this.setVisible(false);
         if(!(but.getText().equals(this.goodAnswer))){
             this.clean();
             gc.weightx=2;
             gc.weighty=2;
             gc.gridx=0;
             gc.gridy=0;
-            this.add(new WrongAnswer(this.goodAnswer,this.game),gc);
+            JPanel wrongAnswer = new WrongAnswer(this.goodAnswer,this.game);
+            wrongAnswer.requestFocus();
+            this.add(wrongAnswer,gc);
             this.revalidate();
         }
         else{
@@ -117,17 +134,11 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener{
             gc.weighty=2;
             gc.gridx=0;
             gc.gridy=0;
-            this.add(new GoodAnswer(this.game,2),gc);
+            JPanel goodAnswer= new GoodAnswer(this.game,2);
+            goodAnswer.requestFocus();
+            this.add(goodAnswer,gc);
             this.revalidate();
         }
-    }
-    public String getGoodAnswer(){
-        return this.goodAnswer;
-    }
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-
     }
 
     @Override
@@ -149,5 +160,63 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener{
     @Override
     public void mouseExited(MouseEvent e) {
         this.voix.stop();
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        System.out.println(choixReponse);
+        System.out.println(goodAnswer);
+        if (e.getKeyCode() == KeyEvent.VK_F1) {
+            GestionQuestion gestionQuestion = this.game.getQuestion();
+            this.voix.playText(gestionQuestion.getAleaObjectQuestion(
+                    gestionQuestion.getRdm()).afficherQuestion());
+        }
+        if (e.getKeyCode() == KeyEvent.VK_1){
+            this.voix.stop();
+            this.voix.playText(answers.get(0));
+            this.choixReponse = answers.get(0);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_2){
+            this.voix.stop();
+            this.voix.playText(answers.get(1));
+            this.choixReponse = answers.get(1);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_ENTER){
+            System.out.println("Coucou" + choixReponse);
+            System.out.println("Ok" + goodAnswer);
+            if(!choixReponse.equals(goodAnswer)){
+                this.clean();
+                gc.weightx=2;
+                gc.weighty=2;
+                gc.gridx=0;
+                gc.gridy=0;
+                JPanel wrongAnswer = new WrongAnswer(this.goodAnswer,this.game);
+                wrongAnswer.requestFocus();
+                this.add(wrongAnswer,gc);
+
+                this.revalidate();
+            }
+            else{
+                this.clean();
+                gc.weightx=2;
+                gc.weighty=2;
+                gc.gridx=0;
+                gc.gridy=0;
+                JPanel goodAnswer= new GoodAnswer(this.game,2);
+                goodAnswer.requestFocus();
+                this.add(goodAnswer,gc);
+                this.revalidate();
+            }
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
     }
 }

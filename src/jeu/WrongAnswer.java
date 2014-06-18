@@ -6,12 +6,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 /**
  * Created by user on 06/04/14.
  */
-public class WrongAnswer extends JPanel implements ActionListener {
+public class WrongAnswer extends JPanel implements ActionListener,KeyListener {
 
     private JLabel wrongInfo1;
     private JLabel wrongInfo2;
@@ -24,6 +26,7 @@ public class WrongAnswer extends JPanel implements ActionListener {
 
     public WrongAnswer(String goodAnswer, Game g){
         this.voix= new SIVOXDevint();
+        this.setFocusable(true);
         this.setOpaque(false);
         this.initialize(goodAnswer);
         this.game=g;
@@ -119,6 +122,24 @@ public class WrongAnswer extends JPanel implements ActionListener {
             this.setVisible(false);
             this.game.maj(0,false);
         }
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode()== KeyEvent.VK_ENTER) {
+            this.setVisible(false);
+            this.game.maj(0,false);
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
 
     }
 }

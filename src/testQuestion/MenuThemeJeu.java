@@ -38,7 +38,7 @@ public class MenuThemeJeu extends MenuAbstrait {
         }
         if(i<noms.length){
             //System.out.println(outils.getTheme().get(i));
-            new IHMPrincipal("Quizz !",false,7,0, outils.getTheme().get(i));
+            new IHMPrincipal("Quizz !",false,0,0, outils.getTheme().get(i));
         }
         else{
             System.exit(0);

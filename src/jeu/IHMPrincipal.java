@@ -25,7 +25,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     private GridBagLayout grid;
     private GridBagConstraints gc;
     private File themePath;
-
+    private int choixReponse = 0;
     private int nextButton=-1;
     private int currentButton=-1;
     private int nbOfPoints;
@@ -68,6 +68,8 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     public void build(){
         this.game=new Game(this, this.nbOfPoints,false,themePath);
+        this.addKeyListener(this.game);
+        this.game.requestFocus();
         this.game.setPreferredSize(new Dimension(950,600));
         this.grid=new GridBagLayout();
         //this.grid2=new GridLayout(6,8);
@@ -107,6 +109,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         this.remove(game);
         System.out.println("LES POINTS DANS LA MAJ"+this.nbOfPoints);
         this.game=new Game(this,NbOfPoints,answerWasCorrect);
+        this.game.requestFocus();
         this.repaint();
         this.revalidate();
     }
@@ -132,14 +135,34 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     }
     @Override
     public void keyPressed(KeyEvent e) {
-        super.keyPressed(e);
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
+       super.keyPressed(e);
         if (e.getKeyCode() == KeyEvent.VK_F1) {
             GestionQuestion gestionQuestion = this.game.getQuestion();
             this.voix.playText(gestionQuestion.getAleaObjectQuestion(
                     gestionQuestion.getRdm()).afficherQuestion());
         }
-
+        if (e.getKeyCode() == KeyEvent.VK_1){
+            this.voix.stop();
+            this.voix.playText("2 choix de réponse possible");
+            this.choixReponse = 2;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_2){
+            this.voix.stop();
+            this.voix.playText("4 choix de réponse possible");
+            this.choixReponse = 4;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_3){
+            this.voix.stop();
+            this.voix.playText("6 choix de réponse possible");
+            this.choixReponse = 6;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_ENTER){
+            if(choixReponse!= 0){
+                this.voix.stop();
+                this.game.getAnswer().majToAnswers(choixReponse);
+                this.voix.playText("Vous avez choisi" + choixReponse +"réponse");
+            }
+        }
     }
 
     static long Stop_Chrono() {

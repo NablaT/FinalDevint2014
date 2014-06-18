@@ -1,19 +1,17 @@
 package jeu;
 
 import t2s.SIVOXDevint;
+import testQuestion.GestionQuestion;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 
 /**
  * Created by user on 04/04/14.
  */
-public class IHMCarre extends JPanel implements ActionListener, MouseListener {
+public class IHMCarre extends JPanel implements ActionListener, MouseListener,KeyListener {
     private SIVOXDevint voix;
     private JButton answer1;
     private JButton answer2;
@@ -23,9 +21,14 @@ public class IHMCarre extends JPanel implements ActionListener, MouseListener {
     private GridBagConstraints gc;
     private String goodAnswer;
     private Game game;
+    private String choixReponse;
+    private ArrayList<String> answers;
 
     public IHMCarre(ArrayList<String> answers,String goodAnswer,Game g){
+        this.setFocusable(true);
+        this.requestFocusInWindow();
         this.voix = new SIVOXDevint();
+        this.addKeyListener(this);
         this.setOpaque(false);
         this.game=g;
         this.initialize(answers);
@@ -34,7 +37,8 @@ public class IHMCarre extends JPanel implements ActionListener, MouseListener {
     }
 
     public void initialize(ArrayList<String> answers){
-
+        this.answers = answers;
+        this.choixReponse="";
         this.buildElements(answers);
         this.setLayout(grid);
         this.initializeGrid();
@@ -148,5 +152,66 @@ public class IHMCarre extends JPanel implements ActionListener, MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
         this.voix.stop();
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_F1) {
+            GestionQuestion gestionQuestion = this.game.getQuestion();
+            this.voix.playText(gestionQuestion.getAleaObjectQuestion(
+                    gestionQuestion.getRdm()).afficherQuestion());
+        }
+        if (e.getKeyCode() == KeyEvent.VK_1){
+            this.voix.stop();
+            this.voix.playText(answers.get(0));
+            this.choixReponse = answers.get(0);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_2){
+            this.voix.stop();
+            this.voix.playText(answers.get(1));
+            this.choixReponse = answers.get(1);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_3){
+            this.voix.stop();
+            this.voix.playText(answers.get(2));
+            this.choixReponse = answers.get(2);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_4){
+            this.voix.stop();
+            this.voix.playText(answers.get(3));
+            this.choixReponse = answers.get(3);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_ENTER){
+            System.out.println(choixReponse);
+            System.out.println(goodAnswer);
+            if(!choixReponse.equals(goodAnswer)){
+                this.clean();
+                gc.weightx=2;
+                gc.weighty=2;
+                gc.gridx=0;
+                gc.gridy=0;
+                this.add(new WrongAnswer(this.goodAnswer,this.game),gc);
+                this.revalidate();
+            }
+            else{
+                this.clean();
+                gc.weightx=2;
+                gc.weighty=2;
+                gc.gridx=0;
+                gc.gridy=0;
+                this.add(new GoodAnswer(this.game,4),gc);
+                this.revalidate();
+            }
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
     }
 }

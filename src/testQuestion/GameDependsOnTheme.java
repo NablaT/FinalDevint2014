@@ -29,6 +29,7 @@ public class GameDependsOnTheme extends JPanel implements ActionListener, KeyLis
 
     public GameDependsOnTheme(String title,File path) {
         super();
+        this.addKeyListener(this);
         //super(title);
         this.voix = new SIVOXDevint();
         this.path= path;
@@ -64,7 +65,7 @@ public class GameDependsOnTheme extends JPanel implements ActionListener, KeyLis
 
 
        this.question.setPreferredSize(new Dimension(200, 100));
-        this.answer= new IHMAnswer(this.gestionQuestion,this);
+       //this.answer= new IHMAnswer(this.gestionQuestion,this);
         this.gc=new GridBagConstraints();
 
         this.build();
