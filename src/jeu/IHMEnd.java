@@ -25,6 +25,7 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
     private GridBagConstraints gc;
     private int nbOfPoints;
     private long chrono;
+    private SIVOXDevint voix;
     /**
      * constructeur,
      *
@@ -33,6 +34,7 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
 
     public IHMEnd(String title, int nbOfPoints, long chrono) {
         super(title);
+        this.voix= new SIVOXDevint();
         String path= "..\\ressources\\image\\fireworks-wallpaper-38935.jpg";
         this.setBackground(Color.BLACK);
         JLabel label=new JLabel(new ImageIcon(path));
@@ -53,9 +55,8 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
         this.labelInfo=new JTextField("Bravo ! Tu as totalisé "+nbOfPoints);
         this.labelInfo2= new JLabel("Bravo ! Tu as totalisé "+nbOfPoints+ " points");
         this.labelInfo2.setForeground(Color.WHITE);
-
+        this.voix.playText("Bravo ! Tu as totalisé " + nbOfPoints + " points");
         this.labelInfo.setPreferredSize(new Dimension(500,500));
-
         Border border = BorderFactory.createLineBorder(Color.WHITE);
 
         Font font1 = new Font("SansSerif", Font.BOLD, 80);
