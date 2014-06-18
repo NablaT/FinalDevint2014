@@ -25,6 +25,8 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener,Key
     private Game game;
     private String choixReponse;
     private ArrayList<String> answers;
+    private boolean end;
+    private boolean bonneReponse;
 
     public IHMHexa(ArrayList<String> answers, String goodAnswer,Game g){
         this.answers = answers;
@@ -235,23 +237,39 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener,Key
             this.choixReponse = answers.get(5);
         }
         if (e.getKeyCode() == KeyEvent.VK_ENTER){
-            if(!choixReponse.equals(goodAnswer)){
-                this.clean();
-                gc.weightx=2;
-                gc.weighty=2;
-                gc.gridx=0;
-                gc.gridy=0;
-                this.add(new WrongAnswer(this.goodAnswer,this.game),gc);
-                this.revalidate();
-            }
-            else{
-                this.clean();
-                gc.weightx=2;
-                gc.weighty=2;
-                gc.gridx=0;
-                gc.gridy=0;
-                this.add(new GoodAnswer(this.game,6),gc);
-                this.revalidate();
+
+            if(!end){
+                if(!choixReponse.equals(goodAnswer)){
+                    this.clean();
+                    gc.weightx=2;
+                    gc.weighty=2;
+                    gc.gridx=0;
+                    gc.gridy=0;
+                    JPanel wrongAnswer = new WrongAnswer(this.goodAnswer,this.game);
+                    wrongAnswer.requestFocus();
+                    this.add(wrongAnswer,gc);
+                    this.revalidate();
+                    this.bonneReponse=false;
+                }
+                else{
+                    this.clean();
+                    gc.weightx=2;
+                    gc.weighty=2;
+                    gc.gridx=0;
+                    gc.gridy=0;
+                    JPanel goodAnswer= new GoodAnswer(this.game,6);
+                    goodAnswer.requestFocus();
+                    this.add(goodAnswer,gc);
+                    this.revalidate();
+                    this.bonneReponse=true;
+                }
+                end=true;
+            }else{
+                if(bonneReponse){
+                    this.game.maj(6,true);
+                }else{
+                    this.game.maj(0,false);
+                }
             }
         }
     }

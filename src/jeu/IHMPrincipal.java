@@ -107,7 +107,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
 
     public void maj(int NbOfPoints, boolean answerWasCorrect){
         this.remove(game);
-        System.out.println("LES POINTS DANS LA MAJ"+this.nbOfPoints);
+
         this.game=new Game(this,NbOfPoints,answerWasCorrect);
         this.game.requestFocus();
         this.repaint();

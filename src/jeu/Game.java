@@ -159,6 +159,9 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         return this.answer;
     }
 
+    public IHMPrincipal getIhmPrincipal(){
+        return this.ihmPrincipal;
+    }
     @Override
     public void keyTyped(KeyEvent e) {
 }

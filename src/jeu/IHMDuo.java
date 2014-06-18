@@ -22,8 +22,11 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
     private String goodAnswer;
     private String choixReponse;
     private ArrayList<String> answers;
-
+    private boolean end;
+    private boolean bonneReponse;
     public IHMDuo(ArrayList<String> answers, String goodAnswer, Game g){
+        this.end=false;
+        this.bonneReponse=false;
         this.answers = answers;
         this.choixReponse="";
         this.setFocusable(true);
@@ -169,8 +172,6 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println(choixReponse);
-        System.out.println(goodAnswer);
         if (e.getKeyCode() == KeyEvent.VK_F1) {
             GestionQuestion gestionQuestion = this.game.getQuestion();
             this.voix.playText(gestionQuestion.getAleaObjectQuestion(
@@ -187,30 +188,38 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
             this.choixReponse = answers.get(1);
         }
         if (e.getKeyCode() == KeyEvent.VK_ENTER){
-            System.out.println("Coucou" + choixReponse);
-            System.out.println("Ok" + goodAnswer);
-            if(!choixReponse.equals(goodAnswer)){
-                this.clean();
-                gc.weightx=2;
-                gc.weighty=2;
-                gc.gridx=0;
-                gc.gridy=0;
-                JPanel wrongAnswer = new WrongAnswer(this.goodAnswer,this.game);
-                wrongAnswer.requestFocus();
-                this.add(wrongAnswer,gc);
-
-                this.revalidate();
-            }
-            else{
-                this.clean();
-                gc.weightx=2;
-                gc.weighty=2;
-                gc.gridx=0;
-                gc.gridy=0;
-                JPanel goodAnswer= new GoodAnswer(this.game,2);
-                goodAnswer.requestFocus();
-                this.add(goodAnswer,gc);
-                this.revalidate();
+            if(!end){
+                if(!choixReponse.equals(goodAnswer)){
+                    this.clean();
+                    gc.weightx=2;
+                    gc.weighty=2;
+                    gc.gridx=0;
+                    gc.gridy=0;
+                    JPanel wrongAnswer = new WrongAnswer(this.goodAnswer,this.game);
+                    wrongAnswer.requestFocus();
+                    this.add(wrongAnswer,gc);
+                    this.revalidate();
+                    this.bonneReponse=false;
+                }
+                else{
+                    this.clean();
+                    gc.weightx=2;
+                    gc.weighty=2;
+                    gc.gridx=0;
+                    gc.gridy=0;
+                    JPanel goodAnswer= new GoodAnswer(this.game,2);
+                    goodAnswer.requestFocus();
+                    this.add(goodAnswer,gc);
+                    this.revalidate();
+                    this.bonneReponse=true;
+                }
+                end=true;
+            }else{
+                if(bonneReponse){
+                    this.game.maj(2,true);
+                }else{
+                    this.game.maj(0,false);
+                }
             }
         }
     }

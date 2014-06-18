@@ -23,6 +23,8 @@ public class IHMCarre extends JPanel implements ActionListener, MouseListener,Ke
     private Game game;
     private String choixReponse;
     private ArrayList<String> answers;
+    private boolean end;
+    private boolean bonneReponse;
 
     public IHMCarre(ArrayList<String> answers,String goodAnswer,Game g){
         this.setFocusable(true);
@@ -187,31 +189,45 @@ public class IHMCarre extends JPanel implements ActionListener, MouseListener,Ke
             this.choixReponse = answers.get(3);
         }
         if (e.getKeyCode() == KeyEvent.VK_ENTER){
-            System.out.println(choixReponse);
-            System.out.println(goodAnswer);
-            if(!choixReponse.equals(goodAnswer)){
-                this.clean();
-                gc.weightx=2;
-                gc.weighty=2;
-                gc.gridx=0;
-                gc.gridy=0;
-                this.add(new WrongAnswer(this.goodAnswer,this.game),gc);
-                this.revalidate();
-            }
-            else{
-                this.clean();
-                gc.weightx=2;
-                gc.weighty=2;
-                gc.gridx=0;
-                gc.gridy=0;
-                this.add(new GoodAnswer(this.game,4),gc);
-                this.revalidate();
+            if(!end){
+                if(!choixReponse.equals(goodAnswer)){
+                    this.clean();
+                    gc.weightx=2;
+                    gc.weighty=2;
+                    gc.gridx=0;
+                    gc.gridy=0;
+                    JPanel wrongAnswer = new WrongAnswer(this.goodAnswer,this.game);
+                    wrongAnswer.requestFocus();
+                    this.add(wrongAnswer,gc);
+                    this.revalidate();
+                    this.bonneReponse=false;
+                }
+                else{
+                    this.clean();
+                    gc.weightx=2;
+                    gc.weighty=2;
+                    gc.gridx=0;
+                    gc.gridy=0;
+                    JPanel goodAnswer= new GoodAnswer(this.game,4);
+                    goodAnswer.requestFocus();
+                    this.add(goodAnswer,gc);
+                    this.revalidate();
+                    this.bonneReponse=true;
+                }
+                end=true;
+            }else{
+                if(bonneReponse){
+                    this.game.maj(4,true);
+                }else{
+                    this.game.maj(0,false);
+                }
             }
         }
     }
 
     @Override
-    public void keyReleased(KeyEvent e) {
+    public void keyReleased(KeyEvent e){
 
+        }
     }
-}
+
