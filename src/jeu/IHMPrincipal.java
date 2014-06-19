@@ -74,7 +74,6 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
         this.grid=new GridBagLayout();
         //this.grid2=new GridLayout(6,8);
 
-        System.out.println("LES POINTS "+this.nbOfPoints);
         this.setLayout(this.grid);
        // this.setLayout(new BorderLayout());
        // this.add(this.progressBar,BorderLayout.NORTH);
@@ -135,7 +134,7 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     }
     @Override
     public void keyPressed(KeyEvent e) {
-       super.keyPressed(e);
+        this.voix.stop();
         if (e.getKeyCode() == KeyEvent.VK_F1) {
             GestionQuestion gestionQuestion = this.game.getQuestion();
             this.voix.playText(gestionQuestion.getAleaObjectQuestion(

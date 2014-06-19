@@ -115,7 +115,6 @@ public class WrongAnswer extends JPanel implements ActionListener,KeyListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Je termine");
         Object source= e.getSource();
         this.voix.stop();
         if(source.equals(this.next)){

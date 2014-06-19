@@ -69,7 +69,6 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
 
         this.setSize(800,800);
-        System.out.println("Dans le build");
         this.setLayout(this.gridBag);
         this.gc.fill=GridBagConstraints.BOTH;
         gc.insets = new Insets(5, 5, 5, 5);
@@ -182,13 +181,11 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("TYPED Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("Passage IHM Answer");
         if (e.getKeyCode() == KeyEvent.VK_F1) {
             this.voix.playText(gestionQuestion.getAleaObjectQuestion(
                     gestionQuestion.getRdm()).afficherQuestion());
@@ -199,7 +196,6 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println("Code touche pressée : " + e.getKeyCode() + " - caractère touche pressée : " + e.getKeyChar());
 
     }
 
@@ -230,7 +226,6 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        //System.out.println(e);
         this.voix.stop();
         this.initCursor1();
         JButton but = (JButton) e.getSource();
@@ -239,8 +234,6 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void mouseExited(MouseEvent e) {
-        //this.voix.stop();
-        //this.voix.playText(this.gestionQuestion.getAleaObjectQuestion(this.gestionQuestion.getRdm()).afficherQuestion());
     }
 
     public void initCursor1(){
@@ -252,7 +245,6 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
         this.setCursor(cursor);
         // Retourner le chemin complet du répertoire de travail
         String curDir = System.getProperty("user.dir");
-        System.out.println ("Le répertoire courant est: "+curDir);
     }
 
 }

@@ -114,7 +114,6 @@ public class GestionQuestion {
 	 */
 	public int getRdmNumber(){
 		rdm = randomizer.nextInt(listeQuestion.size());
-        System.out.println(" LE RDM "+rdm);
 		return rdm;
 	}
 	public int getRdm(){

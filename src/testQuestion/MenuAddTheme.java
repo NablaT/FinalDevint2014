@@ -132,9 +132,6 @@ public class MenuAddTheme extends JFrame implements ActionListener{
         Point hotSpot = new Point(0,0);
         Cursor cursor = toolkit.createCustomCursor(image,hotSpot,"Mouse");
         this.setCursor(cursor);
-        // Retourner le chemin complet du répertoire de travail
-        String curDir = System.getProperty("user.dir");
-        System.out.println ("Le répertoire courant est: "+curDir);
     }
 
     public static void main(String[] args){

@@ -116,7 +116,6 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("Passage Mouse");
         Object source= e.getSource();
         JButton but= (JButton) source;
         //  this.setVisible(false);

@@ -126,7 +126,6 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
         if(step==13 && answerWasCorrect){
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
-            System.out.println("chrono "+this.chrono);
             IHMEnd end= new IHMEnd("FIN",this.nBOfPoints,this.chrono);
         }
         else if(step==13 && !(answerWasCorrect)){
@@ -135,14 +134,12 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         }
         else if(answerWasCorrect){
             step++;
-            System.out.println("chrono "+this.chrono);
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
             IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints,themePath);
 
         }
         else{
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
-            System.out.println("chrono "+this.chrono);
             IHMPrincipal ihm=new IHMPrincipal("Quizz", answerWasCorrect,step,this.nBOfPoints,themePath);
         }
 

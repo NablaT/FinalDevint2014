@@ -184,7 +184,6 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener,Key
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        //System.out.println(e);
         JButton but = (JButton) e.getSource();
         this.voix.playText(but.getText());
     }

@@ -20,7 +20,6 @@ public class Outils {
 	 * Lire les dossiers
 	 */
 	public void listeDossier(){
-        //System.out.println(System.getProperty("user.dir"));
 		String path = "..\\ressources\\question";
 		File repertoire= new File(path);
 		File[] listeFichier;
@@ -30,7 +29,6 @@ public class Outils {
 		for(i=0;i<listeFichier.length;i++){
 				try {
 					if(listeFichier[i].isDirectory()){
-						System.out.println(listeFichier[i].getName());
 						listeStringTheme.add(listeFichier[i].getName());
 						listeTheme.add(listeFichier[i].getAbsoluteFile());
 					}
