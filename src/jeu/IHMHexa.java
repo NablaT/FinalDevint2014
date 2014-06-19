@@ -200,44 +200,53 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener,Key
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_F1) {
-            GestionQuestion gestionQuestion = this.game.getQuestion();
-            this.voix.playText(gestionQuestion.getAleaObjectQuestion(
-                    gestionQuestion.getRdm()).afficherQuestion());
-        }
-        if (e.getKeyCode() == KeyEvent.VK_1){
-            this.voix.stop();
-            this.voix.playText(answers.get(0));
-            this.choixReponse = answers.get(0);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_2){
-            this.voix.stop();
-            this.voix.playText(answers.get(1));
-            this.choixReponse = answers.get(1);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_3){
-            this.voix.stop();
-            this.voix.playText(answers.get(2));
-            this.choixReponse = answers.get(2);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_4){
-            this.voix.stop();
-            this.voix.playText(answers.get(3));
-            this.choixReponse = answers.get(3);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_5){
-            this.voix.stop();
-            this.voix.playText(answers.get(4));
-            this.choixReponse = answers.get(4);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_6){
-            this.voix.stop();
-            this.voix.playText(answers.get(5));
-            this.choixReponse = answers.get(5);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_ENTER){
-
-            if(!end){
+        this.voix.stop();
+        if(!end){
+            if (e.getKeyCode() == KeyEvent.VK_F2){
+                this.voix.playText(" Pour répéter la question, veuillez appuyer sur F1" + "Vous pouvez jouer avec la souris ou avec F1 et les chiffres");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+                this.voix.playText("Appuyer sur un chiffre pour écouter une réponse, puis appuyer sur entré pour valider");
+            }
+            if (e.getKeyCode() == KeyEvent.VK_F1) {
+                GestionQuestion gestionQuestion = this.game.getQuestion();
+                this.voix.playText(gestionQuestion.getAleaObjectQuestion(
+                        gestionQuestion.getRdm()).afficherQuestion());
+            }
+            if (e.getKeyCode() == KeyEvent.VK_1){
+                this.voix.stop();
+                this.voix.playText(answers.get(0));
+                this.choixReponse = answers.get(0);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_2){
+                this.voix.stop();
+                this.voix.playText(answers.get(1));
+                this.choixReponse = answers.get(1);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_3){
+                this.voix.stop();
+                this.voix.playText(answers.get(2));
+                this.choixReponse = answers.get(2);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_4){
+                this.voix.stop();
+                this.voix.playText(answers.get(3));
+                this.choixReponse = answers.get(3);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_5){
+                this.voix.stop();
+                this.voix.playText(answers.get(4));
+                this.choixReponse = answers.get(4);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_6){
+                this.voix.stop();
+                this.voix.playText(answers.get(5));
+                this.choixReponse = answers.get(5);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_ENTER){
                 if(!choixReponse.equals(goodAnswer)){
                     this.clean();
                     gc.weightx=2;
@@ -256,16 +265,22 @@ public class IHMHexa extends JPanel implements ActionListener, MouseListener,Key
                     gc.weighty=2;
                     gc.gridx=0;
                     gc.gridy=0;
-                    JPanel goodAnswer= new GoodAnswer(this.game,6);
+                    JPanel goodAnswer= new GoodAnswer(this.game,4);
                     goodAnswer.requestFocus();
                     this.add(goodAnswer,gc);
                     this.revalidate();
                     this.bonneReponse=true;
                 }
                 end=true;
-            }else{
+            }
+        }
+        else{
+            if (e.getKeyCode() == KeyEvent.VK_F2){
+                this.voix.playText(" Pour aller à la question suivante, veuillez appuyer sur entrée");
+            }
+            if( e.getKeyCode()== KeyEvent.VK_ENTER){
                 if(bonneReponse){
-                    this.game.maj(6,true);
+                    this.game.maj(4,true);
                 }else{
                     this.game.maj(0,false);
                 }

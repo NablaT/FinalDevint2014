@@ -141,7 +141,20 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        this.voix.stop();
+        if (e.getKeyCode()==KeyEvent.VK_ESCAPE){
+            this.voix.playText("Vous avez quittez le jeu");
+            dispose();
+        }
+        if (e.getKeyCode() == KeyEvent.VK_F2){
+            this.voix.playText(" Pour quitter le jeu, veuillez appuyer sur échap");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+            this.voix.playText("Appuyer sur un chiffre pour écouter une réponse, puis appuyer sur entré pour valider");
+        }
     }
 
     @Override

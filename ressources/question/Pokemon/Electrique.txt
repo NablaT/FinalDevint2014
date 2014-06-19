@@ -1,7 +1,0 @@
-De quel type est le pokemon Pikachu
-Electrique
-Sol
-Poison
-Herbe
-Feu
-Acier

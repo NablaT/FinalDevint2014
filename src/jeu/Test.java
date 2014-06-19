@@ -1,4 +1,4 @@
-package jeu;
+	package jeu;
 
 import javax.swing.*;
 import java.awt.*;

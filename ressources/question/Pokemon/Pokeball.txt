@@ -1,7 +1,0 @@
-Quel objet permet d'attraper des Pokemon ?
-Pokeball
-Laceau 
-Filet
-Harpon
-Table
-Chips

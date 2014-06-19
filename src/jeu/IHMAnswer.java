@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+
 /**
  * Created by user on 04/04/14.
  */
@@ -186,6 +187,7 @@ public class IHMAnswer extends JPanel implements ActionListener, KeyListener, Mo
 
     @Override
     public void keyPressed(KeyEvent e) {
+        this.voix.stop();
         if (e.getKeyCode() == KeyEvent.VK_F1) {
             this.voix.playText(gestionQuestion.getAleaObjectQuestion(
                     gestionQuestion.getRdm()).afficherQuestion());

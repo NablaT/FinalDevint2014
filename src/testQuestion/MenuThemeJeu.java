@@ -3,6 +3,8 @@ package testQuestion;
 import devintAPI.MenuAbstrait;
 import jeu.IHMPrincipal;
 
+import java.awt.event.KeyListener;
+
 /**
  * Created by user on 18/04/14.
  */
@@ -44,12 +46,14 @@ public class MenuThemeJeu extends MenuAbstrait {
     @Override
     protected String wavAccueil() {
         // TODO Auto-generated method stub
+        this.voix.playText("Veuillez choisir un théme en utilisant les fléches du haut et bas. Puis appuyer sur entrée pour valider");
         return null;
     }
     @Override
     protected String wavRegleJeu() {
         // TODO Auto-generated method stub
+        this.voix.playText("Veuillez choisir un théme en utilisant les fléches du haut et bas. Puis appuyer sur entrée pour valider");
         return null;
-
     }
+
 }

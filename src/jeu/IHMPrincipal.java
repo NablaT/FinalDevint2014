@@ -135,10 +135,32 @@ public class IHMPrincipal extends MenuAbstrait implements ActionListener, KeyLis
     @Override
     public void keyPressed(KeyEvent e) {
         this.voix.stop();
+        if (e.getKeyCode()==KeyEvent.VK_ESCAPE){
+            this.voix.playText("Vous avez quittez le jeu");
+            dispose();
+        }
+        if (e.getKeyCode() == KeyEvent.VK_F2){
+            this.voix.playText(" Pour répéter la question, veuillez appuyer sur F1");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+            this.voix.playText("Appuyer sur un chiffre pour écouter une réponse, puis appuyer sur entré pour valider");
+        }
         if (e.getKeyCode() == KeyEvent.VK_F1) {
             GestionQuestion gestionQuestion = this.game.getQuestion();
             this.voix.playText(gestionQuestion.getAleaObjectQuestion(
                     gestionQuestion.getRdm()).afficherQuestion());
+        }
+        if (e.getKeyCode() == KeyEvent.VK_F2){
+            this.voix.playText(" Pour répéter la question, veuillez appuyer sur F1" + "Vous pouvez jouer avec la souris ou avec F1 et les chiffres");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+            this.voix.playText("Appuyer sur un chiffre pour écouter une réponse, puis appuyer sur entré pour valider");
         }
         if (e.getKeyCode() == KeyEvent.VK_1){
             this.voix.stop();

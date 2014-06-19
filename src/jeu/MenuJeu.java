@@ -47,12 +47,15 @@ public class MenuJeu extends MenuAbstrait {
 	// ces fichiers doivent �tre plac�s dans ressources/sons/
 	
 	protected  String wavAccueil() {
+        this.voix.playText("Bienvenue dans le jeu Quizz 2014. Vous avez le choix : Vous pouvez jouer ou rajouter des questions dans les options du jeu"
+         + "Vous pouvez jouer avec la souris ou avec F1 et les chiffres");
 		return null;
 		//return "../ressources/sons/accueil.wav";
 	}
 
 	// renvoie le fichier wave contenant la r�gle du jeu
 	protected  String wavRegleJeu() {
+        this.voix.playText("Veuillez choisir en utilisant les fléches du haut et bas. Puis appuyer sur entrée pour valider. Ou utiliser la souris");
         return null;
 		//return "../ressources/sons/accueil.wav";
 	}

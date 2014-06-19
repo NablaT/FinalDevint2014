@@ -171,23 +171,33 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_F1) {
-            GestionQuestion gestionQuestion = this.game.getQuestion();
-            this.voix.playText(gestionQuestion.getAleaObjectQuestion(
-                    gestionQuestion.getRdm()).afficherQuestion());
-        }
-        if (e.getKeyCode() == KeyEvent.VK_1){
-            this.voix.stop();
-            this.voix.playText(answers.get(0));
-            this.choixReponse = answers.get(0);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_2){
-            this.voix.stop();
-            this.voix.playText(answers.get(1));
-            this.choixReponse = answers.get(1);
-        }
-        if (e.getKeyCode() == KeyEvent.VK_ENTER){
-            if(!end){
+        this.voix.stop();
+        if(!end){
+            if (e.getKeyCode() == KeyEvent.VK_F2){
+                this.voix.playText(" Pour répéter la question, veuillez appuyer sur F1"+ "Vous pouvez jouer avec la souris ou avec F1 et les chiffres");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+                this.voix.playText("Appuyer sur un chiffre pour écouter une réponse, puis appuyer sur entrée pour valider");
+            }
+            if (e.getKeyCode() == KeyEvent.VK_F1) {
+                GestionQuestion gestionQuestion = this.game.getQuestion();
+                this.voix.playText(gestionQuestion.getAleaObjectQuestion(
+                        gestionQuestion.getRdm()).afficherQuestion());
+            }
+            if (e.getKeyCode() == KeyEvent.VK_1){
+                this.voix.stop();
+                this.voix.playText(answers.get(0));
+                this.choixReponse = answers.get(0);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_2){
+                this.voix.stop();
+                this.voix.playText(answers.get(1));
+                this.choixReponse = answers.get(1);
+            }
+            if (e.getKeyCode() == KeyEvent.VK_ENTER){
                 if(!choixReponse.equals(goodAnswer)){
                     this.clean();
                     gc.weightx=2;
@@ -213,7 +223,13 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
                     this.bonneReponse=true;
                 }
                 end=true;
-            }else{
+            }
+        }
+        else{
+            if (e.getKeyCode() == KeyEvent.VK_F2){
+                this.voix.playText(" Pour aller à la question suivante, veuillez appuyer sur entré");
+            }
+            if( e.getKeyCode()== KeyEvent.VK_ENTER){
                 if(bonneReponse){
                     this.game.maj(2,true);
                 }else{
