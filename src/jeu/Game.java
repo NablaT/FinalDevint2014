@@ -127,6 +127,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
         if(step==13 && answerWasCorrect){
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();
             IHMEnd end= new IHMEnd("FIN",this.nBOfPoints,this.chrono);
+            end.requestFocus();
         }
         else if(step==13 && !(answerWasCorrect)){
             this.chrono=this.chrono+ihmPrincipal.Stop_Chrono();

@@ -131,6 +131,7 @@ public class WrongAnswer extends JPanel implements ActionListener,KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+
         if (e.getKeyCode()== KeyEvent.VK_ENTER) {
             this.setVisible(false);
             this.game.maj(0,false);

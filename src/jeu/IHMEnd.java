@@ -34,6 +34,7 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
 
     public IHMEnd(String title, int nbOfPoints, long chrono) {
         super(title);
+        this.addKeyListener(this);
         this.voix= new SIVOXDevint();
         String path= "..\\ressources\\image\\fireworks-wallpaper-38935.jpg";
         this.setBackground(Color.BLACK);
@@ -146,14 +147,9 @@ public class IHMEnd extends JFrame implements ActionListener, KeyListener {
             this.voix.playText("Vous avez quittez le jeu");
             dispose();
         }
-        if (e.getKeyCode() == KeyEvent.VK_F2){
+
+        if (e.getKeyCode() == KeyEvent.VK_F2 || e.getKeyCode() == KeyEvent.VK_F1){
             this.voix.playText(" Pour quitter le jeu, veuillez appuyer sur échap");
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-            }
-            this.voix.playText("Appuyer sur un chiffre pour écouter une réponse, puis appuyer sur entré pour valider");
         }
     }
 

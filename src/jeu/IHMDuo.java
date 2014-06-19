@@ -129,6 +129,7 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
             wrongAnswer.requestFocus();
             this.add(wrongAnswer,gc);
             this.revalidate();
+            this.end = true;
         }
         else{
             this.clean();
@@ -140,6 +141,7 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
             goodAnswer.requestFocus();
             this.add(goodAnswer,gc);
             this.revalidate();
+            this.end = true;
         }
     }
 
@@ -226,8 +228,8 @@ public class IHMDuo extends JPanel implements ActionListener, MouseListener, Key
             }
         }
         else{
-            if (e.getKeyCode() == KeyEvent.VK_F2){
-                this.voix.playText(" Pour aller à la question suivante, veuillez appuyer sur entré");
+            if (e.getKeyCode() == KeyEvent.VK_F2|| e.getKeyCode() == KeyEvent.VK_F1){
+                this.voix.playText(" Pour aller à la question suivante, veuillez appuyer sur entrée");
             }
             if( e.getKeyCode()== KeyEvent.VK_ENTER){
                 if(bonneReponse){
