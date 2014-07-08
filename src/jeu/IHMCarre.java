@@ -229,7 +229,7 @@ public class IHMCarre extends JPanel implements ActionListener, MouseListener,Ke
         }
         else{
             if (e.getKeyCode() == KeyEvent.VK_F2){
-                this.voix.playText(" Pour aller à la question suivante, veuillez appuyer sur entré");
+                this.voix.playText(" Pour aller à la question suivante, veuillez appuyer sur entrée");
             }
             if( e.getKeyCode()== KeyEvent.VK_ENTER){
                 if(bonneReponse){
